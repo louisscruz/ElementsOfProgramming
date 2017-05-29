@@ -1,5 +1,7 @@
 package PrimitiveTypes;
 
+import java.util.HashMap;
+
 /**
  * Created by louiscruz on 5/16/17.
  */
@@ -60,24 +62,60 @@ public class PrimitiveTypes {
     }
 
     // O(1) time
-    public static long swapBits(long x, byte i, byte j) {
+    public static int swapBits(long x, int i, int j) {
         if (((x >>> i) & 1) != ((x >>> j) & 1)) {
-            long bitMask = (1L << i) | (1L << j);
+            int bitMask = (1 << i) | (1 << j);
             x ^= bitMask;
         }
-        return x;
+        return (int)x;
+    }
+
+    public static long reverseShort(int x) {
+        byte left = 8;
+        byte right = 7;
+
+        for (int i = 0; i < 8; i++) {
+            x = swapBits(x, (left + i), (right - i));
+        }
+
+        return (long)x;
+    }
+
+    public static HashMap<Integer, Long> generateReverseBitsMap() {
+        HashMap<Integer, Long> map = new HashMap<Integer, Long>();
+
+        for (int i = 0; i < 16; i++) {
+            long reversed = reverseShort(i);
+            map.put(i, reversed);
+        }
+
+        return map;
+    }
+
+    // O(n/L) time, where n is the size of the word and L is the size of the mask
+    public static long reverseBits(long x) {
+        final HashMap<Integer, Long> map = generateReverseBitsMap();
+        final int MASK_SIZE = 16;
+        final int BIT_MASK = 0xFFFF;
+
+        return map.get((x & BIT_MASK)) << (3 * MASK_SIZE);
+//                | map.get((short)((x >>> MASK_SIZE) & BIT_MASK)) << (2 * MASK_SIZE)
+//                | map.get((short)((x >>> (2 * MASK_SIZE) & BIT_MASK)) << MASK_SIZE)
+//                | map.get((short)((x >>> (3 * MASK_SIZE) & BIT_MASK)));
     }
 
     public static void main(String[] args) {
-        PrimitiveTypes primitiveTypes = null;
-        System.out.println(primitiveTypes.countBits(5) == 2);
-        System.out.println(primitiveTypes.parity(10000) == 1);
-        System.out.println(primitiveTypes.fasterParity(10000) == 1);
-        System.out.println(primitiveTypes.evenFasterParity(10000) == 1);
-        System.out.println(primitiveTypes.rightPropagate(80) == 95);
+        System.out.println(countBits(5) == 2);
+        System.out.println(parity(10000) == 1);
+        System.out.println(fasterParity(10000) == 1);
+        System.out.println(evenFasterParity(10000) == 1);
+        System.out.println(rightPropagate(80) == 95);
         System.out.println(modPowerOfTwo(205, 64) == 13);
-        System.out.println(isPowerOfTwo(8) == true);
-        System.out.println(isPowerOfTwo(9) == false);
+        System.out.println(isPowerOfTwo(8));
+        System.out.println(!isPowerOfTwo(9));
         System.out.println(swapBits(73, (byte)1, (byte)6) == 11);
+        System.out.println(reverseShort((short)3) == -16384);
+        System.out.println(generateReverseBitsMap().get(1) == -32768);
+        System.out.println(reverseBits((long)32768));
     }
 }

@@ -59,6 +59,15 @@ public class PrimitiveTypes {
         return (x ^ (x & ~(x - 1))) == 0x0;
     }
 
+    // O(1) time
+    public static long swapBits(long x, byte i, byte j) {
+        if (((x >>> i) & 1) != ((x >>> j) & 1)) {
+            long bitMask = (1L << i) | (1L << j);
+            x ^= bitMask;
+        }
+        return x;
+    }
+
     public static void main(String[] args) {
         PrimitiveTypes primitiveTypes = null;
         System.out.println(primitiveTypes.countBits(5) == 2);
@@ -69,5 +78,6 @@ public class PrimitiveTypes {
         System.out.println(modPowerOfTwo(205, 64) == 13);
         System.out.println(isPowerOfTwo(8) == true);
         System.out.println(isPowerOfTwo(9) == false);
+        System.out.println(swapBits(73, (byte)1, (byte)6) == 11);
     }
 }

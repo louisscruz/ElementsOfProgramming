@@ -49,6 +49,11 @@ public class PrimitiveTypes {
         return x | ((x & ~(x - 1)) - 1);
     }
 
+    // O(1) time
+    public static long modPowerOfTwo(long x, long y) {
+        return x & (y - 1);
+    }
+
     public static void main(String[] args) {
         PrimitiveTypes primitiveTypes = null;
         System.out.println(primitiveTypes.countBits(5) == 2);
@@ -56,5 +61,6 @@ public class PrimitiveTypes {
         System.out.println(primitiveTypes.fasterParity(10000) == 1);
         System.out.println(primitiveTypes.evenFasterParity(10000) == 1);
         System.out.println(primitiveTypes.rightPropagate(80) == 95);
+        System.out.println(modPowerOfTwo(205, 64) == 13);
     }
 }

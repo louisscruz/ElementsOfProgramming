@@ -70,38 +70,43 @@ public class PrimitiveTypes {
         return (int)x;
     }
 
-    public static long reverseShort(int x) {
+    public static long reverseIntBits(int x) {
         byte left = 8;
         byte right = 7;
 
         for (int i = 0; i < 8; i++) {
-            x = swapBits(x, (left + i), (right - i));
+            x = swapBits((long)x, (left + i), (right - i));
         }
 
-        return (long)x;
+        return x;
     }
 
-    public static HashMap<Integer, Long> generateReverseBitsMap() {
-        HashMap<Integer, Long> map = new HashMap<Integer, Long>();
+    public static long[] generateReverseBitsTable() {
+        final int MAX = 32768;
+        long[] table;
 
-        for (int i = 0; i < 16; i++) {
-            long reversed = reverseShort(i);
-            map.put(i, reversed);
+        table = new long[MAX];
+
+        for (int i = 0; i < MAX; i++) {
+            table[i] = reverseIntBits(i);
         }
 
-        return map;
+        return table;
     }
 
-    // O(n/L) time, where n is the size of the word and L is the size of the mask
+    // O(n/L) time, where n is the size of the word and L is the size of the mask (not counting the table generation)
+    // There's currently a one-off error in the binary of reverseIntBits for all powers of two
     public static long reverseBits(long x) {
-        final HashMap<Integer, Long> map = generateReverseBitsMap();
         final int MASK_SIZE = 16;
         final int BIT_MASK = 0xFFFF;
+        final long[] precomputedReverse = generateReverseBitsTable();
 
-        return map.get((x & BIT_MASK)) << (3 * MASK_SIZE);
-//                | map.get((short)((x >>> MASK_SIZE) & BIT_MASK)) << (2 * MASK_SIZE)
-//                | map.get((short)((x >>> (2 * MASK_SIZE) & BIT_MASK)) << MASK_SIZE)
-//                | map.get((short)((x >>> (3 * MASK_SIZE) & BIT_MASK)));
+        return precomputedReverse[(int)(x & BIT_MASK)] << (3 * MASK_SIZE)
+                | precomputedReverse[(int)((x >>> MASK_SIZE) & BIT_MASK)]
+                    << (2 * MASK_SIZE)
+                | precomputedReverse[(int)((x >>> (2 * MASK_SIZE)) & BIT_MASK)]
+                    << MASK_SIZE
+                | precomputedReverse[(int)((x >>> (3 * MASK_SIZE)) & BIT_MASK)];
     }
 
     public static void main(String[] args) {
@@ -114,8 +119,8 @@ public class PrimitiveTypes {
         System.out.println(isPowerOfTwo(8));
         System.out.println(!isPowerOfTwo(9));
         System.out.println(swapBits(73, (byte)1, (byte)6) == 11);
-        System.out.println(reverseShort((short)3) == -16384);
-        System.out.println(generateReverseBitsMap().get(1) == -32768);
-        System.out.println(reverseBits((long)32768));
+        System.out.println(reverseIntBits((256)) == 128);
+        System.out.println(generateReverseBitsTable()[1] == 32768);
+        System.out.println(reverseBits((long) 3) == -4611686018427387904L);
     }
 }

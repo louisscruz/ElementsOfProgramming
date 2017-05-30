@@ -109,6 +109,35 @@ public class PrimitiveTypes {
                 | precomputedReverse[(int)((x >>> (3 * MASK_SIZE)) & BIT_MASK)];
     }
 
+    public static long closestIntSameBitCount(long x) {
+        final int NUM_UNSIGNED_BITS = 63;
+
+        for (int i = 0; i < NUM_UNSIGNED_BITS; i++) {
+            if ((((x >>> i) & 1) != (( x >>> (i + 1)) & 1))) {
+                x ^= (1L << i) | (1L << (i + 1));
+                return x;
+            }
+        }
+
+        throw new IllegalArgumentException("All bits are 0 or 1");
+    }
+
+    // O(1) time
+    public static long fasterClosestInt(long x) {
+        final long notSet = ~x & (x + 1);
+        final long set = x & ~(x - 1);
+
+        if (notSet > set) {
+            x |= notSet;
+            x ^= notSet >> 1;
+        } else {
+            x ^= set;
+            x |= set >> 1;
+        }
+
+        return x;
+    }
+
     public static void main(String[] args) {
         System.out.println(countBits(5) == 2);
         System.out.println(parity(10000) == 1);
@@ -122,5 +151,7 @@ public class PrimitiveTypes {
         System.out.println(reverseIntBits((256)) == 128);
         System.out.println(generateReverseBitsTable()[1] == 32768);
         System.out.println(reverseBits((long) 3) == -4611686018427387904L);
+        System.out.println(closestIntSameBitCount(8));
+        System.out.println(fasterClosestInt(8));
     }
 }

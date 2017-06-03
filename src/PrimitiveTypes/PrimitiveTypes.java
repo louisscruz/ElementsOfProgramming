@@ -138,6 +138,38 @@ public class PrimitiveTypes {
         return x;
     }
 
+    // O(n) time, where n is the number of bits required to represent the operands
+    public static long add(long x, long y) {
+        long sum = 0, carryIn = 0, k = 1, tempX = x, tempY = y;
+
+        while (tempX != 0 || tempY != 0) {
+            long xk = x & k, yk = y & k;
+            long carryOut = (xk & yk) | (xk & carryIn) | (yk & carryIn);
+            sum |= (xk ^ yk ^ carryIn);
+            carryIn = carryOut << 1;
+            k <<= 1;
+            tempX >>>= 1;
+            tempY >>>= 1;
+        }
+
+        return sum | carryIn;
+    }
+
+    // O(n^2) time, where n is the number of bits required to represent the operands
+    public static long multiply(long x, long y) {
+        long sum = 0;
+
+        while (x != 0) {
+            if ((x & 1) != 0) {
+                sum = add(sum, y);
+            }
+            x >>>= 1;
+            y <<= 1;
+        }
+
+        return sum;
+    }
+
     public static void main(String[] args) {
         System.out.println(countBits(5) == 2);
         System.out.println(parity(10000) == 1);
@@ -151,7 +183,8 @@ public class PrimitiveTypes {
         System.out.println(reverseIntBits((256)) == 128);
         System.out.println(generateReverseBitsTable()[1] == 32768);
         System.out.println(reverseBits((long) 3) == -4611686018427387904L);
-        System.out.println(closestIntSameBitCount(8));
-        System.out.println(fasterClosestInt(8));
+        System.out.println(closestIntSameBitCount(8) == 4);
+        System.out.println(fasterClosestInt(8) == 4);
+        System.out.println(multiply(13, 9) == 117);
     }
 }

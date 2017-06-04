@@ -211,6 +211,18 @@ public class PrimitiveTypes {
         return result;
     }
 
+    public static long reverse(int x) {
+        long result = 0;
+        long xRemaining = Math.abs(x);
+
+        while (xRemaining != 0) {
+            result = result * 10 + xRemaining % 10;
+            xRemaining /= 10;
+        }
+
+        return x < 0 ? -result : result;
+    }
+
     public static void main(String[] args) {
         System.out.println(countBits(5) == 2);
         System.out.println(parity(10000) == 1);
@@ -229,5 +241,6 @@ public class PrimitiveTypes {
         System.out.println(multiply(13, 9) == 117);
         System.out.println(divide(9, 3) == 3);
         System.out.println(power(3, 3) == 27);
+        System.out.println(reverse(123) == 321);
     }
 }

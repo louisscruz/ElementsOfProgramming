@@ -1,11 +1,12 @@
 package PrimitiveTypes;
 
-import java.util.HashMap;
+import java.util.Random;
 
 /**
  * Created by louiscruz on 5/16/17.
  */
 public class PrimitiveTypes {
+    // O(n) time, where n is the number of bits to represent the input
     public static short countBits(int x) {
         short numBits = 0;
         while (x != 0) {
@@ -70,7 +71,7 @@ public class PrimitiveTypes {
         return (int)x;
     }
 
-    public static long reverseIntBits(int x) {
+    static long reverseIntBits(int x) {
         byte left = 8;
         byte right = 7;
 
@@ -81,7 +82,7 @@ public class PrimitiveTypes {
         return x;
     }
 
-    public static long[] generateReverseBitsTable() {
+    static long[] generateReverseBitsTable() {
         final int MAX = 32768;
         long[] table;
 
@@ -244,6 +245,72 @@ public class PrimitiveTypes {
         return true;
     }
 
+    static int zeroOneRandom() {
+        Random gen = new Random();
+        return gen.nextInt(2);
+    }
+
+    // O(log(b - a) + 1), where a and b are the bounds
+    public static int uniformRandom(int lowerBound, int upperBound) {
+        int numberOfOutcomes = upperBound - lowerBound + 1, result;
+
+        do {
+             result = 0;
+
+             for (int i = 0; (1 << i) < numberOfOutcomes; ++i) {
+                 result = (result << 1) | zeroOneRandom();
+             }
+        } while (result >= numberOfOutcomes);
+
+        return result + lowerBound;
+    }
+
+    static class Rectangle {
+        int x, y, width, height;
+
+        public Rectangle(int x, int y, int width, int height) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+        }
+    }
+
+    static Rectangle intersectRectangle(Rectangle R1, Rectangle R2) {
+        if (!isIntersect(R1, R2)) {
+            return new Rectangle(0, 0, -1, -1);
+        }
+
+        return new Rectangle(
+            Math.max(R1.x, R2.x),
+            Math.max(R1.y, R2.y),
+            Math.min(R1.x + R1.width, R2.x + R2.width) - Math.max(R1.x, R2.x),
+            Math.min(R1.y + R2.height, R2.y + R2.height) - Math.max(R1.y, R2.y)
+        );
+    }
+
+    // O(1) time
+    public static Boolean isIntersect(Rectangle R1, Rectangle R2) {
+        return R1.x <= R2.x + R2.width && R1.x + R1.width >= R2.x
+            && R1.y <= R2.y + R2.height && R1.y + R1.height >= R2.y;
+    }
+
+    // O(1) time, but not entirely consistent (e.g. rotated rectangles)
+    public static Boolean isRectangle(long[] a, long[] b, long[] c, long[] d) {
+        long[] result;
+        result = new long[2];
+
+        for (short i = 0; i < 2; i++) {
+            result[i] = a[i] ^ b[i] ^ c[i] ^ d[i];
+        }
+
+        for (short i = 0; i < 2; i++) {
+            if (result[i] != 0) return false;
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
         System.out.println(countBits(5) == 2);
         System.out.println(parity(10000) == 1);
@@ -264,5 +331,22 @@ public class PrimitiveTypes {
         System.out.println(power(3, 3) == 27);
         System.out.println(reverse(123) == 321);
         System.out.println(isPalindrome(1234321) == true);
+        System.out.println(uniformRandom(1, 6) < 7);
+        System.out.println(isIntersect(new Rectangle(1, 1, 1, 1), new Rectangle(2, 2, 1, 1)));
+        long[] a, b, c, d;
+        a = new long[2];
+        a[0] = 3;
+        a[1] = 2;
+        b = new long[2];
+        b[0] = 3;
+        b[1] = 4;
+        c = new long[2];
+        c[0] = 7;
+        c[1] = 2;
+        d = new long[2];
+        d[0] = 7;
+        d[1] = 4;
+
+        System.out.println(isRectangle(a, b, c, d));
     }
 }

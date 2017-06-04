@@ -94,7 +94,7 @@ public class PrimitiveTypes {
         return table;
     }
 
-    // O(n/L) time, where n is the size of the word and L is the size of the mask (not counting the table generation)
+    // O(n/L) time (not counting the table generation), where n is the size of the word and L is the size of the mask
     // There's currently a one-off error in the binary of reverseIntBits for all powers of two
     public static long reverseBits(long x) {
         final int MASK_SIZE = 16;
@@ -170,6 +170,47 @@ public class PrimitiveTypes {
         return sum;
     }
 
+    // O(n) time, where n is the number of bits required to represent the operands
+    public static long divide(long x, long y) {
+        long result = 0;
+        int power = 32;
+        long yPower = y << power;
+
+        while (x >= y) {
+            while (yPower > x) {
+                yPower >>>= 1;
+
+                --power;
+            }
+
+            result += 1L << power;
+            x -= yPower;
+        }
+
+        return result;
+    }
+
+    // O(n) time, where n is the number of bits required to represent the operands
+    public static double power(double x, int y) {
+        double result = 1.0;
+        long power = y;
+
+        if (y < 0) {
+            power = -power;
+            x = 1.0 / x;
+        }
+
+        while (power != 0) {
+            if ((power & 1) != 0) {
+                result *= x;
+            }
+            x *= x;
+            power >>>= 1;
+        }
+
+        return result;
+    }
+
     public static void main(String[] args) {
         System.out.println(countBits(5) == 2);
         System.out.println(parity(10000) == 1);
@@ -186,5 +227,7 @@ public class PrimitiveTypes {
         System.out.println(closestIntSameBitCount(8) == 4);
         System.out.println(fasterClosestInt(8) == 4);
         System.out.println(multiply(13, 9) == 117);
+        System.out.println(divide(9, 3) == 3);
+        System.out.println(power(3, 3) == 27);
     }
 }

@@ -45,7 +45,7 @@ public class Arrays {
         }
     }
 
-    // O(n) time
+    // O(n) time, two passes
     public static void fasterDutchFlagPartition(int pivotIndex, List<Color> A) {
         Color pivot = A.get(pivotIndex);
         int smaller = 0;
@@ -65,6 +65,27 @@ public class Arrays {
         }
     }
 
+    // O(n) time, single pass
+    public static void fastestDutchFlagPartition(int pivotIndex, List<Color> A) {
+        Color pivot = A.get(pivotIndex);
+
+        int smaller = 0, equal = 0, larger = A.size();
+
+        while (equal < larger) {
+            if (A.get(equal).ordinal() < pivot.ordinal()) {
+                Collections.swap(A, smaller++, equal++);
+            } else if (A.get(equal).ordinal() == pivot.ordinal()) {
+                equal++;
+            } else {
+                Collections.swap(A, equal, --larger);
+            }
+        }
+    }
+
+    public static void sameKeyDutchFlagPartition(List<Color> A) {
+
+    }
+
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 4, 3};
         evenOdd(array1);
@@ -76,6 +97,7 @@ public class Arrays {
             colors1.add(BLUE);
         }
         List<Color> colors2 = new ArrayList<Color>(colors1);
+        List<Color> colors3 = new ArrayList<Color>(colors1);
         List<Color> colorsAnswer = new ArrayList<Color>();
         for (Color color : Color.values()) {
             for (int i = 0; i < 3; i++) {
@@ -83,10 +105,12 @@ public class Arrays {
             }
         }
 
-
         dutchFlagPartition(1, colors1);
         fasterDutchFlagPartition(1, colors2);
+        fastestDutchFlagPartition(1, colors3);
+
         System.out.println(colors1.equals(colorsAnswer));
         System.out.println(colors2.equals(colorsAnswer));
+        System.out.println(colors3.equals(colorsAnswer));
     }
 }

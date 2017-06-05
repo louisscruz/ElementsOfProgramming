@@ -101,6 +101,7 @@ public class Arrays {
         return A;
     }
 
+    // O(n) time, where n is the number of bits used to represent a and b
     public static String bitStringAdd(String a, String b) {
         if (a.length() != b.length()) throw new IllegalArgumentException();
 
@@ -146,6 +147,50 @@ public class Arrays {
         return sb.toString();
     }
 
+    // O(n) time
+    public static List<Integer> multiply(List<Integer> a, List<Integer> b) {
+        final int sign = a.get(0) < 0 ^ b.get(0) < 0 ? -1 : 1;
+        a.set(0, Math.abs(a.get(0)));
+        b.set(0, Math.abs(b.get(0)));
+
+        List<Integer> result = new ArrayList<Integer>(Collections.nCopies(a.size() + b.size(), 0));
+
+        for (int i = a.size() - 1; i >= 0; --i) {
+            for (int j = b.size() - 1; j >= 0; --j) {
+                result.set(i + j + 1, result.get(i + j + 1) + a.get(i) * b.get(j));
+                result.set(i + j, result.get(i + j) + result.get(i + j + 1) / 10);
+                result.set(i + j + 1, result.get(i + j + 1) % 10);
+            }
+        }
+
+        int firstNotZero = 0;
+
+        while (firstNotZero < result.size() && result.get(firstNotZero) == 0) {
+            ++firstNotZero;
+        }
+
+        result = result.subList(firstNotZero, result.size());
+
+        if (result.isEmpty()) {
+            return java.util.Arrays.asList(0);
+        }
+
+        result.set(0, result.get(0) * sign);
+
+        return result;
+    }
+
+    // O(n) time, O(1) space
+    public static boolean canReachEnd(List<Integer> maxAdvanceSteps) {
+        int furthestReachSoFar = 0, lastIndex = maxAdvanceSteps.size() - 1;
+
+        for (int i = 0; i <= furthestReachSoFar && furthestReachSoFar < lastIndex; i++) {
+            furthestReachSoFar = Math.max(furthestReachSoFar, i + maxAdvanceSteps.get(i));
+        }
+
+        return furthestReachSoFar >= lastIndex;
+    }
+
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 4, 3};
         evenOdd(array1);
@@ -180,5 +225,13 @@ public class Arrays {
         System.out.println(plusOne(decimalList).get(1) == 3);
 
         System.out.println(bitStringAdd("1111", "1111").equals("11110"));
+
+        List<Integer> multiplyAnswer = new ArrayList<Integer>(java.util.Arrays.asList(1, 6, 9, 0, 0));
+
+        System.out.println(multiply(decimalList, decimalList).equals(multiplyAnswer));
+
+        List<Integer> stepBoard = new ArrayList<Integer>(java.util.Arrays.asList(3, 3, 1, 0, 2, 0, 1));
+
+        System.out.println(canReachEnd(stepBoard));
     }
 }

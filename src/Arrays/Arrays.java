@@ -191,6 +191,23 @@ public class Arrays {
         return furthestReachSoFar >= lastIndex;
     }
 
+    // O(n) time
+    public static int deleteDuplicates(List<Integer> A) {
+        if (A.isEmpty()) {
+            return 0;
+        }
+
+        int writeIndex = 1;
+
+        for (int i = 1; i < A.size(); i++) {
+            if (!A.get(writeIndex - 1).equals(A.get(i))) {
+                A.set(writeIndex++, A.get(i));
+            }
+        }
+
+        return writeIndex;
+    }
+
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 4, 3};
         evenOdd(array1);
@@ -233,5 +250,9 @@ public class Arrays {
         List<Integer> stepBoard = new ArrayList<Integer>(java.util.Arrays.asList(3, 3, 1, 0, 2, 0, 1));
 
         System.out.println(canReachEnd(stepBoard));
+
+        List<Integer> repeatedList = new ArrayList<Integer>(java.util.Arrays.asList(1, 1, 2, 2, 3, 3));
+
+        System.out.println(deleteDuplicates(repeatedList) == 3);
     }
 }

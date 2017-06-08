@@ -208,6 +208,22 @@ public class Arrays {
         return writeIndex;
     }
 
+    // O(n) time, O(1) space
+    public static int removeDuplicates(List<Integer> A, int key) {
+        int copyPoint = 0;
+
+        for (int i = 0; i < A.size(); i++) {
+            int element = A.get(i);
+            if (element == key) {
+                A.set(copyPoint, element);
+            } else {
+                copyPoint++;
+            }
+        }
+
+        return copyPoint + 1;
+    }
+
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 4, 3};
         evenOdd(array1);
@@ -254,5 +270,7 @@ public class Arrays {
         List<Integer> repeatedList = new ArrayList<Integer>(java.util.Arrays.asList(1, 1, 2, 2, 3, 3));
 
         System.out.println(deleteDuplicates(repeatedList) == 3);
+
+        System.out.println(removeDuplicates(repeatedList, 2));
     }
 }

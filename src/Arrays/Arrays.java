@@ -224,6 +224,39 @@ public class Arrays {
         return copyPoint + 1;
     }
 
+    // O(n) time, O(1) space
+    public static double singleStock(List<Double> A) {
+        double minPrice = Double.MAX_VALUE, maxProfit = 0.0;
+
+        for (Double price : A) {
+            maxProfit = Math.max(maxProfit, price - minPrice);
+            minPrice = Math.min(minPrice, price);
+        }
+
+        return maxProfit;
+    }
+
+    // O(n) time, O(1) space
+    public static int longestSub(List<Integer> A) {
+        if (A.isEmpty()) return 0;
+
+        int maxLength = 1, currentLength = 1;
+        int currentValue = A.get(0);
+
+        for (int i = 0; i < A.size() - 1; i++) {
+            if (A.get(i) == A.get(i + 1) && A.get(i) == currentValue) {
+                if (++currentLength > maxLength) {
+                    maxLength = currentLength;
+                }
+            } else {
+                currentLength = 1;
+                currentValue = A.get(i + 1);
+            }
+        }
+
+        return maxLength;
+    }
+
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 4, 3};
         evenOdd(array1);
@@ -271,6 +304,14 @@ public class Arrays {
 
         System.out.println(deleteDuplicates(repeatedList) == 3);
 
-        System.out.println(removeDuplicates(repeatedList, 2));
+        System.out.println(removeDuplicates(repeatedList, 2) == 5);
+
+        List<Double> stocks = new ArrayList<Double>(java.util.Arrays.asList(3.0, 4.0, 2.0, 5.0));
+
+        System.out.println(singleStock(stocks));
+
+        List<Integer> longestList = new ArrayList<Integer>(java.util.Arrays.asList(1, 2, 2, 2, 2, 2, 2, 3, 3));
+
+        System.out.println(longestSub(longestList));
     }
 }

@@ -348,12 +348,50 @@ public class Arrays {
         return maxLength;
     }
 
+    // O(n^2) time, O(1) space
+    public static double doubleStock(List<Double> A) {
+        double minFirstPrice = Double.MAX_VALUE, minSecondPrice = Double.MAX_VALUE, maxProfit = 0.0;
+
+        for (int i = 0; i < A.size(); i++) {
+            minSecondPrice = Double.MAX_VALUE;
+            for (int j = i + 1; j < A.size(); j++) {
+                maxProfit = Math.max(maxProfit, A.get(i) - minFirstPrice + A.get(j) - minSecondPrice);
+                minFirstPrice = Math.min(minFirstPrice, A.get(i));
+                minSecondPrice = Math.min(minSecondPrice, A.get(j));
+            }
+        }
+
+        return maxProfit;
+    }
+
+    // O(n) time, O(n) space
+    public static double fastDoubleStock(List<Double> A) {
+        double maxProfit = 0.0;
+        List<Double> firstProfits = new ArrayList<>();
+        double comparisonPoint = Double.MAX_VALUE;
+
+        for (Double price : A) {
+            comparisonPoint = Math.min(comparisonPoint, price);
+            maxProfit = Math.max(maxProfit, price - comparisonPoint);
+            firstProfits.add(maxProfit);
+        }
+
+        comparisonPoint = Double.MIN_VALUE;
+
+        for (int i = A.size() - 1; i > 0; i--) {
+            comparisonPoint = Math.max(comparisonPoint, A.get(i));
+            maxProfit = Math.max(maxProfit, comparisonPoint - A.get(i) + firstProfits.get(i - 1));
+        }
+
+        return maxProfit;
+    }
+
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 4, 3};
         evenOdd(array1);
         System.out.println(java.util.Arrays.equals(array1, new int[]{4, 2, 3, 1}));
 
-        List<Color> colors1 = new ArrayList<Color>();
+        List<Color> colors1 = new ArrayList<>();
 
         for (int i = 0; i < 3; i++) {
             colors1.add(RED);
@@ -361,7 +399,7 @@ public class Arrays {
             colors1.add(BLUE);
         }
 
-        List<FourColor> fourColors = new ArrayList<FourColor>();
+        List<FourColor> fourColors = new ArrayList<>();
 
         for (int i = 0; i < 4; i++) {
             for (FourColor color : FourColor.values()) {
@@ -369,10 +407,10 @@ public class Arrays {
             }
         }
 
-        List<Color> colors2 = new ArrayList<Color>(colors1);
-        List<Color> colors3 = new ArrayList<Color>(colors1);
-        List<Color> colors4 = new ArrayList<Color>(colors1);
-        List<Color> colorsAnswer = new ArrayList<Color>();
+        List<Color> colors2 = new ArrayList<>(colors1);
+        List<Color> colors3 = new ArrayList<>(colors1);
+        List<Color> colors4 = new ArrayList<>(colors1);
+        List<Color> colorsAnswer = new ArrayList<>();
 
         for (Color color : Color.values()) {
             for (int i = 0; i < 3; i++) {
@@ -380,7 +418,7 @@ public class Arrays {
             }
         }
 
-        List<FourColor> fourColorAnswer = new ArrayList<FourColor>();
+        List<FourColor> fourColorAnswer = new ArrayList<>();
 
         for (FourColor color : FourColor.values()) {
             for (int i = 0; i < 4; i++) {
@@ -388,19 +426,19 @@ public class Arrays {
             }
         }
 
-        List<Boolean> booleanList = new ArrayList<Boolean>();
+        List<Boolean> booleanList = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
             booleanList.add(true);
             booleanList.add(false);
         }
 
-        List<Thing> thingList = new ArrayList<Thing>();
+        List<Thing> thingList = new ArrayList<>();
 
         thingList.add(new Thing(true, 1));
         thingList.add(new Thing(false, 0));
 
-        List<Boolean> booleanDutchAnswer = new ArrayList<Boolean>();
+        List<Boolean> booleanDutchAnswer = new ArrayList<>();
 
         for (int i = 1; i < 20; i += 2) {
             booleanDutchAnswer.add(false);
@@ -427,7 +465,7 @@ public class Arrays {
         System.out.println(booleanList.equals(booleanDutchAnswer));
         System.out.println(!thingList.get(0).key && thingList.get(1).key);
 
-        List<Integer> decimalList = new ArrayList<Integer>();
+        List<Integer> decimalList = new ArrayList<>();
         decimalList.add(1);
         decimalList.add(2);
         decimalList.add(9);
@@ -435,26 +473,35 @@ public class Arrays {
 
         System.out.println(bitStringAdd("1111", "1111").equals("11110"));
 
-        List<Integer> multiplyAnswer = new ArrayList<Integer>(java.util.Arrays.asList(1, 6, 9, 0, 0));
+        List<Integer> multiplyAnswer = new ArrayList<>(java.util.Arrays.asList(1, 6, 9, 0, 0));
 
         System.out.println(multiply(decimalList, decimalList).equals(multiplyAnswer));
 
-        List<Integer> stepBoard = new ArrayList<Integer>(java.util.Arrays.asList(3, 3, 1, 0, 2, 0, 1));
+        List<Integer> stepBoard = new ArrayList<>(java.util.Arrays.asList(3, 3, 1, 0, 2, 0, 1));
 
         System.out.println(canReachEnd(stepBoard));
 
-        List<Integer> repeatedList = new ArrayList<Integer>(java.util.Arrays.asList(1, 1, 2, 2, 3, 3));
+        List<Integer> repeatedList = new ArrayList<>(java.util.Arrays.asList(1, 1, 2, 2, 3, 3));
 
         System.out.println(deleteDuplicates(repeatedList) == 3);
 
         System.out.println(removeDuplicates(repeatedList, 2) == 5);
 
-        List<Double> stocks = new ArrayList<Double>(java.util.Arrays.asList(3.0, 4.0, 2.0, 5.0));
+        List<Double> stocks = new ArrayList<>(java.util.Arrays.asList(3.0, 4.0, 2.0, 5.0));
 
         System.out.println(singleStock(stocks) == 3.0);
 
-        List<Integer> longestList = new ArrayList<Integer>(java.util.Arrays.asList(1, 2, 2, 2, 2, 2, 2, 3, 3));
+        List<Integer> longestList = new ArrayList<>(java.util.Arrays.asList(1, 2, 2, 2, 2, 2, 2, 3, 3));
 
         System.out.println(longestSub(longestList) == 6);
+
+        List<Double> doubleStocks = new ArrayList<>(java.util.Arrays.asList(3.0, 4.0, 5.0, 2.0, 1.0, 3.0, 10.0));
+        List<Double> secondDoubleStocks = new ArrayList<>(java.util.Arrays.asList(12.0, 11.0, 13.0, 9.0, 12.0, 8.0, 14.0, 13.0, 15.0));
+
+        System.out.println(doubleStock(doubleStocks) == 11);
+        System.out.println(doubleStock(secondDoubleStocks) == 10);
+
+        System.out.println(fastDoubleStock(doubleStocks) == 11);
+        System.out.println(fastDoubleStock(secondDoubleStocks) == 10);
     }
 }

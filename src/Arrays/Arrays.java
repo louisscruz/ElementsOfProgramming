@@ -142,9 +142,17 @@ public class Arrays {
         public boolean key;
         public int value;
 
-        public Thing(boolean key, int value) {
-            key = key;
-            value = value;
+        public Thing(boolean a1, int a2) {
+            key = a1;
+            value = a2;
+        }
+
+        public boolean equals(Thing other) {
+            if (!(other instanceof Thing)) return false;
+
+            Thing that = other;
+
+            return this.key == that.key && this.value == that.value;
         }
     }
 
@@ -399,16 +407,6 @@ public class Arrays {
             booleanDutchAnswer.add(true);
         }
 
-        List<Thing> objectDutchAnswer = new ArrayList<Thing>();
-
-        objectDutchAnswer.add(new Thing(false, 0));
-        objectDutchAnswer.add(new Thing(true, 1));
-
-//        System.out.println(thingList);
-        System.out.println("UHOH");
-        for (Thing thing : thingList) {
-            System.out.println(thing.key);
-        }
 
         dutchFlagPartition(1, colors1);
         fasterDutchFlagPartition(1, colors2);
@@ -424,12 +422,7 @@ public class Arrays {
         System.out.println(colors4.equals(colorsAnswer));
         System.out.println(fourColors.equals(fourColorAnswer));
         System.out.println(booleanList.equals(booleanDutchAnswer));
-        System.out.println(thingList.equals(objectDutchAnswer));
-        System.out.println(thingList);
-        System.out.println("WOOHOO");
-        for (Thing thing : thingList) {
-            System.out.println(thing.value);
-        }
+        System.out.println(!thingList.get(0).key && thingList.get(1).key);
 
         List<Integer> decimalList = new ArrayList<Integer>();
         decimalList.add(1);

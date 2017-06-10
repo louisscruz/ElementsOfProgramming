@@ -104,7 +104,9 @@ public class Arrays {
 
     // O(n) time, O(1) space
     public static void fourDutchFlagPartition(List<FourColor> A) {
-        for (FourColor color : FourColor.values()) {
+//        for (FourColor color : FourColor.values()) {
+        for (int i = 1; i < 3; i++) {
+            FourColor color = FourColor.values()[i];
             int pivot = color.ordinal();
 
             int low = 0, mid = 0, high = A.size();
@@ -156,6 +158,7 @@ public class Arrays {
         }
     }
 
+    // O(n) time, O(1) space
     public static void objectPartition(List<Thing> A) {
         int low = 0, mid = 0;
 

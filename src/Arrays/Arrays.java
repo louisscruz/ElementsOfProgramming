@@ -386,6 +386,15 @@ public class Arrays {
         return maxProfit;
     }
 
+    // O(n) time, O(1) space
+    public static void rearrange(List<Integer> A) {
+        for (int i = 0; i < A.size() - 1; i++) {
+            if ((i % 2 == 0 && A.get(i) > A.get(i + 1)) || i % 2 == 1 && A.get(i) < A.get(i + 1)) {
+                Collections.swap(A, i, i + 1);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 4, 3};
         evenOdd(array1);
@@ -503,5 +512,11 @@ public class Arrays {
 
         System.out.println(fastDoubleStock(doubleStocks) == 11);
         System.out.println(fastDoubleStock(secondDoubleStocks) == 10);
+
+        List<Integer> rearrangeList = new ArrayList<>(java.util.Arrays.asList(9, 8, 7, 6, 5, 4, 3, 2, 1));
+
+        rearrange(rearrangeList);
+
+        System.out.println(rearrangeList);
     }
 }

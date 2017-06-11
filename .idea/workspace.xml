@@ -32,8 +32,8 @@
       <file leaf-file-name="Arrays.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Arrays/Arrays.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1983">
-              <caret line="519" column="42" lean-forward="true" selection-start-line="519" selection-start-column="42" selection-end-line="519" selection-end-column="42" />
+            <state relative-caret-position="2883">
+              <caret line="517" column="62" lean-forward="true" selection-start-line="517" selection-start-column="62" selection-end-line="517" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5603#5612#0" expanded="true" />
@@ -505,7 +505,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22828428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22828428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -708,8 +708,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Arrays/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1983">
-          <caret line="519" column="42" lean-forward="true" selection-start-line="519" selection-start-column="42" selection-end-line="519" selection-end-column="42" />
+        <state relative-caret-position="2883">
+          <caret line="517" column="62" lean-forward="true" selection-start-line="517" selection-start-column="62" selection-end-line="517" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5603#5612#0" expanded="true" />

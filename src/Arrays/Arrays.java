@@ -3,6 +3,7 @@ package Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 import static Arrays.Arrays.Color.*;
 
@@ -465,6 +466,16 @@ public class Arrays {
         return perm;
     }
 
+    public static List<Integer> randomSampling(int k, List<Integer> A) {
+        Random gen = new Random();
+
+        for (int i = 0; i < k; i++) {
+            Collections.swap(A, i, i + gen.nextInt(A.size() - i));
+        }
+
+        return A.subList(0, k);
+    }
+
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 4, 3};
         evenOdd(array1);
@@ -617,5 +628,7 @@ public class Arrays {
         nthPermutation(nthPerm, 12);
 
         System.out.println(nthPerm.equals(java.util.Arrays.asList(0, 3, 1, 2, 4)));
+
+        System.out.println(randomSampling(3, perm).size() == 3);
     }
 }

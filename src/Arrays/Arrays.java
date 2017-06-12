@@ -457,6 +457,14 @@ public class Arrays {
         return perm;
     }
 
+    public static List<Integer> nthPermutation(List<Integer> perm, int n) {
+        for (int i = 0; i < n; i++) {
+            nextPermutation(perm);
+        }
+
+        return perm;
+    }
+
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 4, 3};
         evenOdd(array1);
@@ -603,5 +611,11 @@ public class Arrays {
         System.out.println(perm.equals(java.util.Arrays.asList(0, 1, 2, 3, 4)));
 
         System.out.println(nextPermutation(perm).equals(java.util.Arrays.asList(0, 1, 2, 4, 3)));
+
+        List<Integer> nthPerm = new ArrayList<>(java.util.Arrays.asList(0, 1, 2, 3, 4));
+
+        nthPermutation(nthPerm, 12);
+
+        System.out.println(nthPerm.equals(java.util.Arrays.asList(0, 3, 1, 2, 4)));
     }
 }

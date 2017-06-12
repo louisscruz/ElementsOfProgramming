@@ -552,6 +552,6 @@ public class Arrays {
 
         List<Integer> primeList = new ArrayList<>(java.util.Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19));
 
-        System.out.println(primeList.equals(primeList));
+        System.out.println(primes(20).equals(primeList));
     }
 }

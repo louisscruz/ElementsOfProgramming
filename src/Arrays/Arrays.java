@@ -417,6 +417,46 @@ public class Arrays {
         return primes;
     }
 
+    // O(n) time, O(1) space
+    public static void applyPermutation(List<Integer> perm, List<Integer> A) {
+        for (int i = 0; i < A.size(); i++) {
+            int next = i;
+
+            while (perm.get(next) >= 0) {
+                Collections.swap(A, i, perm.get(next));
+                int temp = perm.get(next);
+                perm.set(next, perm.get(next) - perm.size());
+                next = temp;
+            }
+        }
+
+        for (int i = 0; i < perm.size(); i++) {
+            perm.set(i, perm.get(i) + perm.size());
+        }
+    }
+
+    // O(n) time, O(1) space
+    public static List<Integer> nextPermutation(List<Integer> perm) {
+        int inversionPoint = perm.size() - 2;
+        while (inversionPoint >= 0 && perm.get(inversionPoint) >= perm.get(inversionPoint + 1)) {
+            inversionPoint--;
+        }
+
+        if (inversionPoint == -1) {
+            return Collections.emptyList();
+        }
+
+        for (int i = perm.size() - 1; i > inversionPoint; i--) {
+            if (perm.get(i) > perm.get(inversionPoint)) {
+                Collections.swap(perm, inversionPoint, i);
+                break;
+            }
+        }
+
+        Collections.reverse(perm.subList(inversionPoint + 1, perm.size()));
+        return perm;
+    }
+
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 4, 3};
         evenOdd(array1);
@@ -553,5 +593,15 @@ public class Arrays {
         List<Integer> primeList = new ArrayList<>(java.util.Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19));
 
         System.out.println(primes(20).equals(primeList));
+
+        List<Integer> permuteList = new ArrayList<>(java.util.Arrays.asList(3, 2, 4, 1, 0));
+
+        List<Integer> perm = new ArrayList<>(java.util.Arrays.asList(3, 2, 4, 1, 0));
+
+        applyPermutation(permuteList, perm);
+
+        System.out.println(perm.equals(java.util.Arrays.asList(0, 1, 2, 3, 4)));
+
+        System.out.println(nextPermutation(perm).equals(java.util.Arrays.asList(0, 1, 2, 4, 3)));
     }
 }

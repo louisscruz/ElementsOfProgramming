@@ -667,6 +667,7 @@ public class Arrays {
         return spiralOrdering;
     }
 
+    // O(n^2) time, O(1) space
     public static List<List<Integer>> rotateMatrix(List<List<Integer>> matrix) {
         final int size = matrix.size() - 1;
         for (int i = 0; i < (size + 1) / 2; i++) {
@@ -684,6 +685,39 @@ public class Arrays {
         }
 
         return matrix;
+    }
+
+    // O(1) time, O(1) space
+    public static class RotatedMatrix {
+        private List<List<Integer>> wrappedSquareMatrix;
+
+        public RotatedMatrix(List<List<Integer>> squareMatrix) {
+            this.wrappedSquareMatrix = squareMatrix;
+        }
+
+        public int readEntry(int i, int j) {
+            return wrappedSquareMatrix.get(wrappedSquareMatrix.size() - 1 - j).get(i);
+        }
+
+        public void writeEntry(int i, int j, int v) {
+            wrappedSquareMatrix.get(wrappedSquareMatrix.size() - 1 - j).set(i, v);
+        }
+    }
+
+    // O(n^2) time, O(n^2) space
+    public static List<List<Integer>> generatePascalTriangle(int numRows) {
+        List<List<Integer>> pascalTriangle = new ArrayList<>();
+
+        for (int i = 0; i < numRows; i++) {
+            List<Integer> currRow = new ArrayList<>();
+            for (int j = 0; j <= i; j++) {
+                currRow.add((0 < j && j < i) ? pascalTriangle.get(i - 1).get(j - 1) + pascalTriangle.get(i - 1).get(j) : 1);
+            }
+
+            pascalTriangle.add(currRow);
+        }
+
+        return pascalTriangle;
     }
 
     public static void main(String[] args) {
@@ -747,7 +781,6 @@ public class Arrays {
         for (int i = 0; i < 20; i += 2) {
             booleanDutchAnswer.add(true);
         }
-
 
         dutchFlagPartition(1, colors1);
         fasterDutchFlagPartition(1, colors2);
@@ -873,5 +906,11 @@ public class Arrays {
         }
 
         System.out.println(rotateMatrix(matrix).equals(rotatedMatrix));
+
+        RotatedMatrix classMatrix = new RotatedMatrix(rotatedMatrix);
+
+        System.out.println(classMatrix.readEntry(0, 3) == 12);
+
+        System.out.println(generatePascalTriangle(4));
     }
 }

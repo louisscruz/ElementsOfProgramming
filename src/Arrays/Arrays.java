@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.HashMap;
 
 import static Arrays.Arrays.Color.*;
 
@@ -476,6 +479,194 @@ public class Arrays {
         return A.subList(0, k);
     }
 
+    public static List<Integer> onlineRandomSample(Iterator<Integer> sequence, int k) {
+        List<Integer> runningSample = new ArrayList<>(k);
+
+        for (int i = 0; sequence.hasNext() && i < k; i++) {
+            runningSample.add(sequence.next());
+        }
+
+        int numSeenSoFar = k;
+        Random randIdxGen = new Random();
+
+        while (sequence.hasNext()) {
+            Integer x = sequence.next();
+            ++numSeenSoFar;
+            final int idxToReplace = randIdxGen.nextInt(numSeenSoFar);
+
+            if (idxToReplace < k) {
+                runningSample.set(idxToReplace, x);
+            }
+        }
+
+        return runningSample;
+    }
+
+    public static List<Integer> computeRandomPermutation(int n) {
+        List<Integer> perm = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            perm.add(i);
+        }
+
+        Random gen = new Random();
+        for (int i = 0; i < n; i++) {
+            Collections.swap(perm, i,i + gen.nextInt(n - i));
+        }
+
+        return perm;
+    }
+
+    public static List<Integer> randomSubset(int n, int k) {
+        Map<Integer, Integer> changedElements = new HashMap<>();
+        Random randIdxGen = new Random();
+
+        for (int i = 0; i < k; i++) {
+            int randIdx = i + randIdxGen.nextInt(n - i);
+            Integer ptr1 = changedElements.get(randIdx);
+            Integer ptr2 = changedElements.get(i);
+
+            if (ptr1 == null && ptr2 == null) {
+                changedElements.put(randIdx, i);
+                changedElements.put(i, randIdx);
+            } else if (ptr1 == null && ptr2 != null) {
+                changedElements.put(randIdx, ptr2);
+                changedElements.put(i, randIdx);
+            } else if (ptr1 != null && ptr2 == null) {
+                changedElements.put(i, ptr2);
+                changedElements.put(randIdx, i);
+            } else {
+                changedElements.put(i, ptr1);
+                changedElements.put(randIdx, ptr2);
+            }
+        }
+
+        List<Integer> result = new ArrayList<>(k);
+
+        for (int i = 0; i < k; i++) {
+            result.add(changedElements.get(i));
+        }
+
+        return result;
+    }
+
+    public static int nonuniformRandomNumberGeneration(List<Integer> values, List<Double> probabilities) {
+        List<Double> prefixSumOfProbabilities = new ArrayList<>();
+        prefixSumOfProbabilities.add(0.0);
+
+        for (double p : probabilities) {
+            prefixSumOfProbabilities.add(prefixSumOfProbabilities.get(prefixSumOfProbabilities.size() - 1) + p);
+        }
+
+        Random r = new Random();
+        final double uniform01 = r.nextDouble();
+        int it = Collections.binarySearch(prefixSumOfProbabilities, uniform01);
+
+        if (it < 0) {
+            final int intervalIdx = (Math.abs(1) - 1) - 1;
+            return values.get(intervalIdx);
+        } else {
+            return values.get(it);
+        }
+    }
+
+    public static boolean isValidSudoku(List<List<Integer>> partialAssignment) {
+        final int size = partialAssignment.size();
+
+        for (int i = 0; i < size; i++) {
+            if (hasDuplicate(partialAssignment, i, i + 1, 0, size)) return false;
+        }
+
+        for (int j = 0; j < size; j++) {
+            if (hasDuplicate(partialAssignment, 0, size, j, j + 1)) return false;
+        }
+
+        final int regionSize = (int)Math.sqrt(size);
+        for (int x = 0; x < regionSize; x++) {
+            for (int y = 0; y < regionSize; y++) {
+                if (hasDuplicate(partialAssignment, regionSize * x, regionSize * (x + 1), regionSize * y, regionSize * (y + 1))) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean hasDuplicate(List<List<Integer>> partialAssignment, int startRow, int endRow, int startCol, int endCol) {
+        List<Boolean> isPresent = new ArrayList<>(Collections.nCopies(partialAssignment.size() + 1, false));
+
+        for (int i = startRow; i < endRow; i++) {
+            for (int j = startCol; j < endCol; j++) {
+                if (partialAssignment.get(i).get(j) != 0 && isPresent.get(partialAssignment.get(i).get(j))) {
+                    return true;
+                }
+                isPresent.set(partialAssignment.get(i).get(j), true);
+            }
+        }
+
+        return false;
+    }
+
+    public static List<Integer> matrixInSpiralOrder(List<List<Integer>> squareMatrix) {
+        List<Integer> spiralOrdering = new ArrayList<>();
+
+        for (int offset = 0; offset < Math.ceil(0.5 * squareMatrix.size()); offset++) {
+            matrixLayerInClockwise(squareMatrix, offset, spiralOrdering);
+        }
+
+        return spiralOrdering;
+    }
+
+    public static void matrixLayerInClockwise(List<List<Integer>> squareMatrix, int offset, List<Integer> spiralOrdering) {
+        if (offset == squareMatrix.size() - offset - 1) {
+            spiralOrdering.add(squareMatrix.get(offset).get(offset));
+            return;
+        }
+
+        for (int j = offset; j < squareMatrix.size() - offset - 1; j++) {
+            spiralOrdering.add(squareMatrix.get(offset).get(j));
+        }
+
+        for (int i = offset; i < squareMatrix.size() - offset - 1; i++) {
+            spiralOrdering.add(squareMatrix.get(i).get(squareMatrix.size() - offset - 1));
+        }
+
+        for (int j = squareMatrix.size() - offset - 1; j > offset; j--) {
+            spiralOrdering.add(squareMatrix.get(squareMatrix.size() - offset - 1).get(j));
+        }
+
+        for (int i = squareMatrix.size() - offset - 1; i > offset; i--) {
+            spiralOrdering.add(squareMatrix.get(i).get(offset));
+        }
+    }
+
+    public static List<Integer> easierMatrixInSpiralOrder(List<List<Integer>> squareMatrix) {
+        final int[][] SHIFT = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        int dir = 0, x = 0, y = 0;
+
+        List<Integer> spiralOrdering = new ArrayList<>();
+
+        final int size = squareMatrix.size();
+
+        for (int i = 0; i < size * size; i++) {
+            spiralOrdering.add(squareMatrix.get(x).get(y));
+            squareMatrix.get(x).set(y, 0);
+            int nextX = x + SHIFT[dir][0], nextY = y + SHIFT[dir][1];
+
+            if (nextX < 0 || nextX >= size || nextY < 0 || nextY >= size || squareMatrix.get(nextX).get(nextY) == 0) {
+                dir = (dir + 1) % 4;
+                nextX = x + SHIFT[dir][0];
+                nextY = y + SHIFT[dir][1];
+            }
+
+            x = nextX;
+            y = nextY;
+        }
+
+        return spiralOrdering;
+    }
+
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 4, 3};
         evenOdd(array1);
@@ -630,5 +821,18 @@ public class Arrays {
         System.out.println(nthPerm.equals(java.util.Arrays.asList(0, 3, 1, 2, 4)));
 
         System.out.println(randomSampling(3, perm).size() == 3);
+
+        List<List<Integer>> spiralList = new ArrayList<>();
+
+        for (int i = 0; i < 3; i++) {
+            spiralList.add(new ArrayList<>());
+            spiralList.get(i).add(1 + (3 * i));
+            spiralList.get(i).add(2 + (3 * i));
+            spiralList.get(i).add(3 + (3 * i));
+        }
+
+        System.out.println(matrixInSpiralOrder(spiralList).equals(java.util.Arrays.asList(1, 2, 3, 6, 9, 8, 7, 4, 5)));
+
+        System.out.println(easierMatrixInSpiralOrder(spiralList).equals(java.util.Arrays.asList(1, 2, 3, 6, 9, 8, 7, 4, 5)));
     }
 }

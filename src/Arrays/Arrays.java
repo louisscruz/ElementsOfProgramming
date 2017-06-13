@@ -667,6 +667,25 @@ public class Arrays {
         return spiralOrdering;
     }
 
+    public static List<List<Integer>> rotateMatrix(List<List<Integer>> matrix) {
+        final int size = matrix.size() - 1;
+        for (int i = 0; i < (size + 1) / 2; i++) {
+            for (int j = i; j < size - i; j++) {
+                int top = matrix.get(i).get(j);
+                int right = matrix.get(j).get(size - i);
+                int bottom = matrix.get(size - i).get(size - j);
+                int left = matrix.get(size - j).get(i);
+
+                matrix.get(i).set(j, left);
+                matrix.get(j).set(size - i, top);
+                matrix.get(size - i).set(size - j, right);
+                matrix.get(size - j).set(i, bottom);
+            }
+        }
+
+        return matrix;
+    }
+
     public static void main(String[] args) {
         int[] array1 = new int[]{1, 2, 4, 3};
         evenOdd(array1);
@@ -834,5 +853,25 @@ public class Arrays {
         System.out.println(matrixInSpiralOrder(spiralList).equals(java.util.Arrays.asList(1, 2, 3, 6, 9, 8, 7, 4, 5)));
 
         System.out.println(easierMatrixInSpiralOrder(spiralList).equals(java.util.Arrays.asList(1, 2, 3, 6, 9, 8, 7, 4, 5)));
+
+        List<List<Integer>> matrix = new ArrayList<>();
+        List<List<Integer>> rotatedMatrix = new ArrayList<>();
+
+        for (int i = 0; i < 4; i++) {
+            matrix.add(new ArrayList<>());
+            rotatedMatrix.add(new ArrayList<>());
+            for (int j = 0; j < 4; j++) {
+                matrix.get(i).add((4 * i) + j);
+                rotatedMatrix.get(i).add(0);
+            }
+        }
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                rotatedMatrix.get(j).set(3 - i, (4 * i) + j);
+            }
+        }
+
+        System.out.println(rotateMatrix(matrix).equals(rotatedMatrix));
     }
 }

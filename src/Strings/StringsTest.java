@@ -134,4 +134,17 @@ class StringsTest {
             }
         }
     }
+
+    @Nested
+    class reverseWordsTests {
+        @Test
+        @DisplayName("should properly reverse a string")
+        void reverseWordString() {
+            final char[] chars = new char[]{'r', 'a', 'm', ' ', 'c', 'o', 's', 't', 'l', 'y'};
+
+            Strings.reverseWords(chars);
+
+            assertArrayEquals(new char[]{'c', 'o', 's', 't', 'l', 'y', ' ', 'r', 'a', 'm'}, chars);
+        }
+    }
 }

@@ -100,4 +100,32 @@ public class Strings {
 
         return true;
     }
+
+    public static void reverseWords(char[] input) {
+        final int n = input.length;
+
+        reverse(input, 0, n - 1);
+
+        int start = 0, end = 0;
+
+        while (start < n) {
+            while (start < end || start < n && input[start] == ' ') {
+                ++start;
+            }
+
+            while (end < start || end < n && input[end] != ' ') {
+                ++end;
+            }
+
+            reverse(input, start, end - 1);
+        }
+    }
+
+    private static void reverse(char[] input, int start, int end) {
+        while (start < end) {
+            char tmp = input[start];
+            input[start++] = input[end];
+            input[end--] = tmp;
+        }
+    }
 }

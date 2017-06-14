@@ -97,4 +97,41 @@ class StringsTest {
             assertArrayEquals(new char[]{'d', 'd', 'd', 'd', 'c'}, chars);
         }
     }
+
+    @Nested
+    class isPalindromeTests {
+        @Nested
+        class whenTrue {
+            @Test
+            @DisplayName("when a straight palindrome")
+            void straightPalindrome() {
+                final boolean answer = Strings.isPalindrome("abcddcba");
+                assertTrue(answer);
+            }
+
+            @Test
+            @DisplayName("when a non-straight palindrome")
+            void nonStraightPalindrome() {
+                final boolean answer = Strings.isPalindrome("A man, a plan, a canal, Panama");
+                assertTrue(answer);
+            }
+        }
+
+        @Nested
+        class whenFalse {
+            @Test
+            @DisplayName("when generally not a palindrome")
+            void generalString() {
+                final boolean answer = Strings.isPalindrome("a string");
+                assertFalse(answer);
+            }
+
+            @Test
+            @DisplayName("when it is one letter off")
+            void oneOffString() {
+                final boolean answer = Strings.isPalindrome("azbcddcba");
+                assertFalse(answer);
+            }
+        }
+    }
 }

@@ -40,4 +40,14 @@ class StringsTest {
             assertEquals(-103, i);
         }
     }
+
+    @Nested
+    class baseConvertTests {
+        @Test
+        @DisplayName("should properly convert from one base to another")
+        void convertTenToTwo() {
+            final String answer = Strings.baseConvert("15", 10, 2);
+            assertEquals("1111", answer);
+        }
+    }
 }

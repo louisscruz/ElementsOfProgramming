@@ -29,4 +29,21 @@ public class Strings {
 
         return isNegative ? -result : result;
     }
+
+    public static String baseConvert(String s, int b1, int b2) {
+        final boolean isNegative = s.charAt(0) == '-';
+
+        int numAsInt = 0;
+
+        for (int i = isNegative ? 1 : 0; i < s.length(); i++) {
+            numAsInt *= b1;
+            numAsInt += Character.isDigit(s.charAt(i)) ? s.charAt(i) - '0' : s.charAt(i) - 'A' + 10;
+        }
+
+        return (isNegative ? "-" : "") + (numAsInt == 0 ? "0" : constructFromBase(numAsInt, b2));
+    }
+
+    static String constructFromBase(int i, int base) {
+        return i == 0 ? "" : constructFromBase(i / base, base) + (char)(i % base >= 10 ? 'A' + i % base - 10 : '0' + i % base);
+    }
 }

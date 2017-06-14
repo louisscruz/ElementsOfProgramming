@@ -67,4 +67,34 @@ class StringsTest {
             assertEquals(702, answer);
         }
     }
+
+    @Nested
+    class replaceRemoveTests {
+        @Test
+        @DisplayName("should properly remove b's")
+        void removeB() {
+            char[] chars = new char[]{'b', 'b', 'c', 'c'};
+            final int answer = Strings.replaceAndRemove(2, chars);
+            assertEquals(0, answer);
+            assertArrayEquals(new char[]{'b', 'b', 'c', 'c'}, chars);
+        }
+
+        @Test
+        @DisplayName("should properly add d's")
+        void addA() {
+            char[] chars = new char[]{'a', 'a', 'c', 'c'};
+            final int answer = Strings.replaceAndRemove(2, chars);
+            assertEquals(4, answer);
+            assertArrayEquals(new char[]{'d', 'd', 'd', 'd'}, chars);
+        }
+
+        @Test
+        @DisplayName("should properly add d's and remove b's")
+        void addARemoveB() {
+            char[] chars = new char[]{'a', 'b', 'a', 'c', 'c'};
+            final int answer = Strings.replaceAndRemove(3, chars);
+            assertEquals(4, answer);
+            assertArrayEquals(new char[]{'d', 'd', 'd', 'd', 'c'}, chars);
+        }
+    }
 }

@@ -151,11 +151,34 @@ class StringsTest {
     @Nested
     class phoneMnemonicTests {
         @Test
-        @DisplayName("shoul properly return the correct number of strings")
+        @DisplayName("should properly return the correct number of strings")
         void phoneMnemonic() {
             assertEquals((int)Math.pow(3, 7), Strings.phoneMnemonic("2222222").size());
             assertEquals((int)Math.pow(4, 7), Strings.phoneMnemonic("7777777").size());
             assertEquals((int)(Math.pow(3, 3) * Math.pow(4, 4)), Strings.phoneMnemonic("2227777").size());
+        }
+    }
+
+    @Nested
+    class rabinKarpTests {
+        @Nested
+        class whenExists {
+            @Test
+            @DisplayName("should properly return the start index")
+            void efghTest() {
+                final String text = "abcdefgefghefg";
+                assertEquals(7, Strings.rabinKarp(text, "efgh"));
+            }
+        }
+
+        @Nested
+        class whenDoesNotExist {
+            @Test
+            @DisplayName("should return -1")
+            void noExist() {
+                final String text = "abcdefghijklmnop";
+                assertEquals(-1, Strings.rabinKarp(text, "cbda"));
+            }
         }
     }
 }

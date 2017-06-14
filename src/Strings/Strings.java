@@ -46,4 +46,15 @@ public class Strings {
     static String constructFromBase(int i, int base) {
         return i == 0 ? "" : constructFromBase(i / base, base) + (char)(i % base >= 10 ? 'A' + i % base - 10 : '0' + i % base);
     }
+
+    public static int spreadsheetEncode(final String s) {
+        int result = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            final int c = s.charAt(i) - 'A' + 1;
+            result = (result * 26) + c;
+        }
+
+        return result;
+    }
 }

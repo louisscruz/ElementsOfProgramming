@@ -50,4 +50,21 @@ class StringsTest {
             assertEquals("1111", answer);
         }
     }
+
+    @Nested
+    class spreadsheetEncodeTests {
+        @Test
+        @DisplayName("should properly convert numbers less than twenty-six")
+        void convertSmall() {
+            final int answer = Strings.spreadsheetEncode("Y");
+            assertEquals(25, answer);
+        }
+
+        @Test
+        @DisplayName("should properly convert numbers greater than twenty-six")
+        void convertLarge() {
+            final int answer = Strings.spreadsheetEncode("ZZ");
+            assertEquals(702, answer);
+        }
+    }
 }

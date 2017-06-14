@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/Strings/StringsTest$baseConvertTest.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strings/Strings.java" afterPath="$PROJECT_DIR$/src/Strings/Strings.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Strings/StringsTest.java" afterPath="$PROJECT_DIR$/src/Strings/StringsTest.java" />
     </list>
@@ -19,21 +20,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Strings.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Strings.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Strings/Strings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="127" lean-forward="false" selection-start-line="46" selection-start-column="127" selection-end-line="46" selection-end-column="127" />
+            <state relative-caret-position="810">
+              <caret line="54" column="39" lean-forward="true" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringsTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StringsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Strings/StringsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            <state relative-caret-position="648">
+              <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -601,34 +602,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StringsTest - 2017.06.13 at 17h 37m 13s.xml">
+    <history-entry file="StringsTest - 2017.06.13 at 21h 24m 04s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.13 at 17h 40m 12s.xml">
+    <history-entry file="StringsTest - 2017.06.13 at 21h 24m 27s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.13 at 17h 44m 58s.xml">
+    <history-entry file="StringsTest - 2017.06.13 at 21h 33m 12s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.13 at 17h 46m 38s.xml">
+    <history-entry file="StringsTest - 2017.06.13 at 21h 33m 38s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.13 at 17h 47m 02s.xml">
+    <history-entry file="StringsTest - 2017.06.13 at 21h 34m 49s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.13 at 17h 50m 45s.xml">
+    <history-entry file="StringsTest - 2017.06.13 at 21h 35m 05s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.13 at 17h 54m 49s.xml">
+    <history-entry file="StringsTest - 2017.06.13 at 21h 52m 30s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.13 at 18h 16m 39s.xml">
+    <history-entry file="StringsTest - 2017.06.13 at 21h 52m 56s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.13 at 18h 17m 59s.xml">
+    <history-entry file="StringsTest - 2017.06.13 at 21h 54m 04s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.13 at 19h 48m 16s.xml">
+    <history-entry file="StringsTest - 2017.06.13 at 21h 54m 26s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -883,21 +884,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strings/Strings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="127" lean-forward="false" selection-start-line="46" selection-start-column="127" selection-end-line="46" selection-end-column="127" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Strings/StringsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        <state relative-caret-position="648">
+          <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Strings/Strings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="39" lean-forward="true" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

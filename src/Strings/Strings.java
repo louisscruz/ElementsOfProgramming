@@ -1,5 +1,8 @@
 package Strings;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class Strings {
     public static String intToString(int x) {
         final boolean isNegative = x < 0;
@@ -126,6 +129,28 @@ public class Strings {
             char tmp = input[start];
             input[start++] = input[end];
             input[end--] = tmp;
+        }
+    }
+
+    public static List<String> phoneMnemonic(String number) {
+        char[] partialMnemonic = new char[number.length()];
+        List<String> mnemonics = new ArrayList<>();
+        generateMnemonics(number, 0, partialMnemonic, mnemonics);
+        return mnemonics;
+    }
+
+    private static final String[] MAPPING = {"0", "1", "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"};
+
+    private static void generateMnemonics(String number, int digit, char[] partialMnemonic, List<String> mnemonics) {
+        if (digit == number.length()) {
+            mnemonics.add(new String(partialMnemonic));
+        } else {
+            final String options = MAPPING[number.charAt(digit) - '0'];
+
+            for (int i = 0; i < options.length(); i++) {
+                partialMnemonic[digit] = options.charAt(i);
+                generateMnemonics(number, digit + 1, partialMnemonic, mnemonics);
+            }
         }
     }
 }

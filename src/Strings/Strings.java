@@ -2,6 +2,8 @@ package Strings;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Strings {
     public static String intToString(int x) {
@@ -152,6 +154,154 @@ public class Strings {
                 generateMnemonics(number, digit + 1, partialMnemonic, mnemonics);
             }
         }
+    }
+
+    public static String lookAndSay(int n) {
+        String s = "1";
+
+        for (int i = 1; i < n; i++) {
+            s = nextNumber(s);
+        }
+
+        return s;
+    }
+
+    private static String nextNumber(String s) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i++) {
+            int count = 1;
+
+            while (i + 1 < s.length() && s.charAt(i) == s.charAt(i + 1)) {
+                ++i;
+                ++count;
+            }
+
+            result.append(count);
+            result.append(s.charAt(i));
+        }
+
+        return result.toString();
+    }
+
+    public static int romanToInteger(String s) {
+        Map<Character, Integer> T = new HashMap<Character, Integer>() {
+            {
+                put('I', 1);
+                put('V', 5);
+                put('X', 10);
+                put('L', 50);
+                put('C', 100);
+                put('D', 500);
+                put('M', 1000);
+            }
+        };
+
+        int sum = T.get(s.charAt(s.length() - 1));
+
+        for (int i = s.length() - 2; i >= 0; i--) {
+            if (T.get(s.charAt(i)) < T.get(s.charAt(i + 1))) {
+                sum -= T.get(s.charAt(i));
+            } else {
+                sum += T.get(s.charAt(i));
+            }
+        }
+
+        return sum;
+    }
+
+    public static List<String> getValidAddress(String s) {
+        List<String> result = new ArrayList<>();
+
+        for (int i = 1; i < 4 && i < s.length();  i++) {
+            final String first = s.substring(0, i);
+
+            if (isValidPart(first)) {
+                for (int j = 1; i + j < s.length() && j < 4; j++) {
+                    final String second = s.substring(i, i + j);
+
+                    if (isValidPart(second)) {
+                        for (int k = 1; i + j + k < s.length() && k < 4; k++) {
+                            final String third = s.substring(i + j, i + j + k);
+                            final String fourth = s.substring(i + j + k);
+
+                            if (isValidPart(third) && isValidPart(fourth)) {
+                                result.add(first + "." + second + "." + third + "." + fourth);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
+    private static boolean isValidPart(String s) {
+        if (s.length() > 3) return false;
+
+        if (s.startsWith("0") && s.length() > 1) return false;
+
+        final int val = Integer.parseInt(s);
+
+        return val <= 255 && val >= 0;
+    }
+
+    public static String snakeString(String s) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 1; i < s.length(); i += 4) {
+            result.append(s.charAt(i));
+        }
+
+        for (int i = 0; i < s.length(); i += 2) {
+            result.append(s.charAt(i));
+        }
+
+        for (int i = 3; i < s.length(); i += 4) {
+            result.append(s.charAt(i));
+        }
+
+        return result.toString();
+    }
+
+    public static String decoding(String s) {
+        int count = 0;
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+
+            if (Character.isDigit(c)) {
+                count = count * 10 + c - '0';
+            } else {
+                while (count > 0) {
+                    result.append(c);
+                    count--;
+                }
+            }
+        }
+
+        return result.toString();
+    }
+
+    public static String encoding(String s) {
+        int count = 1;
+
+        StringBuilder ss = new StringBuilder();
+
+        for (int i = 1; i <= s.length(); i++) {
+            if (i == s.length() || s.charAt(i) != s.charAt(i - 1)) {
+                ss.append(count);
+                ss.append(s.charAt(i - 1));
+                count = 1;
+            } else {
+                count++;
+            }
+        }
+
+        return ss.toString();
     }
 
     public static int rabinKarp(String t, String s) {

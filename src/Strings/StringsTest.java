@@ -160,6 +160,60 @@ class StringsTest {
     }
 
     @Nested
+    class lookSayTests {
+        @Test
+        @DisplayName("should properly return the correct string")
+        void lookSay() {
+            assertEquals("1113213211", Strings.lookAndSay(8));
+        }
+    }
+
+    @Nested
+    class romanNumeralTests {
+        @Test
+        @DisplayName("should properly return the correct integer")
+        void romanNumerals() {
+            assertEquals(39, Strings.romanToInteger("XXXIX"));
+        }
+    }
+
+    @Nested
+    class validAddressTests {
+        @Test
+        @DisplayName("should properly return all possibilities")
+        void validAddress() {
+            assertEquals(1, Strings.getValidAddress("33333333").size());
+        }
+    }
+
+    @Nested
+    class snakeStringTests {
+        @Test
+        @DisplayName("should properly return the correct string")
+        void snakeString() {
+            assertEquals("e_lHloWrdlo!", Strings.snakeString("Hello_World!"));
+        }
+    }
+
+    @Nested
+    class encodeTests {
+        @Test
+        @DisplayName("should properly return the correct string")
+        void encode() {
+            assertEquals("4a3b2c", Strings.encoding("aaaabbbcc"));
+        }
+    }
+
+    @Nested
+    class decodeTests {
+        @Test
+        @DisplayName("should properly return the correct string")
+        void decode() {
+            assertEquals("aaaabbbcc", Strings.decoding("4a3b2c"));
+        }
+    }
+
+    @Nested
     class rabinKarpTests {
         @Nested
         class whenExists {

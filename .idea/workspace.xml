@@ -19,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Strings.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Strings.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Strings/Strings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="993">
-              <caret line="185" column="18" lean-forward="false" selection-start-line="185" selection-start-column="18" selection-end-line="185" selection-end-column="18" />
+            <state relative-caret-position="768">
+              <caret line="297" column="26" lean-forward="false" selection-start-line="297" selection-start-column="26" selection-end-line="297" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,13 +31,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringsTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StringsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Strings/StringsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1131">
-              <caret line="175" column="17" lean-forward="true" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
+            <state relative-caret-position="861">
+              <caret line="211" column="66" lean-forward="false" selection-start-line="211" selection-start-column="66" selection-end-line="211" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5245#5246#0" expanded="true" />
+                <element signature="e#5318#5319#0" expanded="true" />
+                <element signature="e#5479#5480#0" expanded="true" />
+                <element signature="e#5552#5553#0" expanded="true" />
+                <element signature="e#5710#5711#0" expanded="true" />
+                <element signature="e#5793#5794#0" expanded="true" />
+                <element signature="e#5950#5951#0" expanded="true" />
+                <element signature="e#6039#6040#0" expanded="true" />
+                <element signature="e#6186#6187#0" expanded="true" />
+                <element signature="e#6263#6264#0" expanded="true" />
+                <element signature="e#6410#6411#0" expanded="true" />
+                <element signature="e#6487#6488#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,8 +86,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/PrimitiveTypes/PrimitiveTypes.java" />
         <option value="$PROJECT_DIR$/src/Arrays/Arrays.java" />
-        <option value="$PROJECT_DIR$/src/Strings/Strings.java" />
         <option value="$PROJECT_DIR$/src/Strings/StringsTest.java" />
+        <option value="$PROJECT_DIR$/src/Strings/Strings.java" />
       </list>
     </option>
   </component>
@@ -584,6 +596,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="" />
@@ -603,39 +618,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StringsTest - 2017.06.13 at 23h 38m 09s.xml">
+    <history-entry file="StringsTest - 2017.06.14 at 22h 30m 41s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.13 at 23h 39m 38s.xml">
+    <history-entry file="StringsTest - 2017.06.14 at 22h 30m 52s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.13 at 23h 40m 00s.xml">
+    <history-entry file="StringsTest - 2017.06.14 at 22h 41m 37s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 11h 33m 02s.xml">
+    <history-entry file="StringsTest - 2017.06.14 at 22h 42m 09s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 11h 34m 45s.xml">
+    <history-entry file="StringsTest - 2017.06.14 at 22h 42m 29s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 11h 35m 17s.xml">
+    <history-entry file="StringsTest - 2017.06.14 at 22h 46m 50s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 11h 35m 46s.xml">
+    <history-entry file="StringsTest - 2017.06.14 at 22h 51m 49s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 11h 36m 09s.xml">
+    <history-entry file="StringsTest - 2017.06.14 at 22h 54m 09s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 16h 42m 05s.xml">
+    <history-entry file="StringsTest - 2017.06.14 at 22h 55m 09s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 16h 43m 20s.xml">
+    <history-entry file="StringsTest - 2017.06.14 at 22h 56m 38s.xml">
       <configuration name="StringsTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -700,6 +715,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5245#5246#0" expanded="true" />
+            <element signature="e#5318#5319#0" expanded="true" />
+            <element signature="e#5479#5480#0" expanded="true" />
+            <element signature="e#5552#5553#0" expanded="true" />
+            <element signature="e#5710#5711#0" expanded="true" />
+            <element signature="e#5793#5794#0" expanded="true" />
+            <element signature="e#5950#5951#0" expanded="true" />
+            <element signature="e#6039#6040#0" expanded="true" />
+            <element signature="e#6186#6187#0" expanded="true" />
+            <element signature="e#6263#6264#0" expanded="true" />
+            <element signature="e#6410#6411#0" expanded="true" />
+            <element signature="e#6487#6488#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -720,6 +747,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5245#5246#0" expanded="true" />
+            <element signature="e#5318#5319#0" expanded="true" />
+            <element signature="e#5479#5480#0" expanded="true" />
+            <element signature="e#5552#5553#0" expanded="true" />
+            <element signature="e#5710#5711#0" expanded="true" />
+            <element signature="e#5793#5794#0" expanded="true" />
+            <element signature="e#5950#5951#0" expanded="true" />
+            <element signature="e#6039#6040#0" expanded="true" />
+            <element signature="e#6186#6187#0" expanded="true" />
+            <element signature="e#6263#6264#0" expanded="true" />
+            <element signature="e#6410#6411#0" expanded="true" />
+            <element signature="e#6487#6488#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -922,20 +961,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strings/Strings.java">
+    <entry file="file://$PROJECT_DIR$/src/Strings/StringsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="993">
-          <caret line="185" column="18" lean-forward="false" selection-start-line="185" selection-start-column="18" selection-end-line="185" selection-end-column="18" />
+        <state relative-caret-position="861">
+          <caret line="211" column="66" lean-forward="false" selection-start-line="211" selection-start-column="66" selection-end-line="211" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5245#5246#0" expanded="true" />
+            <element signature="e#5318#5319#0" expanded="true" />
+            <element signature="e#5479#5480#0" expanded="true" />
+            <element signature="e#5552#5553#0" expanded="true" />
+            <element signature="e#5710#5711#0" expanded="true" />
+            <element signature="e#5793#5794#0" expanded="true" />
+            <element signature="e#5950#5951#0" expanded="true" />
+            <element signature="e#6039#6040#0" expanded="true" />
+            <element signature="e#6186#6187#0" expanded="true" />
+            <element signature="e#6263#6264#0" expanded="true" />
+            <element signature="e#6410#6411#0" expanded="true" />
+            <element signature="e#6487#6488#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strings/StringsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Strings/Strings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1131">
-          <caret line="175" column="17" lean-forward="true" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
+        <state relative-caret-position="768">
+          <caret line="297" column="26" lean-forward="false" selection-start-line="297" selection-start-column="26" selection-end-line="297" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -25,4 +25,18 @@ class LinkedListsTest {
             assertTrue(answer.equals(answerList));
         }
     }
+
+    @Nested
+    class reverseListTests {
+        @Test
+        @DisplayName("properly reverses the correct portion of the list")
+        void reverseLists() {
+            ListNode<Integer> originalList = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(3, null)));
+            ListNode<Integer> answerList = new ListNode<Integer>(1, new ListNode<Integer>(3, new ListNode<Integer>(2, null)));
+
+            ListNode<Integer> answer = LinkedLists.reverseSublist(originalList, 2, 3);
+
+            assertTrue(answer.equals(answerList));
+        }
+    }
 }

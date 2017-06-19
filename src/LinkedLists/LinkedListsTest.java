@@ -141,4 +141,18 @@ class LinkedListsTest {
             assertTrue(answer.equals(answerList));
         }
     }
+
+    @Nested
+    class removeKthNodeTests {
+        @Test
+        @DisplayName("properly removes the correct node")
+        void removesKthNode() {
+            ListNode<Integer> list = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(3, null)));
+            ListNode<Integer> answerList = new ListNode<Integer>(1, new ListNode<Integer>(3, null));
+
+            LinkedLists.removeKthNode(list, 2);
+
+            assertTrue(list.equals(answerList));
+        }
+    }
 }

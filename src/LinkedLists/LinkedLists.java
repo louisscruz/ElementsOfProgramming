@@ -161,4 +161,23 @@ public class LinkedLists {
 
         return list;
     }
+
+    public static void removeKthNode(ListNode<Integer> list, int k) {
+        if (k < 1) throw new IllegalArgumentException();
+
+        ListNode<Integer> current = list, scout = list;
+
+        while (k-- > 0 && scout != null) {
+            scout = scout.next;
+        }
+
+        if (scout == null) return;
+
+        while (scout != null) {
+            scout = scout.next;
+            current = current.next;
+        }
+
+        deleteNode(current);
+    }
 }

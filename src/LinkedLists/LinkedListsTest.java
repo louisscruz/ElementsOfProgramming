@@ -110,4 +110,21 @@ class LinkedListsTest {
             }
         }
     }
+
+    @Nested
+    class deleteNodeTests {
+        // Give more time, I would test that the appropriate error is thrown if the node is the tail node
+
+        @Test
+        @DisplayName("properly resets node value")
+        void deleteNode() {
+            ListNode<Integer> list = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(3, null)));
+            ListNode<Integer> nodeToDelete = list.next;
+            ListNode<Integer> answerList = new ListNode<Integer>(1, new ListNode<Integer>(3, null));
+
+            LinkedLists.deleteNode(nodeToDelete);
+
+            assertTrue(list.equals(answerList));
+        }
+    }
 }

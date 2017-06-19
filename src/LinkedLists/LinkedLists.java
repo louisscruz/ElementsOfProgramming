@@ -140,4 +140,11 @@ public class LinkedLists {
 
         return first == second ? first : firstCycle;
     }
+
+    public static void deleteNode(ListNode<Integer> node) {
+        if (node.next == null) throw new IllegalArgumentException();
+
+        node.data = node.next.data;
+        node.next = node.next.next;
+    }
 }

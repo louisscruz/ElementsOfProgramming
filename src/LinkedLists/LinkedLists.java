@@ -147,4 +147,18 @@ public class LinkedLists {
         node.data = node.next.data;
         node.next = node.next.next;
     }
+
+    public static ListNode<Integer> uniqueList(ListNode<Integer> list) {
+        ListNode<Integer> currentNode = list;
+
+        while (currentNode.next != null) {
+            if (currentNode.next.data == currentNode.data) {
+                currentNode.next = currentNode.next.next;
+            } else {
+                currentNode = currentNode.next;
+            }
+        }
+
+        return list;
+    }
 }

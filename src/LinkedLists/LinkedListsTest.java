@@ -127,4 +127,18 @@ class LinkedListsTest {
             assertTrue(list.equals(answerList));
         }
     }
+
+    @Nested
+    class removeDuplicatesTests {
+        @Test
+        @DisplayName("does not mutate unique lists")
+        void uniqueList() {
+            ListNode<Integer> list = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(2, new ListNode<Integer>(3, new ListNode<Integer>(3, new ListNode<Integer>(3, null))))));
+            ListNode<Integer> answerList = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(3, null)));
+
+            ListNode<Integer> answer = LinkedLists.uniqueList(list);
+
+            assertTrue(answer.equals(answerList));
+        }
+    }
 }

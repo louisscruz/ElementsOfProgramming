@@ -130,7 +130,6 @@ public class LinkedLists {
         if (firstStemLength > secondStemLength) {
             first = first.offset(count);
         } else {
-            System.out.println(firstCycle.data);
             second = second.offset(count);
         }
 

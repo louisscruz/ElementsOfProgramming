@@ -45,4 +45,100 @@ public class LinkedLists {
 
         return dummyHead.next;
     }
+
+    public static ListNode<Integer> hasCycle(ListNode<Integer> head) {
+        ListNode<Integer> fast = head, slow = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (slow == fast) {
+                int cycleLength = 0;
+
+                do {
+                    cycleLength++;
+                    fast = fast.next;
+                } while (slow != fast);
+
+                ListNode<Integer> scoutHead = head;
+
+                while (cycleLength-- > 0) {
+                    scoutHead = scoutHead.next;
+                }
+
+                ListNode<Integer> scoutTail = head;
+
+                while (scoutHead != scoutTail) {
+                    scoutHead = scoutHead.next;
+                    scoutTail = scoutTail.next;
+                }
+
+                return scoutTail;
+            }
+        }
+
+        return null;
+    }
+
+    public static ListNode<Integer> noncyclicOverlap(ListNode<Integer> first, ListNode<Integer> second) {
+        int firstSize = first.length(), secondSize = second.length();
+
+        ListNode<Integer> firstStart = first, secondStart = second;
+
+        if (firstSize > secondSize) {
+            firstStart = first.offset(firstSize - secondSize);
+        } else if (secondSize > firstSize) {
+            secondStart = second.offset(secondSize - firstSize);
+        }
+
+        while (firstStart != null && secondStart != null) {
+            if (firstStart == secondStart) {
+                return firstStart;
+            }
+
+            firstStart = firstStart.next;
+            secondStart = secondStart.next;
+        }
+
+        return null;
+    }
+
+    public static ListNode<Integer> cyclicOverlap(ListNode<Integer> first, ListNode<Integer> second) {
+        ListNode<Integer> firstCycle = hasCycle(first);
+        ListNode<Integer> secondCycle = hasCycle(second);
+
+        if (firstCycle == null && secondCycle == null) {
+            return noncyclicOverlap(first, second);
+        } else if ((firstCycle != null && secondCycle == null) || (firstCycle == null && secondCycle != null)) {
+            return null;
+        }
+
+        ListNode<Integer> temp = secondCycle;
+
+        do {
+            temp = temp.next;
+        } while (temp != firstCycle && temp != secondCycle);
+
+        if (temp != firstCycle) {
+            return null;
+        }
+
+        int firstStemLength = first.distance(firstCycle), secondStemLength = second.distance(secondCycle);
+        int count = Math.abs(firstStemLength - secondStemLength);
+
+        if (firstStemLength > secondStemLength) {
+            first = first.offset(count);
+        } else {
+            System.out.println(firstCycle.data);
+            second = second.offset(count);
+        }
+
+        while (first != second && first != firstCycle && second != secondCycle) {
+            first = first.next;
+            second = second.next;
+        }
+
+        return first == second ? first : firstCycle;
+    }
 }

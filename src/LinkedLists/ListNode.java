@@ -39,4 +39,43 @@ public class ListNode<T> {
 
         return true;
     }
+
+    public int length() {
+        ListNode<T> current = this;
+        int i = 1;
+
+        while (current.next != null) {
+            current = current.next;
+            i++;
+        }
+
+        return i;
+    }
+
+    public ListNode<T> offset(int k) {
+        ListNode<T> current = this;
+
+        while (k > 0) {
+            current = current.next;
+            k--;
+        }
+
+        return current;
+    }
+
+    public int distance(ListNode<T> x) {
+        ListNode<T> current = this;
+
+        int count = 0;
+
+        while (current != null) {
+            if (current == x) {
+                return count;
+            }
+            count++;
+            current = current.next;
+        }
+
+        return -1;
+    }
 }

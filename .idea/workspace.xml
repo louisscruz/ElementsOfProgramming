@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedLists/LinkedLists.java" afterPath="$PROJECT_DIR$/src/LinkedLists/LinkedLists.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedLists/LinkedListsTest.java" afterPath="$PROJECT_DIR$/src/LinkedLists/LinkedListsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedLists/ListNode.java" afterPath="$PROJECT_DIR$/src/LinkedLists/ListNode.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,13 +20,36 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LinkedLists.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LinkedLists.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedLists.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="30" lean-forward="false" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+            <state relative-caret-position="738">
+              <caret line="130" column="40" lean-forward="true" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
               <folding>
                 <element signature="e#995#1004#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LinkedListsTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedListsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="843">
+              <caret line="106" column="90" lean-forward="false" selection-start-line="106" selection-start-column="90" selection-end-line="106" selection-end-column="90" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1164#1173#0" expanded="true" />
+                <element signature="e#1291#1300#0" expanded="true" />
+                <element signature="e#1727#1736#0" expanded="true" />
+                <element signature="e#2167#2176#0" expanded="true" />
+                <element signature="e#2292#2301#0" expanded="true" />
+                <element signature="e#2681#2690#0" expanded="true" />
+                <element signature="e#2810#2819#0" expanded="true" />
+                <element signature="e#3208#3217#0" expanded="true" />
+                <element signature="e#3396#3405#0" expanded="true" />
+                <element signature="e#3785#3794#0" expanded="true" />
+                <element signature="e#3973#3982#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,23 +58,9 @@
       <file leaf-file-name="ListNode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkedLists/ListNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+            <state relative-caret-position="708">
+              <caret line="66" column="34" lean-forward="false" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkedListsTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedListsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="50" lean-forward="false" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1164#1173#0" expanded="true" />
-                <element signature="e#1291#1300#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -90,8 +99,8 @@
         <option value="$PROJECT_DIR$/src/Strings/StringsTest.java" />
         <option value="$PROJECT_DIR$/src/Strings/Strings.java" />
         <option value="$PROJECT_DIR$/src/LinkedLists.java" />
-        <option value="$PROJECT_DIR$/src/LinkedLists/ListNode.java" />
         <option value="$PROJECT_DIR$/src/LinkedLists/LinkedLists.java" />
+        <option value="$PROJECT_DIR$/src/LinkedLists/ListNode.java" />
         <option value="$PROJECT_DIR$/src/LinkedLists/LinkedListsTest.java" />
       </list>
     </option>
@@ -669,39 +678,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 21h 26m 20s.xml">
+    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 22h 59m 43s.xml">
       <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 22h 30m 52s.xml">
-      <configuration name="StringsTest" configurationId="JUnit" />
+    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 33m 15s.xml">
+      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 22h 41m 37s.xml">
-      <configuration name="StringsTest" configurationId="JUnit" />
+    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 35m 08s.xml">
+      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 22h 42m 09s.xml">
-      <configuration name="StringsTest" configurationId="JUnit" />
+    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 36m 37s.xml">
+      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 22h 42m 29s.xml">
-      <configuration name="StringsTest" configurationId="JUnit" />
+    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 37m 35s.xml">
+      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 22h 46m 50s.xml">
-      <configuration name="StringsTest" configurationId="JUnit" />
+    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 39m 53s.xml">
+      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 22h 51m 49s.xml">
-      <configuration name="StringsTest" configurationId="JUnit" />
+    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 40m 12s.xml">
+      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 22h 54m 09s.xml">
-      <configuration name="StringsTest" configurationId="JUnit" />
+    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 41m 00s.xml">
+      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 22h 55m 09s.xml">
-      <configuration name="StringsTest" configurationId="JUnit" />
+    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 42m 33s.xml">
+      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringsTest - 2017.06.14 at 22h 56m 38s.xml">
-      <configuration name="StringsTest" configurationId="JUnit" />
+    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 43m 05s.xml">
+      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -784,6 +793,15 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1164#1173#0" expanded="true" />
             <element signature="e#1291#1300#0" expanded="true" />
+            <element signature="e#1727#1736#0" expanded="true" />
+            <element signature="e#2167#2176#0" expanded="true" />
+            <element signature="e#2292#2301#0" expanded="true" />
+            <element signature="e#2681#2690#0" expanded="true" />
+            <element signature="e#2810#2819#0" expanded="true" />
+            <element signature="e#3208#3217#0" expanded="true" />
+            <element signature="e#3396#3405#0" expanded="true" />
+            <element signature="e#3785#3794#0" expanded="true" />
+            <element signature="e#3973#3982#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1061,32 +1079,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedListsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="843">
+          <caret line="106" column="90" lean-forward="false" selection-start-line="106" selection-start-column="90" selection-end-line="106" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1164#1173#0" expanded="true" />
+            <element signature="e#1291#1300#0" expanded="true" />
+            <element signature="e#1727#1736#0" expanded="true" />
+            <element signature="e#2167#2176#0" expanded="true" />
+            <element signature="e#2292#2301#0" expanded="true" />
+            <element signature="e#2681#2690#0" expanded="true" />
+            <element signature="e#2810#2819#0" expanded="true" />
+            <element signature="e#3208#3217#0" expanded="true" />
+            <element signature="e#3396#3405#0" expanded="true" />
+            <element signature="e#3785#3794#0" expanded="true" />
+            <element signature="e#3973#3982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedLists/ListNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        <state relative-caret-position="708">
+          <caret line="66" column="34" lean-forward="false" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedLists.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="30" lean-forward="false" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+        <state relative-caret-position="738">
+          <caret line="130" column="40" lean-forward="true" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
           <folding>
             <element signature="e#995#1004#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedListsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="50" lean-forward="false" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1164#1173#0" expanded="true" />
-            <element signature="e#1291#1300#0" expanded="true" />
           </folding>
         </state>
       </provider>

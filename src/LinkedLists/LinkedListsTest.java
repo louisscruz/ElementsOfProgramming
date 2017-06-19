@@ -39,4 +39,75 @@ class LinkedListsTest {
             assertTrue(answer.equals(answerList));
         }
     }
+
+    @Nested
+    class hasCycle {
+        @Test
+        @DisplayName("properly detects a cycle and returns the cycle point")
+        void hasCycle() {
+            ListNode<Integer> originalList = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(3, null)));
+            originalList.next.next.next = originalList.next;
+
+            assertEquals(originalList.next, LinkedLists.hasCycle(originalList));
+        }
+    }
+
+    @Nested
+    class noncyclicOverlapTests {
+        @Test
+        @DisplayName("properly finds the point of overlap")
+        void noncyclicOverlap() {
+            ListNode<Integer> shortList = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(3, null)));
+            ListNode<Integer> longList = new ListNode<Integer>(0, shortList);
+
+            assertEquals(shortList, LinkedLists.noncyclicOverlap(shortList, longList));
+        }
+    }
+
+    @Nested
+    class cyclicOverlapTests {
+        @Nested
+        class whenNoCycles {
+            @Test
+            @DisplayName("properly returns the nocycle result")
+            void noCycles() {
+                ListNode<Integer> shortList = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(3, null)));
+                ListNode<Integer> longList = new ListNode<Integer>(0, shortList);
+
+                ListNode<Integer> answer = LinkedLists.cyclicOverlap(shortList, longList);
+
+                assertTrue(answer.equals(shortList));
+            }
+        }
+
+        @Nested
+        class whenOneCycle {
+            @Test
+            @DisplayName("properly returns null")
+            void oneCycle() {
+                ListNode<Integer> shortList = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(3, null)));
+                shortList.next.next.next = shortList.next;
+                ListNode<Integer> longList = new ListNode<Integer>(0, null);
+
+                ListNode<Integer> answer = LinkedLists.cyclicOverlap(shortList, longList);
+
+                assertNull(answer);
+            }
+        }
+
+        @Nested
+        class whenTwoCycles {
+            @Test
+            @DisplayName("properly returns the correct node")
+            void twoCycles() {
+                ListNode<Integer> shortList = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(3, null)));
+                shortList.next.next.next = shortList.next;
+                ListNode<Integer> longList = new ListNode<Integer>(0, shortList);
+
+                ListNode<Integer> answer = LinkedLists.cyclicOverlap(shortList, longList);
+
+                assertEquals(shortList, answer);
+            }
+        }
+    }
 }

@@ -279,4 +279,21 @@ public class LinkedLists {
 
         return lessHead.next;
     }
+
+    public static ListNode<Integer> addTwoNumbers(ListNode<Integer> a, ListNode<Integer> b) {
+        ListNode<Integer> dummyHead = new ListNode<Integer>(0, null);
+        ListNode<Integer> placeIter = dummyHead;
+        int carry = 0;
+
+        while (a != null || b != null || carry != 0) {
+            int val = carry + (a != null ? a.data : 0) + (b != null ? b.data : 0);
+            a = a != null ? a.next : null;
+            b = b != null ? b.next : null;
+            placeIter.next = new ListNode<Integer>(val % 10, null);
+            carry = val / 10;
+            placeIter = placeIter.next;
+        }
+
+        return dummyHead.next;
+    }
 }

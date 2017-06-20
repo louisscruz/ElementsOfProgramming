@@ -216,4 +216,19 @@ class LinkedListsTest {
             assertTrue(answer.equals(answerList));
         }
     }
+
+    @Nested
+    class addTwoNumbersTests {
+        @Test
+        @DisplayName("returns the correct list")
+        void addTwoNumbers() {
+            ListNode<Integer> num1 = new ListNode<Integer>(3, new ListNode<Integer>(1, new ListNode<Integer>(4, null)));
+            ListNode<Integer> num2 = new ListNode<Integer>(7, new ListNode<Integer>(0, new ListNode<Integer>(9, null)));
+            ListNode<Integer> answerList = new ListNode<Integer>(0, new ListNode<Integer>(2, new ListNode<Integer>(3, new ListNode<Integer>(1, null))));
+
+            ListNode<Integer> answer = LinkedLists.addTwoNumbers(num1, num2);
+
+            assertTrue(answer.equals(answerList));
+        }
+    }
 }

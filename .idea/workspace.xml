@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate" />
+    <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StacksAndQueues/StacksAndQueues.java" afterPath="$PROJECT_DIR$/src/StacksAndQueues/StacksAndQueues.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StacksAndQueues/StacksAndQueuesTest.java" afterPath="$PROJECT_DIR$/src/StacksAndQueues/StacksAndQueuesTest.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,9 +22,13 @@
       <file leaf-file-name="StacksAndQueues.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StacksAndQueues/StacksAndQueues.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="615">
+              <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#520#521#0" expanded="true" />
+                <element signature="e#581#582#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -29,9 +36,11 @@
       <file leaf-file-name="StacksAndQueuesTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/StacksAndQueues/StacksAndQueuesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="420">
+              <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,6 +177,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElementsOfProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElementsOfProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LinkedLists" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -190,27 +217,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListsTest">
-    <configuration default="false" name="Arrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Arrays.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Arrays.Arrays" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ElementsOfProgramming" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.StacksAndQueuesTest">
     <configuration default="false" name="StringsTest.testAssertEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -301,6 +308,32 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="LinkedLists" />
       <option name="MAIN_CLASS_NAME" value="LinkedLists.LinkedListsTest$isLinkedListPalindromeTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="StacksAndQueuesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="StacksAndQueues.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ElementsOfProgramming" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="StacksAndQueues" />
+      <option name="MAIN_CLASS_NAME" value="StacksAndQueues.StacksAndQueuesTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -598,19 +631,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.LinkedLists in ElementsOfProgramming" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Arrays" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.StringsTest.testAssertEquals" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.StringsTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.LinkedListsTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.LinkedListsTest$isLinkedListPalindromeTests" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.StringsTest.testAssertEquals" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.StringsTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LinkedListsTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.LinkedListsTest$isLinkedListPalindromeTests" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.StacksAndQueuesTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LinkedListsTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.LinkedListsTest$isLinkedListPalindromeTests" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.StringsTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.StringsTest.testAssertEquals" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Arrays" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.StacksAndQueuesTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LinkedListsTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LinkedListsTest$isLinkedListPalindromeTests" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.StringsTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.StringsTest.testAssertEquals" />
       </list>
     </recent_temporary>
   </component>
@@ -671,14 +704,14 @@
     <history-entry file="LinkedListsTest$isLinkedListPalindromeTests - 2017.06.19 at 21h 42m 13s.xml">
       <configuration name="LinkedListsTest$isLinkedListPalindromeTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 41m 00s.xml">
-      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 42m 33s.xml">
-      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 43m 05s.xml">
       <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StacksAndQueuesTest - 2017.06.19 at 23h 32m 59s.xml">
+      <configuration name="StacksAndQueuesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StacksAndQueuesTest - 2017.06.19 at 23h 33m 30s.xml">
+      <configuration name="StacksAndQueuesTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -694,7 +727,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22684853" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22684853" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1106,6 +1139,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkedLists/ListNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="890">
+          <caret line="92" column="26" lean-forward="false" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
+          <folding>
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedLists.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="860">
@@ -1126,8 +1170,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedListsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="177" column="119" lean-forward="false" selection-start-line="177" selection-start-column="119" selection-end-line="177" selection-end-column="119" />
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#8808#8817#0" expanded="true" />
@@ -1135,30 +1179,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkedLists/ListNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="890">
-          <caret line="92" column="26" lean-forward="false" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
-          <folding>
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StacksAndQueues/StacksAndQueues.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="615">
+          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StacksAndQueues/StacksAndQueuesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="420">
+          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

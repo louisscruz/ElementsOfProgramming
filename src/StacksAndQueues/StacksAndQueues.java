@@ -41,4 +41,35 @@ public class StacksAndQueues {
             elementWithCachedMax.addFirst(new ElementWithCachedMax(x, Math.max(x, empty() ? x : max())));
         }
     }
+
+    public static int rpn(String s) {
+        Deque<Integer> stack = new LinkedList<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            int val = c - '0';
+
+            if (val <= 9 && val >= 0) {
+                stack.push(val);
+            } else {
+                int b = stack.pop();
+                int a = stack.pop();
+                int newVal;
+
+                if (c == '+') {
+                    newVal = a + b;
+                } else if (c == '-') {
+                    newVal = a - b;
+                } else if (c == '/') {
+                    newVal = a / b;
+                } else {
+                    newVal = a * b;
+                }
+
+                stack.push(newVal);
+            }
+        }
+
+        return stack.pop();
+    }
 }

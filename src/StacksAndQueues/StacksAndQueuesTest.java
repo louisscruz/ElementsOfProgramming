@@ -26,4 +26,16 @@ class StacksAndQueuesTest {
         }
     }
 
+    @Nested
+    class rpnTests {
+        @Test
+        @DisplayName("returns correct integer")
+        void rpn() {
+            int answer = StacksAndQueues.rpn("443*4+2--");
+
+            assertEquals(-10, answer);
+        }
+
+    }
+
 }

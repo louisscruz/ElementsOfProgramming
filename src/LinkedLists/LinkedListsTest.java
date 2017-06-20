@@ -202,4 +202,18 @@ class LinkedListsTest {
             assertFalse(LinkedLists.isLinkedListPalindrome(list));
         }
     }
+
+    @Nested
+    class listPivotingTests {
+        @Test
+        @DisplayName("properly returns the correct list")
+        void listPivot() {
+            ListNode<Integer> list = new ListNode<Integer>(2, new ListNode<Integer>(2, new ListNode<Integer>(3, new ListNode<Integer>(1, new ListNode<Integer>(3, new ListNode<Integer>(3, null))))));
+            ListNode<Integer> answerList = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(2, new ListNode<Integer>(3, new ListNode<Integer>(3, new ListNode<Integer>(3, null))))));
+
+            ListNode<Integer> answer = LinkedLists.listPivoting(list, 2);
+
+            assertTrue(answer.equals(answerList));
+        }
+    }
 }

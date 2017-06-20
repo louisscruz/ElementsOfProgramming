@@ -247,4 +247,36 @@ public class LinkedLists {
 
         return true;
     }
+
+    public static ListNode<Integer> listPivoting(ListNode<Integer> list, int pivot) {
+        ListNode<Integer> lessHead = new ListNode<Integer>(0, null);
+        ListNode<Integer> equalHead = new ListNode<Integer>(0, null);
+        ListNode<Integer> greaterHead = new ListNode<Integer>(0, null);
+
+        ListNode<Integer> lessIter = lessHead;
+        ListNode<Integer> equalIter = equalHead;
+        ListNode<Integer> greaterIter = greaterHead;
+
+        ListNode<Integer> iter = list;
+
+        while (iter != null) {
+            if (iter.data < pivot) {
+                lessIter.next = iter;
+                lessIter = iter;
+            } else if (iter.data == pivot) {
+                equalIter.next = iter;
+                equalIter = iter;
+            } else {
+                greaterIter.next = iter;
+                greaterIter = iter;
+            }
+            iter = iter.next;
+        }
+
+        greaterIter.next = null;
+        equalIter.next = greaterHead.next;
+        lessIter.next = equalHead.next;
+
+        return lessHead.next;
+    }
 }

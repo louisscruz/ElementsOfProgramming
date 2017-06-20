@@ -169,4 +169,37 @@ class LinkedListsTest {
             assertTrue(answer.equals(shiftedList));
         }
     }
+
+    @Nested
+    class evenOddMergeTests {
+        @Test
+        @DisplayName("properly rotates the links")
+        void evenOddMerge() {
+            ListNode<Integer> list = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(3, new ListNode<Integer>(4, null))));
+            ListNode<Integer> answerList = new ListNode<Integer>(1, new ListNode<Integer>(3, new ListNode<Integer>(2, new ListNode<Integer>(4, null))));
+
+            ListNode<Integer> answer = LinkedLists.evenOddMerge(list);
+
+            assertTrue(answer.equals(answerList));
+        }
+    }
+
+    @Nested
+    class isLinkedListPalindromeTests {
+        @Test
+        @DisplayName("properly detects true")
+        void truePalindrome() {
+            ListNode<Integer> list = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(2, new ListNode<Integer>(1, null))));
+
+            assertTrue(LinkedLists.isLinkedListPalindrome(list));
+        }
+
+        @Test
+        @DisplayName("properly detects false")
+        void falsePalindrome() {
+            ListNode<Integer> list = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(2, new ListNode<Integer>(3, null))));
+
+            assertFalse(LinkedLists.isLinkedListPalindrome(list));
+        }
+    }
 }

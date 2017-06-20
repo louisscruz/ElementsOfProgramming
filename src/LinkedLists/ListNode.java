@@ -78,4 +78,18 @@ public class ListNode<T> {
 
         return -1;
     }
+
+    public ListNode<T> reverseList() {
+        ListNode<T> dummy = new ListNode<T>(null, this);
+        ListNode<T> scout = dummy.next;
+
+        while (scout.next != null) {
+            ListNode<T> temp = scout.next;
+            scout.next = temp.next;
+            temp.next = dummy.next;
+            dummy.next = temp;
+        }
+
+        return dummy.next;
+    }
 }

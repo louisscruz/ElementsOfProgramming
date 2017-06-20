@@ -1,6 +1,7 @@
 package LinkedLists;
 
 import java.util.List;
+import java.util.Arrays;
 
 public class LinkedLists {
     public static ListNode<Integer> mergeLinkedLists(ListNode<Integer> left, ListNode<Integer> right) {
@@ -200,5 +201,50 @@ public class LinkedLists {
         current.next = list;
 
         return newStart;
+    }
+
+    public static ListNode<Integer> evenOddMerge(ListNode<Integer> list) {
+        if (list == null) return list;
+
+        ListNode<Integer> evenDummyHead = new ListNode<Integer>(0, null);
+        ListNode<Integer> oddDummyHead = new ListNode<Integer>(0, null);
+
+        List<ListNode<Integer>> tails = Arrays.asList(evenDummyHead, oddDummyHead);
+
+        int turn = 0;
+
+        for (ListNode<Integer> iter = list; iter != null; iter = iter.next) {
+            tails.get(turn).next = iter;
+            tails.set(turn, tails.get(turn).next);
+            turn ^= 1;
+        }
+
+        tails.get(1).next = null;
+        tails.get(0).next = oddDummyHead.next;
+
+        return evenDummyHead.next;
+    }
+
+    public static boolean isLinkedListPalindrome(ListNode<Integer> list) {
+        ListNode<Integer> slow = list, fast = list;
+
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+
+        ListNode<Integer> firstHalfIter = list;
+        ListNode<Integer> secondHalfIter = slow.reverseList();
+
+        while (secondHalfIter != null && firstHalfIter != null) {
+            if (secondHalfIter.data != firstHalfIter.data) {
+                return false;
+            }
+
+            secondHalfIter = secondHalfIter.next;
+            firstHalfIter = firstHalfIter.next;
+        }
+
+        return true;
     }
 }

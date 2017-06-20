@@ -22,8 +22,8 @@
       <file leaf-file-name="LinkedLists.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedLists.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="173" column="33" lean-forward="false" selection-start-line="173" selection-start-column="33" selection-end-line="173" selection-end-column="33" />
+            <state relative-caret-position="277">
+              <caret line="187" column="26" lean-forward="false" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -32,8 +32,8 @@
       <file leaf-file-name="LinkedListsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedListsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="153" column="0" lean-forward="true" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+            <state relative-caret-position="442">
+              <caret line="166" column="69" lean-forward="false" selection-start-line="166" selection-start-column="69" selection-end-line="166" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -671,11 +671,11 @@
     <history-entry file="LinkedListsTest - 2017.06.19 at 16h 21m 49s.xml">
       <configuration name="LinkedListsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 39m 53s.xml">
-      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
+    <history-entry file="LinkedListsTest - 2017.06.19 at 18h 04m 37s.xml">
+      <configuration name="LinkedListsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 40m 12s.xml">
-      <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
+    <history-entry file="LinkedListsTest - 2017.06.19 at 18h 06m 05s.xml">
+      <configuration name="LinkedListsTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LinkedLists_in_ElementsOfProgramming - 2017.06.18 at 23h 41m 00s.xml">
       <configuration name="LinkedLists in ElementsOfProgramming" configurationId="JUnit" />
@@ -1099,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedListsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="153" column="0" lean-forward="true" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="166" column="69" lean-forward="false" selection-start-line="166" selection-start-column="69" selection-end-line="166" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1109,8 +1109,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedLists.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="173" column="33" lean-forward="false" selection-start-line="173" selection-start-column="33" selection-end-line="173" selection-end-column="33" />
+        <state relative-caret-position="277">
+          <caret line="187" column="26" lean-forward="false" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
           <folding />
         </state>
       </provider>

@@ -180,4 +180,25 @@ public class LinkedLists {
 
         deleteNode(current);
     }
+
+    public static ListNode<Integer> rightShift(ListNode<Integer> list, int shift) {
+        ListNode<Integer> newStart = list, temp = null;
+
+        while (shift-- > 0) {
+            if (shift == 0) temp = newStart;
+            newStart = newStart.next;
+        }
+
+        temp.next = null;
+
+        ListNode<Integer> current = newStart;
+
+        while (current.next != null) {
+            current = current.next;
+        }
+
+        current.next = list;
+
+        return newStart;
+    }
 }

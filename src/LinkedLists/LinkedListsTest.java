@@ -155,4 +155,18 @@ class LinkedListsTest {
             assertTrue(list.equals(answerList));
         }
     }
+
+    @Nested
+    class rightShiftTests {
+        @Test
+        @DisplayName("properly shifts")
+        void rightShift() {
+            ListNode<Integer> list = new ListNode<Integer>(1, new ListNode<Integer>(2, new ListNode<Integer>(3, null)));
+            ListNode<Integer> shiftedList = new ListNode<Integer>(2, new ListNode<Integer>(3, new ListNode<Integer>(1, null)));
+
+            ListNode<Integer> answer = LinkedLists.rightShift(list, 1);
+
+            assertTrue(answer.equals(shiftedList));
+        }
+    }
 }

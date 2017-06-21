@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 
+import java.util.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StacksAndQueuesTest {
@@ -65,6 +67,61 @@ class StacksAndQueuesTest {
         @DisplayName("properly returns correct path when it does not begin with a slash")
         void noSlash() {
             assertEquals("test/thing", StacksAndQueues.shortestEquivalentPath("test/other/../thing"));
+        }
+    }
+
+    @Nested
+    class jumpOrderTests {
+        @Nested
+        class rec {
+            @Test
+            @DisplayName("returns the correct order")
+            void order() {
+                PostingListNode list = new PostingListNode(new PostingListNode(new PostingListNode(null)));
+                list.jump = list.next.next;
+                list.next.next.jump = list.next;
+
+                StacksAndQueues.setJumpOrderRec(list);
+
+                assertEquals(0, list.order);
+                assertEquals(2, list.next.order);
+                assertEquals(1, list.next.next.order);
+            }
+        }
+
+        @Nested
+        class iter {
+            @Test
+            @DisplayName("returns the correct order")
+            void order() {
+                PostingListNode list = new PostingListNode(new PostingListNode(new PostingListNode(null)));
+                list.jump = list.next.next;
+                list.next.next.jump = list.next;
+
+                StacksAndQueues.setJumpOrderIter(list);
+
+                assertEquals(0, list.order);
+                assertEquals(2, list.next.order);
+                assertEquals(1, list.next.next.order);
+            }
+        }
+    }
+
+    @Nested
+    class buildingTests {
+        @Test
+        @DisplayName("properly return the correct buildings")
+        void buildings() {
+            Iterator<Integer> buildings = new LinkedList<>(Arrays.asList(7, 5, 6, 4)).iterator();
+            Deque<Building> answerBuildings = new LinkedList<>(Arrays.asList(new Building(0, 7), new Building(2, 6), new Building(3, 4)));
+
+            Deque<Building> answer = StacksAndQueues.examineBuildings(buildings);
+
+            for (Building b : answerBuildings) {
+                Building answerBuilding = answer.pop();
+                assertEquals(b.height, answerBuilding.height);
+                assertEquals(b.id, answerBuilding.id);
+            }
         }
     }
 }

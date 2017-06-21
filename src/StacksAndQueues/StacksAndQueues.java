@@ -139,4 +139,52 @@ public class StacksAndQueues {
 
         return result.toString();
     }
+
+    public static void setJumpOrderRec(PostingListNode L) {
+        setJumpOrderHelper(L, 0);
+    }
+
+    private static int setJumpOrderHelper(PostingListNode L, int order) {
+        if (L != null && L.order == -1) {
+            L.order = order++;
+            order = setJumpOrderHelper(L.jump, order);
+            order = setJumpOrderHelper(L.next, order);
+        }
+
+        return order;
+    }
+
+    public static void setJumpOrderIter(PostingListNode L) {
+        Deque<PostingListNode> s = new LinkedList();
+        int order = 0;
+
+        s.push(L);
+
+        while (!s.isEmpty()) {
+            PostingListNode curr = s.pop();
+
+            if (curr != null && curr.order == -1) {
+                curr.order = order++;
+                s.push(curr.next);
+                s.push(curr.jump);
+            }
+        }
+    }
+
+    public static Deque<Building> examineBuildings(Iterator<Integer> sequence) {
+        int buildingIdx = 0;
+        Deque<Building> buildings = new LinkedList<>();
+
+        while (sequence.hasNext()) {
+            Integer buildingHeight = sequence.next();
+
+            while (!buildings.isEmpty() && (Integer.compare(buildingHeight, buildings.getLast().height) >= 0)) {
+                buildings.removeLast();
+            }
+
+            buildings.addLast(new Building(buildingIdx++, buildingHeight));
+        }
+
+        return buildings;
+    }
 }

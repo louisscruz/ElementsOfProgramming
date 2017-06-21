@@ -1,6 +1,7 @@
 package StacksAndQueues;
 
 import java.util.Deque;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class StacksAndQueues {
@@ -92,5 +93,50 @@ public class StacksAndQueues {
         }
 
         return leftChars.isEmpty();
+    }
+
+    public static String shortestEquivalentPath(String path) {
+        if (path.equals("")) {
+            throw new IllegalArgumentException("Empty string is not a legal path");
+        }
+
+        Deque<String> pathNames = new LinkedList<>();
+
+        if (path.startsWith("/")) {
+            pathNames.push("/");
+        }
+
+        for (String token : path.split("/")) {
+            if (token.equals("..")) {
+                if (pathNames.isEmpty() || pathNames.peek().equals("..")) {
+                    pathNames.push(token);
+                } else {
+                    if (pathNames.peek().equals("/")) {
+                        throw new IllegalArgumentException("Path error");
+                    }
+                    pathNames.pop();
+                }
+            } else if (!token.equals(".") && !token.isEmpty()) {
+                pathNames.push(token);
+            }
+        }
+
+        StringBuilder result = new StringBuilder();
+
+        if (!pathNames.isEmpty()) {
+            Iterator<String> it = pathNames.descendingIterator();
+            String prev = it.next();
+            result.append(prev);
+
+            while (it.hasNext()) {
+                if (!prev.equals("/")) {
+                    result.append("/");
+                }
+                prev = it.next();
+                result.append(prev);
+            }
+        }
+
+        return result.toString();
     }
 }

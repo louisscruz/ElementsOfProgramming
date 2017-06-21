@@ -52,4 +52,19 @@ class StacksAndQueuesTest {
             assertTrue(StacksAndQueues.isWellFormed("({[]})"));
         }
     }
+
+    @Nested
+    class equivalentPathTests {
+        @Test
+        @DisplayName("properly returns correct path when beginning with a slash")
+        void slash() {
+            assertEquals("/test/thing", StacksAndQueues.shortestEquivalentPath("/test/other/../thing"));
+        }
+
+        @Test
+        @DisplayName("properly returns correct path when it does not begin with a slash")
+        void noSlash() {
+            assertEquals("test/thing", StacksAndQueues.shortestEquivalentPath("test/other/../thing"));
+        }
+    }
 }

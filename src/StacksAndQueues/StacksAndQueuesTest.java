@@ -38,4 +38,18 @@ class StacksAndQueuesTest {
 
     }
 
+    @Nested
+    class isWellFormedTests {
+        @Test
+        @DisplayName("properly returns false")
+        void falseFormed() {
+            assertFalse(StacksAndQueues.isWellFormed("(()(}))"));
+        }
+
+        @Test
+        @DisplayName("properly returns true")
+        void trueFormed() {
+            assertTrue(StacksAndQueues.isWellFormed("({[]})"));
+        }
+    }
 }

@@ -72,4 +72,25 @@ public class StacksAndQueues {
 
         return stack.pop();
     }
+
+    public static boolean isWellFormed(String s) {
+        Deque<Character> leftChars = new LinkedList<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == '(' || c == '{' || c == '[') {
+                leftChars.addFirst(c);
+            } else {
+                if (leftChars.isEmpty()) {
+                    return false;
+                }
+                if ((c == ')' && leftChars.peek() != '(') || (c == '}' && leftChars.peek() != '{') || (c == ']' && leftChars.peek() != '[')) {
+                    return false;
+                }
+                leftChars.pop();
+            }
+        }
+
+        return leftChars.isEmpty();
+    }
 }

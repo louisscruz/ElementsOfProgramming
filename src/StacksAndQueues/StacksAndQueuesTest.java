@@ -149,4 +149,20 @@ class StacksAndQueuesTest {
             assertEquals(5, (int)q.dequeue());
         }
     }
+
+    @Nested
+    class stackQueueTests {
+        @Test
+        @DisplayName("works like a queue")
+        void stackQueue() {
+            StackQueue<Integer> q = new StackQueue<>();
+            q.enqueue(1);
+            q.enqueue(2);
+            q.enqueue(3);
+
+            assertEquals(1, (int)q.dequeue());
+            assertEquals(2, (int)q.dequeue());
+            assertEquals(3, (int)q.dequeue());
+        }
+    }
 }

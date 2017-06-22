@@ -129,6 +129,24 @@ class StacksAndQueuesTest {
     class queueTests {
         @Test
         @DisplayName("works as expected")
-        
+        void circularQueue() {
+            Queue q = new Queue(2);
+            q.enqueue(1);
+            q.enqueue(2);
+            assertEquals(1, (int)q.dequeue());
+            assertEquals(2, (int)q.dequeue());
+
+            q.enqueue(1);
+            q.enqueue(2);
+            q.enqueue(3);
+            q.enqueue(4);
+            q.enqueue(5);
+
+            for (int i = 0; i < 4; i++) {
+                q.dequeue();
+            }
+
+            assertEquals(5, (int)q.dequeue());
+        }
     }
 }

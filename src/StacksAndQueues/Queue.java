@@ -2,6 +2,7 @@ package StacksAndQueues;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.NoSuchElementException;
 
 public class Queue {
     private int head = 0, tail = 0, numQueueElements = 0;
@@ -22,6 +23,8 @@ public class Queue {
         entries[tail] = el;
         tail = (tail + 1) % entries.length;
         numQueueElements++;
+
+        return el;
     }
 
     public Integer dequeue() {
@@ -30,18 +33,9 @@ public class Queue {
             Integer val = entries[head];
             head = (head + 1) % entries.length;
 
-            if (numQueueElements <= (entries.length / (SCALE_FACTOR * 2))) {
-                Integer[] newEntries = new Integer[entries.length / SCALE_FACTOR];
-
-                for (int i = head, j = 0; i < tail + 1; i++, j++) {
-                    newEntries[j] = entries[i];
-                }
-                head = 0;
-                entries = newEntries;
-                tail = entries.length - 1;
-            }
-
             return val;
         }
+
+        throw new NoSuchElementException("the queue is empty");
     }
 }

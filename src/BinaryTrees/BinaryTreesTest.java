@@ -37,4 +37,35 @@ class BinaryTreesTest<T> {
             assertFalse(BinaryTrees.isBalanced(root));
         }
     }
+
+    @Nested
+    class symmetricalTests {
+        @Test
+        @DisplayName("properly returns true")
+        void symmetrical() {
+            BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> left = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> right = new BinaryTreeNode<Integer>();
+
+            root.left = left;
+            root.right = right;
+
+            assertTrue(BinaryTrees.isSymmetrical(root));
+        }
+
+        @Test
+        @DisplayName("properly returns false")
+        void asymmetrical() {
+            BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> left = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> right = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> leftLeft = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> rightLeft = new BinaryTreeNode<Integer>();
+
+            root.left = left;
+            root.right = right;
+            root.left.left = leftLeft;
+            root.right.left = rightLeft;
+        }
+    }
 }

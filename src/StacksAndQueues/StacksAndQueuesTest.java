@@ -155,7 +155,7 @@ class StacksAndQueuesTest {
         @Test
         @DisplayName("works like a queue")
         void stackQueue() {
-            StackQueue<Integer> q = new StackQueue<>();
+            StackQueue<Integer> q = new StackQueue<Integer>();
             q.enqueue(1);
             q.enqueue(2);
             q.enqueue(3);
@@ -163,6 +163,24 @@ class StacksAndQueuesTest {
             assertEquals(1, (int)q.dequeue());
             assertEquals(2, (int)q.dequeue());
             assertEquals(3, (int)q.dequeue());
+        }
+    }
+
+    @Nested
+    class maxStackQueueTests {
+        @Test
+        @DisplayName("finds the correct max")
+        void maxStackQueue() {
+            MaxStackQueue<Integer> q = new MaxStackQueue<Integer>();
+            q.enqueue(1);
+            q.enqueue(3);
+            q.enqueue(2);
+
+            assertEquals(3, (int)q.max());
+            q.dequeue();
+            assertEquals(3, (int)q.max());
+            q.dequeue();
+            assertEquals(2, (int)q.max());
         }
     }
 }

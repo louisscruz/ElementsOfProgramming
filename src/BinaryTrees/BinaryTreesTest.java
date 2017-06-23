@@ -176,4 +176,26 @@ class BinaryTreesTest<T> {
             assertEquals(response, answerList);
         }
     }
+
+    @Nested
+    class preOrderTests {
+        @Test
+        @DisplayName("returns the correct list")
+        void order() {
+            BinaryTreeNodeWithParent<Integer> root = new BinaryTreeNodeWithParent<Integer>();
+            root.data = 1;
+            BinaryTreeNodeWithParent<Integer> left = new BinaryTreeNodeWithParent<Integer>();
+            left.data = 2;
+            BinaryTreeNodeWithParent<Integer> right = new BinaryTreeNodeWithParent<Integer>();
+            right.data = 3;
+
+            root.left = left;
+            root.right = right;
+
+            List<Integer> response = BinaryTrees.preOrder(root);
+            List<Integer> answerList = new ArrayList<Integer>(Arrays.asList(1, 2, 3));
+
+            assertEquals(response, answerList);
+        }
+    }
 }

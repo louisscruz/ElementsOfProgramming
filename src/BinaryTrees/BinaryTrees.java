@@ -1,5 +1,7 @@
 package BinaryTrees;
 
+import com.sun.source.tree.BinaryTree;
+
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -117,6 +119,24 @@ public class BinaryTrees {
                 curr = s.pop();
                 result.add(curr.data);
                 curr = curr.right;
+            }
+        }
+
+        return result;
+    }
+
+    public static List<Integer> preOrder(BinaryTreeNode<Integer> root) {
+        Deque<BinaryTreeNode<Integer>> s = new LinkedList<>();
+        s.add(root);
+        List<Integer> result = new ArrayList<>();
+
+        while (!s.isEmpty()) {
+            BinaryTreeNode<Integer> curr = s.pop();
+            if (curr != null) {
+                if (curr.right != null) s.push(curr.right);
+                if (curr.left != null) s.push(curr.left);
+
+                result.add(curr.data);
             }
         }
 

@@ -55,4 +55,35 @@ public class BinaryTrees {
 
         return newStatus;
     }
+
+    public static BinaryTreeNodeWithParent<Integer> LCAParent(BinaryTreeNodeWithParent<Integer> a, BinaryTreeNodeWithParent<Integer> b) {
+        if (a == b) return a;
+        if (a != b && a.parent == null && b.parent == null) return null;
+
+        int aDepth = a.depth();
+        int bDepth = b.depth();
+
+        if (aDepth != bDepth) {
+            boolean aDeeper = aDepth > bDepth;
+
+            int diff = Math.abs(aDepth - bDepth);
+
+            for (int i = 0; i < diff; i++) {
+                if (aDeeper) {
+                    a = a.parent;
+                } else {
+                    b = b.parent;
+                }
+            }
+        }
+
+        while (a != null && b != null) {
+            a = a.parent;
+            b = b.parent;
+
+            if (a == b) return a;
+        }
+
+        return null;
+    }
 }

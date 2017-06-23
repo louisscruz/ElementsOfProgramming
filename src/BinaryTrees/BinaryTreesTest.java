@@ -90,4 +90,29 @@ class BinaryTreesTest<T> {
             assertEquals(root, BinaryTrees.LCA(root, leftLeft, right));
         }
     }
+
+    @Nested
+    class lcaParentTests {
+        @Test
+        @DisplayName("returns the proper node")
+        void ancestor() {
+            BinaryTreeNodeWithParent<Integer> root = new BinaryTreeNodeWithParent<Integer>();
+            BinaryTreeNodeWithParent<Integer> left = new BinaryTreeNodeWithParent<Integer>();
+            BinaryTreeNodeWithParent<Integer> right = new BinaryTreeNodeWithParent<Integer>();
+            BinaryTreeNodeWithParent<Integer> leftLeft = new BinaryTreeNodeWithParent<Integer>();
+            BinaryTreeNodeWithParent<Integer> rightLeft = new BinaryTreeNodeWithParent<Integer>();
+
+            root.left = left;
+            root.right = right;
+            root.left.left = leftLeft;
+            root.right.left = rightLeft;
+
+            leftLeft.parent = left;
+            left.parent = root;
+            rightLeft.parent = right;
+            right.parent = root;
+
+            assertEquals(root, BinaryTrees.LCAParent(leftLeft, right));
+        }
+    }
 }

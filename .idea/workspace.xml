@@ -22,9 +22,31 @@
       <file leaf-file-name="BinaryTrees.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="53" column="56" lean-forward="false" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+            <state relative-caret-position="384">
+              <caret line="76" column="13" lean-forward="true" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinaryTreeNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinaryTreeNodeWithParent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNodeWithParent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+              <folding>
+                <element signature="e#199#200#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -32,8 +54,8 @@
       <file leaf-file-name="BinaryTreesTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="84" column="29" lean-forward="true" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+            <state relative-caret-position="636">
+              <caret line="112" column="32" lean-forward="false" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#400#409#0" expanded="true" />
@@ -56,6 +78,11 @@
                 <element signature="e#2762#2771#0" expanded="true" />
                 <element signature="e#2840#2849#0" expanded="true" />
                 <element signature="e#2919#2928#0" expanded="true" />
+                <element signature="e#3373#3382#0" expanded="true" />
+                <element signature="e#3467#3476#0" expanded="true" />
+                <element signature="e#3562#3571#0" expanded="true" />
+                <element signature="e#3660#3669#0" expanded="true" />
+                <element signature="e#3759#3768#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,6 +136,7 @@
         <option value="$PROJECT_DIR$/src/StacksAndQueues/MaxStack.java" />
         <option value="$PROJECT_DIR$/src/StacksAndQueues/StacksAndQueuesTest.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNode.java" />
+        <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNodeWithParent.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java" />
       </list>
@@ -693,17 +721,17 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BinaryTreesTest - 2017.06.21 at 23h 36m 16s.xml">
-      <configuration name="BinaryTreesTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BinaryTreesTest - 2017.06.22 at 17h 06m 28s.xml">
       <configuration name="BinaryTreesTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BinaryTreesTest - 2017.06.22 at 17h 07m 39s.xml">
       <configuration name="BinaryTreesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StacksAndQueuesTest - 2017.06.21 at 20h 40m 39s.xml">
-      <configuration name="StacksAndQueuesTest" configurationId="JUnit" />
+    <history-entry file="BinaryTreesTest - 2017.06.22 at 17h 32m 03s.xml">
+      <configuration name="BinaryTreesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BinaryTreesTest - 2017.06.22 at 17h 34m 13s.xml">
+      <configuration name="BinaryTreesTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StacksAndQueuesTest - 2017.06.21 at 21h 04m 05s.xml">
       <configuration name="StacksAndQueuesTest" configurationId="JUnit" />
@@ -774,13 +802,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Strings/Strings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Strings/StringsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2940">
@@ -1123,16 +1144,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="53" column="56" lean-forward="false" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+        <state relative-caret-position="384">
+          <caret line="76" column="13" lean-forward="true" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNodeWithParent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#199#200#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="84" column="29" lean-forward="true" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+        <state relative-caret-position="636">
+          <caret line="112" column="32" lean-forward="false" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#400#409#0" expanded="true" />
@@ -1155,6 +1186,11 @@
             <element signature="e#2762#2771#0" expanded="true" />
             <element signature="e#2840#2849#0" expanded="true" />
             <element signature="e#2919#2928#0" expanded="true" />
+            <element signature="e#3373#3382#0" expanded="true" />
+            <element signature="e#3467#3476#0" expanded="true" />
+            <element signature="e#3562#3571#0" expanded="true" />
+            <element signature="e#3660#3669#0" expanded="true" />
+            <element signature="e#3759#3768#0" expanded="true" />
           </folding>
         </state>
       </provider>

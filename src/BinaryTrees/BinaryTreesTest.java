@@ -66,6 +66,28 @@ class BinaryTreesTest<T> {
             root.right = right;
             root.left.left = leftLeft;
             root.right.left = rightLeft;
+
+            assertFalse(BinaryTrees.isSymmetrical(root));
+        }
+    }
+
+    @Nested
+    class lcaTests {
+        @Test
+        @DisplayName("returns the proper node")
+        void ancestor() {
+            BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> left = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> right = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> leftLeft = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> rightLeft = new BinaryTreeNode<Integer>();
+
+            root.left = left;
+            root.right = right;
+            root.left.left = leftLeft;
+            root.right.left = rightLeft;
+
+            assertEquals(root, BinaryTrees.LCA(root, leftLeft, right));
         }
     }
 }

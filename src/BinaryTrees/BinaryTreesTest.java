@@ -4,6 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class BinaryTreesTest<T> {
@@ -113,6 +117,63 @@ class BinaryTreesTest<T> {
             right.parent = root;
 
             assertEquals(root, BinaryTrees.LCAParent(leftLeft, right));
+        }
+    }
+
+    @Nested
+    class pathSumTests {
+        @Test
+        @DisplayName("properly returns true")
+        void pathTrue() {
+            BinaryTreeNodeWithParent<Integer> root = new BinaryTreeNodeWithParent<Integer>();
+            root.data = 1;
+            BinaryTreeNodeWithParent<Integer> left = new BinaryTreeNodeWithParent<Integer>();
+            left.data = 2;
+            BinaryTreeNodeWithParent<Integer> right = new BinaryTreeNodeWithParent<Integer>();
+            right.data = 3;
+
+            root.left = left;
+            root.right = right;
+
+            assertTrue(BinaryTrees.hasPathSum(root, 3));
+        }
+
+        @Test
+        @DisplayName("properly returns false")
+        void pathFalse() {
+            BinaryTreeNodeWithParent<Integer> root = new BinaryTreeNodeWithParent<Integer>();
+            root.data = 1;
+            BinaryTreeNodeWithParent<Integer> left = new BinaryTreeNodeWithParent<Integer>();
+            left.data = 2;
+            BinaryTreeNodeWithParent<Integer> right = new BinaryTreeNodeWithParent<Integer>();
+            right.data = 3;
+
+            root.left = left;
+            root.right = right;
+
+            assertFalse(BinaryTrees.hasPathSum(root, 5));
+        }
+    }
+
+    @Nested
+    class inOrderTests {
+        @Test
+        @DisplayName("returns the correct list")
+        void order() {
+            BinaryTreeNodeWithParent<Integer> root = new BinaryTreeNodeWithParent<Integer>();
+            root.data = 1;
+            BinaryTreeNodeWithParent<Integer> left = new BinaryTreeNodeWithParent<Integer>();
+            left.data = 2;
+            BinaryTreeNodeWithParent<Integer> right = new BinaryTreeNodeWithParent<Integer>();
+            right.data = 3;
+
+            root.left = left;
+            root.right = right;
+
+            List<Integer> response = BinaryTrees.inOrder(root);
+            List<Integer> answerList = new ArrayList<Integer>(Arrays.asList(2, 1, 3));
+
+            assertEquals(response, answerList);
         }
     }
 }

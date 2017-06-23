@@ -1,5 +1,10 @@
 package BinaryTrees;
 
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
+
 public class BinaryTrees {
     public static boolean isBalanced(BinaryTreeNode<Integer> root) {
         return Math.abs(root.left.height() - root.right.height()) == 0;
@@ -85,5 +90,36 @@ public class BinaryTrees {
         }
 
         return null;
+    }
+
+    public static boolean hasPathSum(BinaryTreeNode<Integer> root, int sum) {
+        if (root == null) {
+            return false;
+        } else if (root.left == null && root.right == null) {
+            return sum == root.data;
+        }
+
+        int diff = sum - root.data;
+
+        return hasPathSum(root.left, diff) || hasPathSum(root.right, diff);
+    }
+
+    public static List<Integer> inOrder(BinaryTreeNode<Integer> root) {
+        Deque<BinaryTreeNode<Integer>> s = new LinkedList<>();
+        BinaryTreeNode<Integer> curr = root;
+        List<Integer> result = new ArrayList<>();
+
+        while (!s.isEmpty() || curr != null) {
+            if (curr != null) {
+                s.push(curr);
+                curr = curr.left;
+            } else {
+                curr = s.pop();
+                result.add(curr.data);
+                curr = curr.right;
+            }
+        }
+
+        return result;
     }
 }

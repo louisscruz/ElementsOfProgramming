@@ -173,7 +173,7 @@ class BinaryTreesTest<T> {
             List<Integer> response = BinaryTrees.inOrder(root);
             List<Integer> answerList = new ArrayList<Integer>(Arrays.asList(2, 1, 3));
 
-            assertEquals(response, answerList);
+            assertEquals(answerList, response);
         }
     }
 
@@ -195,7 +195,32 @@ class BinaryTreesTest<T> {
             List<Integer> response = BinaryTrees.preOrder(root);
             List<Integer> answerList = new ArrayList<Integer>(Arrays.asList(1, 2, 3));
 
-            assertEquals(response, answerList);
+            assertEquals(answerList, response);
+        }
+    }
+
+    @Nested
+    class successor {
+        @Test
+        @DisplayName("returns the correct node")
+        void next() {
+            BinaryTreeNodeWithParent<Integer> root = new BinaryTreeNodeWithParent<Integer>();
+            BinaryTreeNodeWithParent<Integer> left = new BinaryTreeNodeWithParent<Integer>();
+            BinaryTreeNodeWithParent<Integer> right = new BinaryTreeNodeWithParent<Integer>();
+            BinaryTreeNodeWithParent<Integer> leftRight = new BinaryTreeNodeWithParent<Integer>();
+            BinaryTreeNodeWithParent<Integer> rightLeft = new BinaryTreeNodeWithParent<Integer>();
+
+            root.left = left;
+            root.right = right;
+            root.left.right = leftRight;
+            root.right.left = rightLeft;
+
+            leftRight.parent = left;
+            left.parent = root;
+            rightLeft.parent = right;
+            right.parent = root;
+
+            assertEquals(root, BinaryTrees.successor(leftRight));
         }
     }
 }

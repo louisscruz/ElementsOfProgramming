@@ -142,4 +142,20 @@ public class BinaryTrees {
 
         return result;
     }
+
+    public static BinaryTreeNodeWithParent<Integer> successor(BinaryTreeNodeWithParent<Integer> node) {
+        if (node.parent == null) {
+            return null;
+        } else if (node.right == null) {
+            if (node.parent.left == node) {
+                return node.parent;
+            } else if (node.parent.parent == null) {
+                return null;
+            } else {
+                return node.parent.parent;
+            }
+        } else {
+            return (BinaryTreeNodeWithParent)node.right;
+        }
+    }
 }

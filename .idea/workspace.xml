@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNode.java" afterPath="$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java" afterPath="$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java" afterPath="$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java" />
     </list>
@@ -20,13 +21,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BinaryTrees.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BinaryTrees.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="149" column="43" lean-forward="true" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="43" />
+            <state relative-caret-position="443">
+              <caret line="189" column="25" lean-forward="true" selection-start-line="189" selection-start-column="25" selection-end-line="189" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6633#6642#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,20 +37,75 @@
       <file leaf-file-name="BinaryTreeNode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="705">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinaryTreesTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BinaryTreesTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="683">
+              <caret line="261" column="38" lean-forward="true" selection-start-line="261" selection-start-column="38" selection-end-line="261" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#474#483#0" expanded="true" />
+                <element signature="e#548#557#0" expanded="true" />
+                <element signature="e#623#632#0" expanded="true" />
+                <element signature="e#915#924#0" expanded="true" />
+                <element signature="e#989#998#0" expanded="true" />
+                <element signature="e#1064#1073#0" expanded="true" />
+                <element signature="e#1142#1151#0" expanded="true" />
+                <element signature="e#1521#1530#0" expanded="true" />
+                <element signature="e#1595#1604#0" expanded="true" />
+                <element signature="e#1670#1679#0" expanded="true" />
+                <element signature="e#1967#1976#0" expanded="true" />
+                <element signature="e#2041#2050#0" expanded="true" />
+                <element signature="e#2116#2125#0" expanded="true" />
+                <element signature="e#2194#2203#0" expanded="true" />
+                <element signature="e#2273#2282#0" expanded="true" />
+                <element signature="e#2687#2696#0" expanded="true" />
+                <element signature="e#2761#2770#0" expanded="true" />
+                <element signature="e#2836#2845#0" expanded="true" />
+                <element signature="e#2914#2923#0" expanded="true" />
+                <element signature="e#2993#3002#0" expanded="true" />
+                <element signature="e#3447#3456#0" expanded="true" />
+                <element signature="e#3541#3550#0" expanded="true" />
+                <element signature="e#3636#3645#0" expanded="true" />
+                <element signature="e#3734#3743#0" expanded="true" />
+                <element signature="e#3833#3842#0" expanded="true" />
+                <element signature="e#4423#4432#0" expanded="true" />
+                <element signature="e#4544#4553#0" expanded="true" />
+                <element signature="e#4666#4675#0" expanded="true" />
+                <element signature="e#5008#5017#0" expanded="true" />
+                <element signature="e#5129#5138#0" expanded="true" />
+                <element signature="e#5251#5260#0" expanded="true" />
+                <element signature="e#5635#5644#0" expanded="true" />
+                <element signature="e#5756#5765#0" expanded="true" />
+                <element signature="e#5878#5887#0" expanded="true" />
+                <element signature="e#6099#6108#0" expanded="true" />
+                <element signature="e#6405#6414#0" expanded="true" />
+                <element signature="e#6526#6535#0" expanded="true" />
+                <element signature="e#6648#6657#0" expanded="true" />
+                <element signature="e#6870#6879#0" expanded="true" />
+                <element signature="e#7176#7185#0" expanded="true" />
+                <element signature="e#7270#7279#0" expanded="true" />
+                <element signature="e#7365#7374#0" expanded="true" />
+                <element signature="e#7464#7473#0" expanded="true" />
+                <element signature="e#7563#7572#0" expanded="true" />
+                <element signature="e#8159#8168#0" expanded="true" />
+                <element signature="e#8280#8289#0" expanded="true" />
+                <element signature="e#8402#8411#0" expanded="true" />
+                <element signature="e#8623#8632#0" expanded="true" />
+                <element signature="e#8924#8933#0" expanded="true" />
+                <element signature="e#8998#9007#0" expanded="true" />
+                <element signature="e#9073#9082#0" expanded="true" />
+                <element signature="e#9151#9160#0" expanded="true" />
+                <element signature="e#9230#9239#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,8 +158,8 @@
         <option value="$PROJECT_DIR$/src/StacksAndQueues/MaxStackQueue.java" />
         <option value="$PROJECT_DIR$/src/StacksAndQueues/MaxStack.java" />
         <option value="$PROJECT_DIR$/src/StacksAndQueues/StacksAndQueuesTest.java" />
-        <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNode.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNodeWithParent.java" />
+        <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNode.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java" />
       </list>
@@ -130,9 +187,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -203,6 +259,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -687,21 +744,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BinaryTreesTest - 2017.06.23 at 22h 47m 31s.xml">
-      <configuration name="BinaryTreesTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BinaryTreesTest - 2017.06.23 at 23h 01m 27s.xml">
-      <configuration name="BinaryTreesTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BinaryTreesTest - 2017.06.23 at 23h 01m 43s.xml">
-      <configuration name="BinaryTreesTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BinaryTreesTest - 2017.06.23 at 23h 15m 18s.xml">
-      <configuration name="BinaryTreesTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BinaryTreesTest - 2017.06.23 at 23h 17m 30s.xml">
-      <configuration name="BinaryTreesTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BinaryTreesTest - 2017.06.23 at 23h 18m 13s.xml">
       <configuration name="BinaryTreesTest" configurationId="JUnit" />
     </history-entry>
@@ -715,6 +757,21 @@
       <configuration name="BinaryTreesTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BinaryTreesTest - 2017.06.24 at 23h 52m 19s.xml">
+      <configuration name="BinaryTreesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BinaryTreesTest - 2017.06.25 at 14h 14m 27s.xml">
+      <configuration name="BinaryTreesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BinaryTreesTest - 2017.06.25 at 15h 29m 28s.xml">
+      <configuration name="BinaryTreesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BinaryTreesTest - 2017.06.25 at 15h 30m 29s.xml">
+      <configuration name="BinaryTreesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BinaryTreesTest - 2017.06.25 at 15h 30m 39s.xml">
+      <configuration name="BinaryTreesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BinaryTreesTest - 2017.06.25 at 15h 30m 50s.xml">
       <configuration name="BinaryTreesTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -731,7 +788,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22469491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22469491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1094,16 +1151,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="149" column="43" lean-forward="true" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="43" />
+        <state relative-caret-position="705">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1112,10 +1161,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="683">
+          <caret line="261" column="38" lean-forward="true" selection-start-line="261" selection-start-column="38" selection-end-line="261" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#474#483#0" expanded="true" />
+            <element signature="e#548#557#0" expanded="true" />
+            <element signature="e#623#632#0" expanded="true" />
+            <element signature="e#915#924#0" expanded="true" />
+            <element signature="e#989#998#0" expanded="true" />
+            <element signature="e#1064#1073#0" expanded="true" />
+            <element signature="e#1142#1151#0" expanded="true" />
+            <element signature="e#1521#1530#0" expanded="true" />
+            <element signature="e#1595#1604#0" expanded="true" />
+            <element signature="e#1670#1679#0" expanded="true" />
+            <element signature="e#1967#1976#0" expanded="true" />
+            <element signature="e#2041#2050#0" expanded="true" />
+            <element signature="e#2116#2125#0" expanded="true" />
+            <element signature="e#2194#2203#0" expanded="true" />
+            <element signature="e#2273#2282#0" expanded="true" />
+            <element signature="e#2687#2696#0" expanded="true" />
+            <element signature="e#2761#2770#0" expanded="true" />
+            <element signature="e#2836#2845#0" expanded="true" />
+            <element signature="e#2914#2923#0" expanded="true" />
+            <element signature="e#2993#3002#0" expanded="true" />
+            <element signature="e#3447#3456#0" expanded="true" />
+            <element signature="e#3541#3550#0" expanded="true" />
+            <element signature="e#3636#3645#0" expanded="true" />
+            <element signature="e#3734#3743#0" expanded="true" />
+            <element signature="e#3833#3842#0" expanded="true" />
+            <element signature="e#4423#4432#0" expanded="true" />
+            <element signature="e#4544#4553#0" expanded="true" />
+            <element signature="e#4666#4675#0" expanded="true" />
+            <element signature="e#5008#5017#0" expanded="true" />
+            <element signature="e#5129#5138#0" expanded="true" />
+            <element signature="e#5251#5260#0" expanded="true" />
+            <element signature="e#5635#5644#0" expanded="true" />
+            <element signature="e#5756#5765#0" expanded="true" />
+            <element signature="e#5878#5887#0" expanded="true" />
+            <element signature="e#6099#6108#0" expanded="true" />
+            <element signature="e#6405#6414#0" expanded="true" />
+            <element signature="e#6526#6535#0" expanded="true" />
+            <element signature="e#6648#6657#0" expanded="true" />
+            <element signature="e#6870#6879#0" expanded="true" />
+            <element signature="e#7176#7185#0" expanded="true" />
+            <element signature="e#7270#7279#0" expanded="true" />
+            <element signature="e#7365#7374#0" expanded="true" />
+            <element signature="e#7464#7473#0" expanded="true" />
+            <element signature="e#7563#7572#0" expanded="true" />
+            <element signature="e#8159#8168#0" expanded="true" />
+            <element signature="e#8280#8289#0" expanded="true" />
+            <element signature="e#8402#8411#0" expanded="true" />
+            <element signature="e#8623#8632#0" expanded="true" />
+            <element signature="e#8924#8933#0" expanded="true" />
+            <element signature="e#8998#9007#0" expanded="true" />
+            <element signature="e#9073#9082#0" expanded="true" />
+            <element signature="e#9151#9160#0" expanded="true" />
+            <element signature="e#9230#9239#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="189" column="25" lean-forward="true" selection-start-line="189" selection-start-column="25" selection-end-line="189" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6633#6642#0" expanded="true" />
           </folding>
         </state>
       </provider>

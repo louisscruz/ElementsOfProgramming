@@ -245,4 +245,35 @@ class BinaryTreesTest {
             assertEquals(answerList, response);
         }
     }
+
+    @Nested
+    class treeFromPreorderTests {
+        @Test
+        @DisplayName("returns the correct tree")
+        void fromPreorder() {
+            BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> left = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> right = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> leftLeft = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> rightLeft = new BinaryTreeNode<Integer>();
+
+            root.left = left;
+            root.right = right;
+            root.left.left = leftLeft;
+            root.right.left = rightLeft;
+
+            root.data = 5;
+            left.data = 3;
+            right.data = 7;
+            leftLeft.data = 1;
+            rightLeft.data = 6;
+
+
+            Integer[] input = new Integer[]{5, 3, 1, null, null, null, 7, 6, null, null, null};
+
+            BinaryTreeNode<Integer> response = BinaryTrees.fromPreorder(input);
+
+            assertTrue(response.equals(root));
+        }
+    }
 }

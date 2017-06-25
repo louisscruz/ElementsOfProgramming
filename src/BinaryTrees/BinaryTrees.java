@@ -185,4 +185,38 @@ public class BinaryTrees {
 
         return result;
     }
+
+    public static BinaryTreeNode<Integer> fromPreorder(Integer[] input) {
+        int inputIdx = 0;
+        return fromPreorderAcc(input, inputIdx).node;
+    }
+
+    private static class NodeWrapper {
+        public BinaryTreeNode<Integer> node;
+        public int index;
+
+        public NodeWrapper(BinaryTreeNode<Integer> node, int index) {
+            this.node = node;
+            this.index = index;
+        }
+    }
+
+    private static NodeWrapper fromPreorderAcc(Integer[] input, int inputIdx) {
+        Integer data = input[inputIdx++];
+
+        if (data == null) {
+            return new NodeWrapper(null, inputIdx);
+        }
+
+        NodeWrapper left = fromPreorderAcc(input, inputIdx);
+        NodeWrapper right = fromPreorderAcc(input, left.index);
+
+        BinaryTreeNode<Integer> newNode = new BinaryTreeNode<Integer>();
+
+        newNode.data = data;
+        newNode.left = left.node;
+        newNode.right = right.node;
+
+        return new NodeWrapper(newNode, right.index);
+    }
 }

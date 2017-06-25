@@ -276,4 +276,26 @@ class BinaryTreesTest {
             assertTrue(response.equals(root));
         }
     }
+
+    @Nested
+    class listOfLeavesTests {
+        @Test
+        @DisplayName("returns the proper list")
+        void list() {
+            BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> left = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> right = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> leftLeft = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> rightLeft = new BinaryTreeNode<Integer>();
+
+            root.left = left;
+            root.right = right;
+            root.left.left = leftLeft;
+            root.right.left = rightLeft;
+
+            List<BinaryTreeNode<Integer>> answer = new ArrayList<>(Arrays.asList(leftLeft, rightLeft));
+
+            assertEquals(answer, BinaryTrees.listOfLeaves(root));
+        }
+    }
 }

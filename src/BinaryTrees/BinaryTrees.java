@@ -219,4 +219,23 @@ public class BinaryTrees {
 
         return new NodeWrapper(newNode, right.index);
     }
+
+    public static List<BinaryTreeNode<Integer>> listOfLeaves(BinaryTreeNode<Integer> root) {
+        List<BinaryTreeNode<Integer>> leaves = new ArrayList<>();
+
+        addLeaves(root, leaves);
+
+        return leaves;
+    }
+
+    private static void addLeaves(BinaryTreeNode<Integer> node, List<BinaryTreeNode<Integer>> leaves) {
+        if (node == null) return;
+
+        if (node.left == null && node.right == null) {
+            leaves.add(node);
+        } else {
+            addLeaves(node.left, leaves);
+            addLeaves(node.right, leaves);
+        }
+    }
 }

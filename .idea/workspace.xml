@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/BinaryTrees/BinaryTrees.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/BinaryTrees/BinaryTrees.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/BinaryTrees/BinaryTreesTest$inOrderTests.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/BinaryTrees/BinaryTreesTest$inOrderTests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/BinaryTrees/BinaryTreesTest$preOrderTests.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/BinaryTrees/BinaryTreesTest$preOrderTests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/BinaryTrees/BinaryTreesTest.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/BinaryTrees/BinaryTreesTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java" afterPath="$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java" afterPath="$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java" />
@@ -24,11 +20,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BinaryTrees.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BinaryTrees.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="698">
-              <caret line="145" column="103" lean-forward="false" selection-start-line="145" selection-start-column="103" selection-end-line="145" selection-end-column="103" />
+            <state relative-caret-position="771">
+              <caret line="149" column="43" lean-forward="true" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,27 +42,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinaryTreeNodeWithParent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNodeWithParent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="68" lean-forward="false" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
-              <folding>
-                <element signature="e#162#163#0" expanded="true" />
-                <element signature="e#199#200#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinaryTreesTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BinaryTreesTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5881#5890#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,9 +102,9 @@
         <option value="$PROJECT_DIR$/src/StacksAndQueues/MaxStack.java" />
         <option value="$PROJECT_DIR$/src/StacksAndQueues/StacksAndQueuesTest.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNode.java" />
-        <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNodeWithParent.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java" />
+        <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java" />
       </list>
     </option>
   </component>
@@ -148,9 +130,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -705,12 +687,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BinaryTreesTest - 2017.06.22 at 23h 32m 16s.xml">
-      <configuration name="BinaryTreesTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BinaryTreesTest - 2017.06.23 at 22h 45m 50s.xml">
-      <configuration name="BinaryTreesTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BinaryTreesTest - 2017.06.23 at 22h 47m 31s.xml">
       <configuration name="BinaryTreesTest" configurationId="JUnit" />
     </history-entry>
@@ -733,6 +709,12 @@
       <configuration name="BinaryTreesTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BinaryTreesTest - 2017.06.23 at 23h 34m 14s.xml">
+      <configuration name="BinaryTreesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BinaryTreesTest - 2017.06.24 at 23h 52m 02s.xml">
+      <configuration name="BinaryTreesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BinaryTreesTest - 2017.06.24 at 23h 52m 19s.xml">
       <configuration name="BinaryTreesTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1049,7 +1031,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,9 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="906">
           <caret line="188" column="5" lean-forward="false" selection-start-line="188" selection-start-column="5" selection-end-line="188" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1103,22 +1081,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1689">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4483#4492#0" expanded="false" />
-            <element signature="e#4923#4932#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java">
+    <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNodeWithParent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5881#5890#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="68" lean-forward="false" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,21 +1100,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNodeWithParent.java">
+    <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="68" lean-forward="false" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
+        <state relative-caret-position="771">
+          <caret line="149" column="43" lean-forward="true" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="43" />
           <folding>
-            <element signature="e#162#163#0" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java">
+    <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="145" column="103" lean-forward="false" selection-start-line="145" selection-start-column="103" selection-end-line="145" selection-end-column="103" />
+        <state relative-caret-position="180">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

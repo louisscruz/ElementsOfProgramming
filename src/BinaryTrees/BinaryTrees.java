@@ -158,4 +158,31 @@ public class BinaryTrees {
             return (BinaryTreeNodeWithParent)node.right;
         }
     }
+
+    public static List<Integer> inorderTraversal(BinaryTreeNodeWithParent<Integer> node) {
+        BinaryTreeNodeWithParent<Integer> prev = null, curr = node;
+        List<Integer> result = new ArrayList<>();
+
+        while (curr != null) {
+            BinaryTreeNodeWithParent<Integer> next;
+            if (curr.parent == prev) {
+                if (curr.left != null) {
+                    next = (BinaryTreeNodeWithParent)curr.left;
+                } else {
+                    result.add(curr.data);
+                    next = (curr.right != null) ? (BinaryTreeNodeWithParent)curr.right : curr.parent;
+                }
+            } else if (curr.left == prev) {
+                result.add(curr.data);
+                next = (curr.right != null) ? (BinaryTreeNodeWithParent)curr.right : curr.parent;
+            } else {
+                next = curr.parent;
+            }
+
+            prev = curr;
+            curr = next;
+        }
+
+        return result;
+    }
 }

@@ -10,7 +10,7 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BinaryTreesTest<T> {
+class BinaryTreesTest {
     @Nested
     class balancedTests {
         @Test
@@ -200,7 +200,7 @@ class BinaryTreesTest<T> {
     }
 
     @Nested
-    class successor {
+    class successorTests {
         @Test
         @DisplayName("returns the correct node")
         void next() {
@@ -221,6 +221,28 @@ class BinaryTreesTest<T> {
             right.parent = root;
 
             assertEquals(root, BinaryTrees.successor(leftRight));
+        }
+    }
+
+    @Nested
+    class inorderTraversalTests {
+        @Test
+        @DisplayName("returns the correct list")
+        void order() {
+            BinaryTreeNodeWithParent<Integer> root = new BinaryTreeNodeWithParent<Integer>();
+            root.data = 1;
+            BinaryTreeNodeWithParent<Integer> left = new BinaryTreeNodeWithParent<Integer>();
+            left.data = 2;
+            BinaryTreeNodeWithParent<Integer> right = new BinaryTreeNodeWithParent<Integer>();
+            right.data = 3;
+
+            root.left = left;
+            root.right = right;
+
+            List<Integer> response = BinaryTrees.inOrder(root);
+            List<Integer> answerList = new ArrayList<Integer>(Arrays.asList(2, 1, 3));
+
+            assertEquals(answerList, response);
         }
     }
 }

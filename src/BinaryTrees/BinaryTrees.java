@@ -238,4 +238,72 @@ public class BinaryTrees {
             addLeaves(node.right, leaves);
         }
     }
+
+    public static List<BinaryTreeNode<Integer>> exteriorList(BinaryTreeNode<Integer> root) {
+        List<BinaryTreeNode<Integer>> exterior = new LinkedList<>();
+
+        if (root != null) {
+            exterior.add(root);
+            exterior.addAll(leftBoundaryAndLeaves(root.left, true));
+            exterior.addAll(rightBoundaryAndLeaves(root.right, true));
+        }
+
+        return exterior;
+    }
+
+    private static List<BinaryTreeNode<Integer>> leftBoundaryAndLeaves(BinaryTreeNode<Integer> subtreeRoot, boolean isBoundary) {
+        List<BinaryTreeNode<Integer>> result = new LinkedList<>();
+
+        if (subtreeRoot != null) {
+            if (isBoundary || isLeaf(subtreeRoot)) {
+                result.add(subtreeRoot);
+            }
+
+            result.addAll(leftBoundaryAndLeaves(subtreeRoot.left, isBoundary));
+            result.addAll(leftBoundaryAndLeaves(subtreeRoot.right, isBoundary && subtreeRoot.left == null));
+        }
+
+        return result;
+    }
+
+    private static List<BinaryTreeNode<Integer>> rightBoundaryAndLeaves(BinaryTreeNode<Integer> subtreeRoot, boolean isBoundary) {
+        List<BinaryTreeNode<Integer>> result = new LinkedList<>();
+
+        if (subtreeRoot != null) {
+            result.addAll(rightBoundaryAndLeaves(subtreeRoot.left, isBoundary && subtreeRoot.right == null));
+            result.addAll(rightBoundaryAndLeaves(subtreeRoot.right, isBoundary));
+            if (isBoundary || isLeaf(subtreeRoot)) {
+                result.add(subtreeRoot);
+            }
+        }
+
+        return result;
+    }
+
+    private static boolean isLeaf(BinaryTreeNode<Integer> node) {
+        return node.left == null && node.right == null;
+    }
+
+    public static void contructRightSibling(BinaryTreeNodeWithNext<Integer> tree) {
+        BinaryTreeNodeWithNext<Integer> leftStart = tree;
+
+        while (leftStart != null && leftStart.left != null) {
+            populateLowerLevelNextField(leftStart);
+            leftStart = leftStart.left;
+        }
+    }
+
+    private static void populateLowerLevelNextField(BinaryTreeNodeWithNext<Integer> startNode) {
+        BinaryTreeNodeWithNext<Integer> iter = startNode;
+
+        while (iter != null) {
+            iter.left.next = iter.right;
+
+            if (iter.next != null) {
+                iter.right.next = iter.next.left;
+            }
+
+            iter = iter.next;
+        }
+    }
 }

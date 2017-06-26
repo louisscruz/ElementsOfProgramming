@@ -298,4 +298,52 @@ class BinaryTreesTest {
             assertEquals(answer, BinaryTrees.listOfLeaves(root));
         }
     }
+
+    @Nested
+    class exteriorListTests {
+        @Test
+        @DisplayName("returns the proper list")
+        void list() {
+            BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> left = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> right = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> leftLeft = new BinaryTreeNode<Integer>();
+            BinaryTreeNode<Integer> rightLeft = new BinaryTreeNode<Integer>();
+
+            root.left = left;
+            root.right = right;
+            root.left.left = leftLeft;
+            root.right.left = rightLeft;
+
+            List<BinaryTreeNode<Integer>> answer = new ArrayList<>(Arrays.asList(root, left, leftLeft, rightLeft, right));
+
+            assertEquals(answer, BinaryTrees.exteriorList(root));
+        }
+    }
+
+    @Nested
+    class nextSiblingTests {
+        @Test
+        @DisplayName("returns the proper lists")
+        void list() {
+            BinaryTreeNodeWithNext<Integer> root = new BinaryTreeNodeWithNext<Integer>();
+            BinaryTreeNodeWithNext<Integer> left = new BinaryTreeNodeWithNext<Integer>();
+            BinaryTreeNodeWithNext<Integer> right = new BinaryTreeNodeWithNext<Integer>();
+            BinaryTreeNodeWithNext<Integer> leftLeft = new BinaryTreeNodeWithNext<Integer>();
+            BinaryTreeNodeWithNext<Integer> leftRight = new BinaryTreeNodeWithNext<Integer>();
+            BinaryTreeNodeWithNext<Integer> rightLeft = new BinaryTreeNodeWithNext<Integer>();
+
+            root.left = left;
+            root.right = right;
+            root.left.left = leftLeft;
+            root.left.right = leftRight;
+            root.right.left = rightLeft;
+
+            BinaryTrees.contructRightSibling(root);
+
+            assertEquals(left.next, right);
+            assertEquals(leftLeft.next, leftRight);
+            assertEquals(leftRight.next, rightLeft);
+        }
+    }
 }

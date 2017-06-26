@@ -346,4 +346,39 @@ class BinaryTreesTest {
             assertEquals(leftRight.next, rightLeft);
         }
     }
+
+    @Nested
+    class lockTests {
+        @Test
+        @DisplayName("properly locks")
+        void list() {
+            BinaryTrees.BinaryTreeNodeWithLock<Integer> root = new BinaryTrees.BinaryTreeNodeWithLock<Integer>();
+            BinaryTrees.BinaryTreeNodeWithLock<Integer> left = new BinaryTrees.BinaryTreeNodeWithLock<Integer>();
+            BinaryTrees.BinaryTreeNodeWithLock<Integer> right = new BinaryTrees.BinaryTreeNodeWithLock<Integer>();
+            BinaryTrees.BinaryTreeNodeWithLock<Integer> leftLeft = new BinaryTrees.BinaryTreeNodeWithLock<Integer>();
+            BinaryTrees.BinaryTreeNodeWithLock<Integer> leftRight = new BinaryTrees.BinaryTreeNodeWithLock<Integer>();
+            BinaryTrees.BinaryTreeNodeWithLock<Integer> rightLeft = new BinaryTrees.BinaryTreeNodeWithLock<Integer>();
+
+            root.left = left;
+            root.right = right;
+            root.left.left = leftLeft;
+            root.left.right = leftRight;
+            root.right.left = rightLeft;
+
+            leftLeft.parent = left;
+            leftRight.parent = left;
+            left.parent = root;
+            rightLeft.parent = right;
+            right.parent = root;
+
+            assertTrue(left.lock());
+            assertTrue(left.isLocked());
+            assertFalse(root.lock());
+            assertFalse(leftLeft.lock());
+            assertTrue(right.lock());
+            left.unlock();
+            right.unlock();
+            assertTrue(root.lock());
+        }
+    }
 }

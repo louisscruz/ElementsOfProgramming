@@ -306,4 +306,40 @@ public class BinaryTrees {
             iter = iter.next;
         }
     }
+
+    public static class BinaryTreeNodeWithLock<T> extends BinaryTreeNodeWithParent<T> {
+        public BinaryTreeNodeWithLock<T> left, right, parent;
+        private boolean locked = false;
+        private int numLockedDescendants = 0;
+
+        public boolean isLocked() { return locked; }
+
+        public boolean lock() {
+            if (numLockedDescendants > 0 || locked) {
+                return false;
+            }
+
+            for (BinaryTreeNodeWithLock<T> iter = parent; iter != null; iter = iter.parent) {
+                if (iter.isLocked()) return false;
+            }
+
+            locked = true;
+
+            for (BinaryTreeNodeWithLock<T> iter = parent; iter != null; iter = iter.parent) {
+                iter.numLockedDescendants++;
+            }
+
+            return true;
+        }
+
+        public void unlock() {
+            if (isLocked()) {
+                locked = false;
+
+                for (BinaryTreeNodeWithLock<T> iter = parent; iter != null; iter = iter.parent) {
+                    iter.numLockedDescendants--;
+                }
+            }
+        }
+    }
 }

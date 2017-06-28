@@ -29,4 +29,17 @@ class HeapsTest {
             assertEquals(expected, Heaps.mergeFiles(lists));
         }
     }
+
+    @Nested
+    class increasingDecreasingTests {
+        @Test
+        @DisplayName("properly returns the list sorted")
+        void sort() {
+            List<Integer> list = new LinkedList<>(Arrays.asList(1, 4, 7, 6, 3, 2, 9, 8, 5));
+
+            List<Integer> expected = new LinkedList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
+
+            assertEquals(expected, Heaps.increaseDecreaseSort(list));
+        }
+    }
 }

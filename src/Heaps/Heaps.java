@@ -46,4 +46,29 @@ public class Heaps {
 
         return result;
     }
+
+    private static enum SubarrayType { INCREASING, DECREASING }
+
+    public static List<Integer> increaseDecreaseSort(List<Integer> input) {
+        List<List<Integer>> sortedSubarrays = new ArrayList<>();
+        SubarrayType subarrayType = SubarrayType.INCREASING;
+
+        int startIdx = 0;
+
+        for (int i = 1; i <= input.size(); i++) {
+            if (i == input.size() || (input.get(i - 1) < input.get(i) && subarrayType == SubarrayType.DECREASING) || (input.get(i - 1) >= input.get(i) && subarrayType == SubarrayType.INCREASING)) {
+                List<Integer> subList = input.subList(startIdx, i);
+
+                if (subarrayType == SubarrayType.DECREASING) {
+                    Collections.reverse(subList);
+                }
+
+                sortedSubarrays.add(subList);
+                startIdx = i;
+                subarrayType = (subarrayType == SubarrayType.DECREASING ? SubarrayType.INCREASING : SubarrayType.DECREASING);
+            }
+        }
+
+        return mergeFiles(sortedSubarrays);
+    }
 }

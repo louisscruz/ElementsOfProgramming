@@ -32,24 +32,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Heaps.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Heaps.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Heaps/Heaps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="788">
-              <caret line="85" column="33" lean-forward="false" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+            <state relative-caret-position="443">
+              <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding>
                 <element signature="e#742#743#0" expanded="true" />
                 <element signature="e#816#817#0" expanded="true" />
+                <element signature="e#3453#3454#0" expanded="true" />
+                <element signature="e#3518#3519#0" expanded="true" />
+                <element signature="e#3733#3734#0" expanded="true" />
+                <element signature="e#3813#3814#0" expanded="true" />
+                <element signature="e#4238#4244#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HeapsTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HeapsTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Heaps/HeapsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="69" lean-forward="false" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="69" />
+            <state relative-caret-position="1050">
+              <caret line="70" column="75" lean-forward="false" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,8 +156,8 @@
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNodeWithNext.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java" />
-        <option value="$PROJECT_DIR$/src/Heaps/HeapsTest.java" />
         <option value="$PROJECT_DIR$/src/Heaps/Heaps.java" />
+        <option value="$PROJECT_DIR$/src/Heaps/HeapsTest.java" />
       </list>
     </option>
   </component>
@@ -754,12 +759,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BinaryTreesTest - 2017.06.25 at 19h 10m 15s.xml">
-      <configuration name="BinaryTreesTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BinaryTreesTest - 2017.06.25 at 19h 11m 46s.xml">
-      <configuration name="BinaryTreesTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BinaryTreesTest - 2017.06.25 at 19h 12m 33s.xml">
       <configuration name="BinaryTreesTest" configurationId="JUnit" />
     </history-entry>
@@ -782,6 +781,12 @@
       <configuration name="HeapsTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="HeapsTest - 2017.06.27 at 22h 39m 54s.xml">
+      <configuration name="HeapsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeapsTest - 2017.06.27 at 23h 04m 08s.xml">
+      <configuration name="HeapsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeapsTest - 2017.06.27 at 23h 07m 18s.xml">
       <configuration name="HeapsTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1161,16 +1166,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Heaps/HeapsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="69" lean-forward="false" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1101">
@@ -1184,11 +1179,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Heaps/Heaps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="788">
-          <caret line="85" column="33" lean-forward="false" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+        <state relative-caret-position="443">
+          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
             <element signature="e#742#743#0" expanded="true" />
             <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#3453#3454#0" expanded="true" />
+            <element signature="e#3518#3519#0" expanded="true" />
+            <element signature="e#3733#3734#0" expanded="true" />
+            <element signature="e#3813#3814#0" expanded="true" />
+            <element signature="e#4238#4244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Heaps/HeapsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="70" column="75" lean-forward="false" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

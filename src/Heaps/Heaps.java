@@ -93,4 +93,47 @@ public class Heaps {
 
         return answer;
     }
+
+    public static class Star implements Comparable<Star> {
+        public static class StarLocation {
+            public double x, y, z;
+
+            public StarLocation(double x, double y, double z) {
+                this.x = x;
+                this.y = y;
+                this.z = z;
+            }
+        }
+
+        public StarLocation location;
+
+        public Star(double x, double y, double z) {
+            this.location = new StarLocation(x, y, z);
+        }
+
+        public double distance() {
+            return Math.sqrt(location.x * location.x + location.y * location.y + location.z * location.z);
+        }
+
+        @Override
+        public int compareTo(Star other) {
+            return Double.compare(this.distance(), other.distance());
+        }
+    }
+
+    public static List<Star> closestStars(int k, Iterator<Star> stars) {
+        PriorityQueue<Star> maxHeap = new PriorityQueue<>(k, Collections.reverseOrder());
+
+        while (stars.hasNext()) {
+            Star star = stars.next();
+            maxHeap.add(star);
+            if (maxHeap.size() == k + 1) {
+                maxHeap.remove();
+            }
+        }
+
+        List<Star> orderedStars = new ArrayList<Star>(maxHeap);
+        Collections.sort(orderedStars);
+        return orderedStars;
+    }
 }

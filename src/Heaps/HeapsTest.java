@@ -44,7 +44,7 @@ class HeapsTest {
     }
 
     @Nested
-    class almostSorted {
+    class almostSortedTests {
         @Test
         @DisplayName("properly returns the list sorted")
         void sort() {
@@ -53,6 +53,22 @@ class HeapsTest {
             List<Integer> expected = new LinkedList<>(Arrays.asList(-1, 2, 3, 4, 5, 6, 8));
 
             assertEquals(expected, Heaps.almostSorted(list.iterator(), 2));
+        }
+    }
+
+    @Nested
+    class starTests {
+        @Test
+        @DisplayName("properly returns the correct starts")
+        void closestStars() {
+            Heaps.Star firstStar = new Heaps.Star(0, 1, 1);
+            Heaps.Star secondStar = new Heaps.Star(1, 1, 1);
+            Heaps.Star thirdStar = new Heaps.Star(2, 2, 2);
+            List<Heaps.Star> list = new LinkedList<>(Arrays.asList(firstStar, secondStar, thirdStar));
+
+            List<Heaps.Star> expected = new LinkedList<>(Arrays.asList(firstStar, secondStar));
+
+            assertEquals(expected, Heaps.closestStars(2, list.iterator()));
         }
     }
 }

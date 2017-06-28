@@ -71,4 +71,26 @@ public class Heaps {
 
         return mergeFiles(sortedSubarrays);
     }
+
+    public static List<Integer> almostSorted(Iterator<Integer> list, int k) {
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        List<Integer> answer = new ArrayList<>();
+
+        for (int i = 0; i < k && list.hasNext(); i++) {
+            minHeap.add(list.next());
+        }
+
+        while (list.hasNext()) {
+            minHeap.add(list.next());
+            Integer smallest = minHeap.poll();
+            answer.add(smallest);
+        }
+
+        while (!minHeap.isEmpty()) {
+            Integer smallest = minHeap.poll();
+            answer.add(smallest);
+        }
+
+        return answer;
+    }
 }

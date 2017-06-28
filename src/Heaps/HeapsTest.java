@@ -42,4 +42,17 @@ class HeapsTest {
             assertEquals(expected, Heaps.increaseDecreaseSort(list));
         }
     }
+
+    @Nested
+    class almostSorted {
+        @Test
+        @DisplayName("properly returns the list sorted")
+        void sort() {
+            List<Integer> list = new LinkedList<>(Arrays.asList(3, -1, 2, 6, 4, 5, 8));
+
+            List<Integer> expected = new LinkedList<>(Arrays.asList(-1, 2, 3, 4, 5, 6, 8));
+
+            assertEquals(expected, Heaps.almostSorted(list.iterator(), 2));
+        }
+    }
 }

@@ -154,4 +154,54 @@ public class Heaps {
 
         return (minHeap.size() == maxHeap.size()) ? (0.5 * (minHeap.peek() + maxHeap.peek())) : minHeap.peek();
     }
+
+    public static class HeapEntry {
+        public Integer index;
+        public Integer value;
+
+        public HeapEntry(Integer index, Integer value) {
+            this.index = index;
+            this.value = value;
+        }
+    }
+
+    private static class Compare implements Comparator<HeapEntry> {
+        @Override
+        public int compare(HeapEntry o1, HeapEntry o2) {
+            return Integer.compare(o2.value, o1.value);
+        }
+
+        public static final Compare COMPARE_HEAP_ENTRIES = new Compare();
+    }
+
+    private static final int DEFAULT_INITIAL_CAPACITY = 16;
+
+    public static List<Integer> maxMaxHeap(List<Integer> list, int k) {
+        if (k <= 0) {
+            return Collections.EMPTY_LIST;
+        }
+
+        PriorityQueue<HeapEntry> candidateMaxHeap = new PriorityQueue<>(DEFAULT_INITIAL_CAPACITY, Compare.COMPARE_HEAP_ENTRIES);
+
+        candidateMaxHeap.add(new HeapEntry(0, list.get(0)));
+
+        List<Integer> result = new ArrayList<>();
+
+        for (int i = 0; i < k; i++) {
+            Integer candidateIdx = candidateMaxHeap.peek().index;
+            result.add(candidateMaxHeap.remove().value);
+
+            Integer leftChildIdx = 2 * candidateIdx + 1;
+            if (leftChildIdx < list.size()) {
+                candidateMaxHeap.add(new HeapEntry(leftChildIdx, list.get(leftChildIdx)));
+            }
+
+            Integer rightChildIdx = 2 * candidateIdx + 2;
+            if (rightChildIdx < list.size()) {
+                candidateMaxHeap.add(new HeapEntry(rightChildIdx, list.get(rightChildIdx)));
+            }
+        }
+
+        return result;
+    }
 }

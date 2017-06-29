@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Heaps/Heaps.java" afterPath="$PROJECT_DIR$/src/Heaps/Heaps.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Heaps/HeapsTest.java" afterPath="$PROJECT_DIR$/src/Heaps/HeapsTest.java" />
     </list>
@@ -38,9 +37,12 @@
       <file leaf-file-name="Heaps.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Heaps/Heaps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="150" column="46" lean-forward="false" selection-start-line="150" selection-start-column="46" selection-end-line="150" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="893">
+              <caret line="204" column="22" lean-forward="false" selection-start-line="204" selection-start-column="22" selection-end-line="204" selection-end-column="22" />
+              <folding>
+                <element signature="e#5335#5336#0" expanded="true" />
+                <element signature="e#5401#5402#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +50,8 @@
       <file leaf-file-name="HeapsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Heaps/HeapsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1230">
-              <caret line="82" column="56" lean-forward="false" selection-start-line="82" selection-start-column="56" selection-end-line="82" selection-end-column="56" />
+            <state relative-caret-position="998">
+              <caret line="95" column="62" lean-forward="false" selection-start-line="95" selection-start-column="62" selection-end-line="95" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -756,9 +758,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HeapsTest - 2017.06.27 at 21h 26m 45s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HeapsTest - 2017.06.27 at 21h 26m 58s.xml">
       <configuration name="HeapsTest" configurationId="JUnit" />
     </history-entry>
@@ -784,6 +783,9 @@
       <configuration name="HeapsTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="HeapsTest - 2017.06.28 at 22h 09m 32s.xml">
+      <configuration name="HeapsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeapsTest - 2017.06.28 at 23h 00m 58s.xml">
       <configuration name="HeapsTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1179,8 +1181,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Heaps/HeapsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="82" column="56" lean-forward="false" selection-start-line="82" selection-start-column="56" selection-end-line="82" selection-end-column="56" />
+        <state relative-caret-position="998">
+          <caret line="95" column="62" lean-forward="false" selection-start-line="95" selection-start-column="62" selection-end-line="95" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1189,9 +1191,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Heaps/Heaps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="150" column="46" lean-forward="false" selection-start-line="150" selection-start-column="46" selection-end-line="150" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="893">
+          <caret line="204" column="22" lean-forward="false" selection-start-line="204" selection-start-column="22" selection-end-line="204" selection-end-column="22" />
+          <folding>
+            <element signature="e#5335#5336#0" expanded="true" />
+            <element signature="e#5401#5402#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

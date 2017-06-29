@@ -83,4 +83,17 @@ class HeapsTest {
             assertEquals(1, Heaps.onlineMedian(list.iterator()));
         }
     }
+
+    @Nested
+    class maxMaxHeapTests {
+        @Test
+        @DisplayName("properly returns the correct elements")
+        void maxMaxHeap() {
+            List<Integer> list = new ArrayList<>(Arrays.asList(50, 30, 40, 5, 4, 39, 38));
+
+            List<Integer> expected = new ArrayList<>(Arrays.asList(50, 40, 39));
+
+            assertEquals(expected, Heaps.maxMaxHeap(list, 3));
+        }
+    }
 }

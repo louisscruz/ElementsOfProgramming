@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Arrays;
@@ -69,6 +70,17 @@ class HeapsTest {
             List<Heaps.Star> expected = new LinkedList<>(Arrays.asList(firstStar, secondStar));
 
             assertEquals(expected, Heaps.closestStars(2, list.iterator()));
+        }
+    }
+
+    @Nested
+    class onlineMedianTests {
+        @Test
+        @DisplayName("properly returns the median when of odd cardinality")
+        void onlineMedian() {
+            List<Integer> list = new ArrayList<>(Arrays.asList(1, 0, 3));
+
+            assertEquals(1, Heaps.onlineMedian(list.iterator()));
         }
     }
 }

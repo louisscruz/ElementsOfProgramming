@@ -136,4 +136,22 @@ public class Heaps {
         Collections.sort(orderedStars);
         return orderedStars;
     }
+
+    public static double onlineMedian(Iterator<Integer> sequence) {
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(16, Collections.reverseOrder());
+
+        while (sequence.hasNext()) {
+            int nextVal = sequence.next();
+
+            minHeap.add(nextVal);
+            maxHeap.add(minHeap.remove());
+
+            if (minHeap.size() < maxHeap.size()) {
+                minHeap.add(maxHeap.remove());
+            }
+        }
+
+        return (minHeap.size() == maxHeap.size()) ? (0.5 * (minHeap.peek() + maxHeap.peek())) : minHeap.peek();
+    }
 }

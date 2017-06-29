@@ -204,4 +204,40 @@ public class Heaps {
 
         return result;
     }
+
+    private static class ValueWithRank {
+        public Integer value;
+        public Integer rank;
+
+        public ValueWithRank(Integer value, Integer rank) {
+            this.value = value;
+            this.rank = rank;
+        }
+    }
+
+    private static class StackCompare implements Comparator<ValueWithRank> {
+        @Override
+        public int compare(ValueWithRank o1, ValueWithRank o2) {
+            return Integer.compare(o2.rank, o1.rank);
+        }
+
+        public static final StackCompare COMPARE_VALUE_WITH_RANK = new StackCompare();
+    }
+
+    public static class Stack {
+        private int timeStamp = 0;
+        private PriorityQueue<ValueWithRank> maxHeap = new PriorityQueue<>(DEFAULT_INITIAL_CAPACITY, StackCompare.COMPARE_VALUE_WITH_RANK);
+
+        public void push(Integer x) {
+            maxHeap.add(new ValueWithRank(x, timeStamp++));
+        }
+
+        public Integer pop() throws NoSuchElementException {
+            return maxHeap.remove().value;
+        }
+
+        public Integer peek() {
+            return maxHeap.peek().value;
+        }
+    }
 }

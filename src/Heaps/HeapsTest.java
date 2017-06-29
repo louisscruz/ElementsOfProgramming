@@ -89,11 +89,27 @@ class HeapsTest {
         @Test
         @DisplayName("properly returns the correct elements")
         void maxMaxHeap() {
-            List<Integer> list = new ArrayList<>(Arrays.asList(50, 30, 40, 5, 4, 39, 38));
+            List<Integer> list = new ArrayList<>(Arrays.asList(50, 7, 40, 5, 4, 39, 38));
 
             List<Integer> expected = new ArrayList<>(Arrays.asList(50, 40, 39));
 
             assertEquals(expected, Heaps.maxMaxHeap(list, 3));
+        }
+    }
+
+    @Nested
+    class stackHeapTests {
+        @Test
+        @DisplayName("properly returns the correct elements")
+        void stackHeap() {
+            Heaps.Stack s = new Heaps.Stack();
+            s.push(3);
+            s.push(2);
+            s.push(1);
+
+            assertEquals((Integer)1, s.pop());
+            assertEquals((Integer)2, s.pop());
+            assertEquals((Integer)3, s.pop());
         }
     }
 }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Heaps/Heaps.java" afterPath="$PROJECT_DIR$/src/Heaps/Heaps.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Heaps/HeapsTest.java" afterPath="$PROJECT_DIR$/src/Heaps/HeapsTest.java" />
     </list>
@@ -19,29 +20,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BinaryTrees.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4890">
-              <caret line="335" column="26" lean-forward="false" selection-start-line="335" selection-start-column="26" selection-end-line="335" selection-end-column="26" />
-              <folding>
-                <element signature="e#412#413#0" expanded="false" />
-                <element signature="e#471#472#0" expanded="false" />
-                <element signature="e#8992#8993#0" expanded="false" />
-                <element signature="e#9054#9055#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Heaps.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Heaps/Heaps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="204" column="22" lean-forward="false" selection-start-line="204" selection-start-column="22" selection-end-line="204" selection-end-column="22" />
+            <state relative-caret-position="668">
+              <caret line="225" column="0" lean-forward="true" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
               <folding>
                 <element signature="e#5335#5336#0" expanded="true" />
                 <element signature="e#5401#5402#0" expanded="true" />
+                <element signature="e#6959#6960#0" expanded="true" />
+                <element signature="e#7023#7024#0" expanded="true" />
+                <element signature="e#7364#7365#0" expanded="true" />
+                <element signature="e#7434#7435#0" expanded="true" />
+                <element signature="e#7582#7583#0" expanded="true" />
+                <element signature="e#7633#7634#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,8 +42,8 @@
       <file leaf-file-name="HeapsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Heaps/HeapsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="998">
-              <caret line="95" column="62" lean-forward="false" selection-start-line="95" selection-start-column="62" selection-end-line="95" selection-end-column="62" />
+            <state relative-caret-position="848">
+              <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -758,18 +750,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HeapsTest - 2017.06.27 at 21h 26m 58s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HeapsTest - 2017.06.27 at 21h 56m 55s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HeapsTest - 2017.06.27 at 21h 57m 21s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HeapsTest - 2017.06.27 at 22h 39m 19s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HeapsTest - 2017.06.27 at 22h 39m 54s.xml">
       <configuration name="HeapsTest" configurationId="JUnit" />
     </history-entry>
@@ -786,6 +766,18 @@
       <configuration name="HeapsTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="HeapsTest - 2017.06.28 at 23h 00m 58s.xml">
+      <configuration name="HeapsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeapsTest - 2017.06.28 at 23h 15m 01s.xml">
+      <configuration name="HeapsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeapsTest - 2017.06.28 at 23h 27m 48s.xml">
+      <configuration name="HeapsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeapsTest - 2017.06.28 at 23h 29m 05s.xml">
+      <configuration name="HeapsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HeapsTest - 2017.06.28 at 23h 29m 26s.xml">
       <configuration name="HeapsTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1168,21 +1160,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4890">
+        <state relative-caret-position="788">
           <caret line="335" column="26" lean-forward="false" selection-start-line="335" selection-start-column="26" selection-end-line="335" selection-end-column="26" />
           <folding>
-            <element signature="e#412#413#0" expanded="false" />
-            <element signature="e#471#472#0" expanded="false" />
-            <element signature="e#8992#8993#0" expanded="false" />
-            <element signature="e#9054#9055#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Heaps/HeapsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="998">
-          <caret line="95" column="62" lean-forward="false" selection-start-line="95" selection-start-column="62" selection-end-line="95" selection-end-column="62" />
+        <state relative-caret-position="848">
+          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1191,11 +1180,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Heaps/Heaps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="204" column="22" lean-forward="false" selection-start-line="204" selection-start-column="22" selection-end-line="204" selection-end-column="22" />
+        <state relative-caret-position="668">
+          <caret line="225" column="0" lean-forward="true" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
           <folding>
             <element signature="e#5335#5336#0" expanded="true" />
             <element signature="e#5401#5402#0" expanded="true" />
+            <element signature="e#6959#6960#0" expanded="true" />
+            <element signature="e#7023#7024#0" expanded="true" />
+            <element signature="e#7364#7365#0" expanded="true" />
+            <element signature="e#7434#7435#0" expanded="true" />
+            <element signature="e#7582#7583#0" expanded="true" />
+            <element signature="e#7633#7634#0" expanded="true" />
           </folding>
         </state>
       </provider>

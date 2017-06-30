@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Heaps/Heaps.java" afterPath="$PROJECT_DIR$/src/Heaps/Heaps.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Heaps/HeapsTest.java" afterPath="$PROJECT_DIR$/src/Heaps/HeapsTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,21 +18,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Heaps.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Heaps.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Heaps/Heaps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="225" column="0" lean-forward="true" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
-              <folding>
-                <element signature="e#5335#5336#0" expanded="true" />
-                <element signature="e#5401#5402#0" expanded="true" />
-                <element signature="e#6959#6960#0" expanded="true" />
-                <element signature="e#7023#7024#0" expanded="true" />
-                <element signature="e#7364#7365#0" expanded="true" />
-                <element signature="e#7434#7435#0" expanded="true" />
-                <element signature="e#7582#7583#0" expanded="true" />
-                <element signature="e#7633#7634#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="561">
+              <caret line="191" column="56" lean-forward="false" selection-start-line="191" selection-start-column="56" selection-end-line="191" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,8 +31,30 @@
       <file leaf-file-name="HeapsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Heaps/HeapsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="848">
-              <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+            <state relative-caret-position="1236">
+              <caret line="113" column="5" lean-forward="false" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Searching.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Searching/Searching.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchingTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Searching/SearchingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,7 +67,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="10" selection-end-column="22" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,8 +160,10 @@
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreeNodeWithNext.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTrees.java" />
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java" />
-        <option value="$PROJECT_DIR$/src/Heaps/HeapsTest.java" />
         <option value="$PROJECT_DIR$/src/Heaps/Heaps.java" />
+        <option value="$PROJECT_DIR$/src/Heaps/HeapsTest.java" />
+        <option value="$PROJECT_DIR$/src/Searching/SearchingTest.java" />
+        <option value="$PROJECT_DIR$/src/Searching/Searching.java" />
       </list>
     </option>
   </component>
@@ -174,7 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -239,7 +254,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LinkedLists" />
+              <option name="myItemId" value="Searching" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -263,7 +278,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -274,17 +289,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Searching" />
       <recent name="Heaps" />
       <recent name="BinaryTrees" />
       <recent name="StacksAndQueues" />
       <recent name="LinkedLists" />
-      <recent name="Strings" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HeapsTest">
+  <component name="RunManager" selected="JUnit.SearchingTest">
     <configuration default="false" name="LinkedListsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -297,32 +312,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="LinkedLists" />
       <option name="MAIN_CLASS_NAME" value="LinkedLists.LinkedListsTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="LinkedListsTest$isLinkedListPalindromeTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="LinkedLists.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="ElementsOfProgramming" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="LinkedLists" />
-      <option name="MAIN_CLASS_NAME" value="LinkedLists.LinkedListsTest$isLinkedListPalindromeTests" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -401,6 +390,32 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="Heaps" />
       <option name="MAIN_CLASS_NAME" value="Heaps.HeapsTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SearchingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Searching.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ElementsOfProgramming" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Searching" />
+      <option name="MAIN_CLASS_NAME" value="Searching.SearchingTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -699,18 +714,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.LinkedLists in ElementsOfProgramming" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.LinkedListsTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.LinkedListsTest$isLinkedListPalindromeTests" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.StacksAndQueuesTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BinaryTreesTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.HeapsTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.StacksAndQueuesTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BinaryTreesTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.HeapsTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.SearchingTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HeapsTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BinaryTreesTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.StacksAndQueuesTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.LinkedListsTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LinkedListsTest$isLinkedListPalindromeTests" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SearchingTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HeapsTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BinaryTreesTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.StacksAndQueuesTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LinkedListsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -750,39 +765,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HeapsTest - 2017.06.27 at 22h 39m 54s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HeapsTest - 2017.06.27 at 23h 04m 08s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HeapsTest - 2017.06.27 at 23h 07m 18s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HeapsTest - 2017.06.28 at 22h 07m 36s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HeapsTest - 2017.06.28 at 22h 09m 32s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HeapsTest - 2017.06.28 at 23h 00m 58s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HeapsTest - 2017.06.28 at 23h 15m 01s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HeapsTest - 2017.06.28 at 23h 27m 48s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HeapsTest - 2017.06.28 at 23h 29m 05s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HeapsTest - 2017.06.28 at 23h 29m 26s.xml">
       <configuration name="HeapsTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 22h 14m 18s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 22h 27m 03s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 22h 27m 33s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 22h 35m 21s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 22h 36m 21s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 22h 38m 52s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 22h 39m 57s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 22h 42m 50s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 22h 57m 59s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -794,7 +809,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22469491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22469491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -831,20 +846,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Strings/Strings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strings/StringsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PrimitiveTypes/PrimitiveTypes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4860">
@@ -1069,7 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="996">
           <caret line="92" column="26" lean-forward="false" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1154,7 +1154,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="10" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1162,35 +1164,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="788">
           <caret line="335" column="26" lean-forward="false" selection-start-line="335" selection-start-column="26" selection-end-line="335" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Heaps/Heaps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="191" column="56" lean-forward="false" selection-start-line="191" selection-start-column="56" selection-end-line="191" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Heaps/HeapsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state relative-caret-position="1236">
+          <caret line="113" column="5" lean-forward="false" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Heaps/Heaps.java">
+    <entry file="file://$PROJECT_DIR$/src/Searching/Searching.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="225" column="0" lean-forward="true" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Searching/SearchingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
           <folding>
-            <element signature="e#5335#5336#0" expanded="true" />
-            <element signature="e#5401#5402#0" expanded="true" />
-            <element signature="e#6959#6960#0" expanded="true" />
-            <element signature="e#7023#7024#0" expanded="true" />
-            <element signature="e#7364#7365#0" expanded="true" />
-            <element signature="e#7434#7435#0" expanded="true" />
-            <element signature="e#7582#7583#0" expanded="true" />
-            <element signature="e#7633#7634#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

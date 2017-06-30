@@ -23,4 +23,31 @@ class SearchingTest {
             assertEquals(3, Searching.findFirst(list2, 4));
         }
     }
+
+    @Nested
+    class findFirstGreater {
+        @Test
+        @DisplayName("returns the correct index when last")
+        void findFirstGreatestLast() {
+            List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 2, 2, 3, 4));
+
+            assertEquals(5, Searching.findFirstGreater(list, 3));
+        }
+
+        @Test
+        @DisplayName("returns the correct index when second")
+        void findFirstGreatestSecond() {
+            List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 2, 2, 3, 4));
+
+            assertEquals(1, Searching.findFirstGreater(list, 1));
+        }
+
+        @Test
+        @DisplayName("returns -1 when non-existent")
+        void findFirstGreatestNone() {
+            List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 2, 2, 3, 4));
+
+            assertEquals(-1, Searching.findFirstGreater(list, 7));
+        }
+    }
 }

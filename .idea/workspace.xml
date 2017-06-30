@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Searching/Searching.java" afterPath="$PROJECT_DIR$/src/Searching/Searching.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Searching/SearchingTest.java" afterPath="$PROJECT_DIR$/src/Searching/SearchingTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,21 +41,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Searching.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Searching.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Searching/Searching.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            <state relative-caret-position="90">
+              <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchingTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchingTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Searching/SearchingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+            <state relative-caret-position="615">
+              <caret line="41" column="54" lean-forward="false" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -765,34 +766,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HeapsTest - 2017.06.28 at 23h 29m 26s.xml">
-      <configuration name="HeapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.06.29 at 22h 14m 18s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.06.29 at 22h 27m 03s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.06.29 at 22h 27m 33s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.06.29 at 22h 35m 21s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.06.29 at 22h 36m 21s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.06.29 at 22h 38m 52s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.06.29 at 22h 39m 57s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SearchingTest - 2017.06.29 at 22h 42m 50s.xml">
       <configuration name="SearchingTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SearchingTest - 2017.06.29 at 22h 57m 59s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 23h 07m 45s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 23h 08m 33s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 23h 09m 41s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 23h 10m 06s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 23h 10m 34s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 23h 11m 05s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 23h 13m 39s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.06.29 at 23h 18m 33s.xml">
       <configuration name="SearchingTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -809,7 +810,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22469491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22469491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1185,21 +1186,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Searching/Searching.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Searching/SearchingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+        <state relative-caret-position="615">
+          <caret line="41" column="54" lean-forward="false" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Searching/Searching.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>

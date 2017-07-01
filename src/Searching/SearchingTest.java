@@ -63,4 +63,23 @@ class SearchingTest {
             assertEquals(2, Searching.findEqualsIndex(secondList));
         }
     }
+
+    @Nested
+    class findCyclicFirstTests {
+        @Test
+        @DisplayName("returns the correct index when cyclic")
+        void findCyclicFirstCyclic() {
+            List<Integer> list = new ArrayList<>(Arrays.asList(5, 6, 0, 1, 2, 3, 4));
+
+            assertEquals(2, Searching.findCyclicFirst(list));
+        }
+
+        @Test
+        @DisplayName("returns the correct index when non-cyclic")
+        void findCyclicFirstNonCyclic() {
+            List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+
+            assertEquals(0, Searching.findCyclicFirst(list));
+        }
+    }
 }

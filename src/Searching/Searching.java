@@ -61,4 +61,23 @@ public class Searching {
 
         return result;
     }
+
+    public static int findCyclicFirst(List<Integer> list) {
+        Integer first = 0, last = list.size() - 1, lastVal = list.get(last);
+        Integer result = -1, mid, midVal;
+
+        while (first <= last) {
+            mid = first + ((last - first) / 2);
+            midVal = list.get(mid);
+
+            if (midVal >= lastVal) {
+                first = mid + 1;
+            } else if (midVal < lastVal) {
+                result = mid;
+                last = mid - 1;
+            }
+        }
+
+        return result;
+    }
 }

@@ -50,4 +50,17 @@ class SearchingTest {
             assertEquals(-1, Searching.findFirstGreater(list, 7));
         }
     }
+
+    @Nested
+    class findEqualsIndexTests {
+        @Test
+        @DisplayName("returns the correct indexes")
+        void findEqualsIndex() {
+            List<Integer> firstList = new ArrayList<>(Arrays.asList(-2, 0, 2, 4, 6, 7, 9));
+            List<Integer> secondList = new ArrayList<>(Arrays.asList(-2, 0, 2, 3, 6, 7, 9));
+
+            assertEquals(2, Searching.findEqualsIndex(firstList));
+            assertEquals(2, Searching.findEqualsIndex(secondList));
+        }
+    }
 }

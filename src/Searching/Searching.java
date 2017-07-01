@@ -28,8 +28,6 @@ public class Searching {
         while (left <= right) {
             int mid = left + ((right - left) / 2);
 
-            System.out.println(mid);
-
             if (list.get(mid) > k) {
                 right = mid - 1;
             } else if (list.get(mid) < k) {
@@ -41,5 +39,26 @@ public class Searching {
         }
 
         return (result < list.size()) ? result : -1;
+    }
+
+    public static int findEqualsIndex(List<Integer> list) {
+        Integer first = 0, last = list.size() - 1, result = -1;
+        Integer mid, midVal;
+
+        while (first <= last) {
+            mid = first + ((last - first) / 2);
+            midVal = list.get(mid);
+
+            if (mid == midVal) {
+                result = mid;
+                last = mid - 1;
+            } else if (mid < midVal) {
+                last = mid - 1;
+            } else {
+                first = mid + 1;
+            }
+        }
+
+        return result;
     }
 }

@@ -80,4 +80,31 @@ public class Searching {
 
         return result;
     }
+
+    public static int intSquareRoot(int i) {
+        if (i <= 0) throw new IllegalArgumentException();
+        if (i <= 3) return 1;
+        int left = 2, right;
+
+        while (left * left * left * left <= i) {
+            left = left * left;
+        }
+
+        right = left * left;
+
+        while (left + 1 < right) {
+            int mid = left + ((right - left) / 2);
+            int midSquared = mid * mid;
+
+            if (midSquared < i) {
+                left = mid;
+            } else if (midSquared > i) {
+                right = mid;
+            } else {
+                return mid;
+            }
+        }
+
+        return left;
+    }
 }

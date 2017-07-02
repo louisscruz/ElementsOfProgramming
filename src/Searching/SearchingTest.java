@@ -82,4 +82,29 @@ class SearchingTest {
             assertEquals(0, Searching.findCyclicFirst(list));
         }
     }
+
+    @Nested
+    class intSquareRootTests {
+        @Nested
+        class whenExact {
+            @Test
+            @DisplayName("returns the proper value")
+            void exactValue() {
+                int i = 100;
+
+                assertEquals(10, Searching.intSquareRoot(i));
+            }
+        }
+
+        @Nested
+        class whenInexact {
+            @Test
+            @DisplayName("returns the proper value")
+            void inexactValue() {
+                int i = 145;
+
+                assertEquals(12, Searching.intSquareRoot(i));
+            }
+        }
+    }
 }

@@ -107,4 +107,17 @@ class SearchingTest {
             }
         }
     }
+
+    @Nested
+    class squareRootTests {
+        @Test
+        @DisplayName("returns the proper value")
+        void squareRoot() {
+            double i = 6.25;
+
+            double answer = Searching.squareRoot(i);
+
+            assertTrue(2.5 - answer < 0.001);
+        }
+    }
 }

@@ -107,4 +107,39 @@ public class Searching {
 
         return left;
     }
+
+    public static double squareRoot(double i) {
+        double lower, upper;
+
+        if (i <= 1.0) {
+            lower = 0;
+            upper = 1;
+        } else {
+            lower = 1;
+            upper = i;
+        }
+
+        while (compare(upper, lower) != Ordering.EQUAL) {
+            double mid = lower + (0.5 * (upper - lower));
+            double midSquared = mid * mid;
+
+            if (compare(midSquared, i) == Ordering.LARGER) {
+                upper = mid;
+            } else {
+                lower = mid;
+            }
+        }
+
+        return lower;
+    }
+
+    private static enum Ordering { SMALLER, EQUAL, LARGER }
+
+    private static Ordering compare(double a, double b) {
+        final double EPSILON = 0.00001;
+
+        double diff = (a - b) / b;
+
+        return diff < -EPSILON ? Ordering.SMALLER : (diff > EPSILON ? Ordering.LARGER : Ordering.EQUAL);
+    }
 }

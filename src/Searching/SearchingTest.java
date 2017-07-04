@@ -120,4 +120,27 @@ class SearchingTest {
             assertTrue(2.5 - answer < 0.001);
         }
     }
+
+    @Nested
+    class twoDimensionalSearchTests {
+        @Nested
+        class whenItExists {
+            @Test
+            @DisplayName("returns the proper index")
+            void search() {
+                ArrayList<ArrayList<Integer>> matrix = new ArrayList<>();
+                ArrayList<Integer> first = new ArrayList<>(Arrays.asList(-1, 2, 3));
+                ArrayList<Integer> second = new ArrayList<>(Arrays.asList(1, 2, 4));
+                ArrayList<Integer> third = new ArrayList<>(Arrays.asList(3, 5, 6));
+
+                matrix.add(first);
+                matrix.add(second);
+                matrix.add(third);
+
+                int[] answer = Searching.twoDimensionalSearch(matrix, 5);
+
+                assertTrue(Arrays.equals(new int[]{2, 1}, answer));
+            }
+        }
+    }
 }

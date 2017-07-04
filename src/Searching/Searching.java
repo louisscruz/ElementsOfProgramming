@@ -1,5 +1,6 @@
 package Searching;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Searching {
@@ -141,5 +142,24 @@ public class Searching {
         double diff = (a - b) / b;
 
         return diff < -EPSILON ? Ordering.SMALLER : (diff > EPSILON ? Ordering.LARGER : Ordering.EQUAL);
+    }
+
+    public static int[] twoDimensionalSearch(ArrayList<ArrayList<Integer>> matrix, int val) {
+        final int x = matrix.get(0).size(), y = matrix.size();
+        int row = 0, col = x - 1;
+
+        while (col >= 0 && row < y) {
+            int currentVal = matrix.get(row).get(col);
+
+            if (val == currentVal) return new int[]{row, col};
+
+            if (currentVal < val) {
+                row++;
+            } else {
+                col--;
+            }
+        }
+
+        return null;
     }
 }

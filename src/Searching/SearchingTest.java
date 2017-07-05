@@ -143,4 +143,18 @@ class SearchingTest {
             }
         }
     }
+
+    @Nested
+    class minMaxTests {
+        @Test
+        @DisplayName("returns the correct min and max")
+        void minMax() {
+            List<Integer> list = new ArrayList<>(Arrays.asList(1, 3, 2, 5, 4));
+
+            Searching.MinMax answer = Searching.findMinMax(list);
+
+            assertEquals(1, answer.min);
+            assertEquals(5, answer.max);
+        }
+    }
 }

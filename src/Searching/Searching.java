@@ -162,4 +162,43 @@ public class Searching {
 
         return null;
     }
+
+    public static class MinMax {
+        public int min;
+        public int max;
+
+        public MinMax(int min, int max) {
+            this.min = min;
+            this.max = max;
+        }
+
+        public static MinMax minMax(int a, int b) {
+            return (a < b) ? new MinMax(a, b) : new MinMax(b, a);
+        }
+    }
+
+    public static MinMax findMinMax(List<Integer> list) {
+        if (list.size() < 1) return null;
+        if (list.size() == 1) {
+            final int val = list.get(0);
+            return new MinMax(val, val);
+        }
+
+        final int first = list.get(0), second = list.get(1);
+
+        MinMax globalMinMax = MinMax.minMax(first, second);
+
+        for (int i = 2; i + 1 < list.size(); i += 2) {
+            final int a = list.get(i), b = list.get(i + 1);
+            final MinMax localMinMax = MinMax.minMax(a, b);
+            globalMinMax = new MinMax(Math.min(globalMinMax.min, localMinMax.min), Math.max(globalMinMax.max, localMinMax.max));
+        }
+
+        if (list.size() % 2 != 0) {
+            final int last = list.get(list.size() - 1);
+            globalMinMax = new MinMax(Math.min(globalMinMax.min, last), Math.max(globalMinMax.max, last));
+        }
+
+        return globalMinMax;
+    }
 }

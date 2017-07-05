@@ -157,4 +157,17 @@ class SearchingTest {
             assertEquals(5, answer.max);
         }
     }
+
+    @Nested
+    class quickSelectTests {
+        @Test
+        @DisplayName("returns the correct value")
+        void quickSelect() {
+            List<Integer> list = new ArrayList<>(Arrays.asList(4, 2, 3, 1));
+
+            int answer = Searching.quickSelect(list, 3);
+
+            assertEquals(2, answer);
+        }
+    }
 }

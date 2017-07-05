@@ -1,7 +1,6 @@
 package Searching;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Searching {
     public static int findFirst(List<Integer> list, int k) {
@@ -200,5 +199,51 @@ public class Searching {
         }
 
         return globalMinMax;
+    }
+
+    private static class GreaterThan implements Comparator<Integer> {
+        @Override
+        public int compare(Integer a, Integer b) {
+            return (a > b) ? -1 : (a.equals(b)) ? 0 : 1;
+        }
+    }
+
+    public static Integer quickSelect(List<Integer> list, int val) {
+        if (val > list.size()) return null;
+
+        int left = 0, right = list.size() - 1;
+        Random random = new Random();
+        GreaterThan cmp = new GreaterThan();
+
+        while (left <= right) {
+            int randIdx = left + random.nextInt(right - left + 1);
+            int newPivotIdx = partitionList(list, left, right, randIdx, cmp);
+
+            if (newPivotIdx == (val - 1)) {
+                return list.get(newPivotIdx);
+            } else if (newPivotIdx < (val - 1)) {
+                left = newPivotIdx + 1;
+            } else {
+                right = newPivotIdx - 1;
+            }
+        }
+
+        return null;
+    }
+
+    private static int partitionList(List<Integer> list, int left, int right, int randIdx, Comparator<Integer> cmp) {
+        int newPivotIdx = left, pivotVal = list.get(randIdx);
+
+        Collections.swap(list, randIdx, right);
+
+        for (int i = left; i < right; i++) {
+            if (cmp.compare(list.get(i), pivotVal) < 0) {
+                Collections.swap(list, i, newPivotIdx++);
+            }
+        }
+
+        Collections.swap(list, right, newPivotIdx);
+
+        return newPivotIdx;
     }
 }

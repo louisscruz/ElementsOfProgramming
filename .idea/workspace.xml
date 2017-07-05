@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Searching/Searching.java" afterPath="$PROJECT_DIR$/src/Searching/Searching.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Searching/SearchingTest.java" afterPath="$PROJECT_DIR$/src/Searching/SearchingTest.java" />
     </list>
@@ -20,25 +19,26 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Searching.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Searching.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Searching/Searching.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="190" column="29" lean-forward="false" selection-start-line="190" selection-start-column="29" selection-end-line="190" selection-end-column="29" />
+            <state relative-caret-position="413">
+              <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4469#4470#0" expanded="true" />
-                <element signature="e#4545#4546#0" expanded="true" />
+                <element signature="e#4438#4439#0" expanded="true" />
+                <element signature="e#4514#4515#0" expanded="true" />
+                <element signature="e#5569#5570#0" expanded="true" />
+                <element signature="e#5636#5637#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchingTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SearchingTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Searching/SearchingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="921">
-              <caret line="137" column="34" lean-forward="true" selection-start-line="137" selection-start-column="34" selection-end-line="137" selection-end-column="34" />
+            <state relative-caret-position="773">
+              <caret line="161" column="28" lean-forward="false" selection-start-line="161" selection-start-column="28" selection-end-line="161" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,8 +100,8 @@
         <option value="$PROJECT_DIR$/src/BinaryTrees/BinaryTreesTest.java" />
         <option value="$PROJECT_DIR$/src/Heaps/Heaps.java" />
         <option value="$PROJECT_DIR$/src/Heaps/HeapsTest.java" />
-        <option value="$PROJECT_DIR$/src/Searching/SearchingTest.java" />
         <option value="$PROJECT_DIR$/src/Searching/Searching.java" />
+        <option value="$PROJECT_DIR$/src/Searching/SearchingTest.java" />
       </list>
     </option>
   </component>
@@ -685,27 +685,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SearchingTest - 2017.07.03 at 22h 06m 39s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.07.03 at 22h 07m 06s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.07.03 at 22h 07m 27s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.07.03 at 22h 07m 50s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.07.03 at 22h 16m 49s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.07.03 at 22h 17m 50s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SearchingTest - 2017.07.03 at 22h 22m 18s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SearchingTest - 2017.07.04 at 21h 34m 04s.xml">
       <configuration name="SearchingTest" configurationId="JUnit" />
     </history-entry>
@@ -713,6 +692,27 @@
       <configuration name="SearchingTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SearchingTest - 2017.07.04 at 21h 35m 16s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.07.04 at 23h 19m 28s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.07.04 at 23h 25m 25s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.07.04 at 23h 33m 06s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.07.04 at 23h 33m 08s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.07.04 at 23h 58m 33s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.07.05 at 00h 00m 47s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.07.05 at 00h 02m 49s.xml">
       <configuration name="SearchingTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1091,24 +1091,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Searching/SearchingTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Searching/Searching.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="921">
-          <caret line="137" column="34" lean-forward="true" selection-start-line="137" selection-start-column="34" selection-end-line="137" selection-end-column="34" />
+        <state relative-caret-position="413">
+          <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#4438#4439#0" expanded="true" />
+            <element signature="e#4514#4515#0" expanded="true" />
+            <element signature="e#5569#5570#0" expanded="true" />
+            <element signature="e#5636#5637#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Searching/Searching.java">
+    <entry file="file://$PROJECT_DIR$/src/Searching/SearchingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="190" column="29" lean-forward="false" selection-start-line="190" selection-start-column="29" selection-end-line="190" selection-end-column="29" />
+        <state relative-caret-position="773">
+          <caret line="161" column="28" lean-forward="false" selection-start-line="161" selection-start-column="28" selection-end-line="161" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4469#4470#0" expanded="true" />
-            <element signature="e#4545#4546#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -170,4 +170,18 @@ class SearchingTest {
             assertEquals(2, answer);
         }
     }
+
+    @Nested
+    class findMissingDuplicateTests {
+        @Test
+        @DisplayName("returns a correct values")
+        void findMissingDuplicate() {
+            List<Integer> list = new ArrayList<>(Arrays.asList(0, 1, 2, 2, 4, 5));
+
+            Searching.MissingDuplicate answer = Searching.findMissingDuplicate(list);
+
+            assertEquals(3, (int)answer.missing);
+            assertEquals(2, (int)answer.duplicate);
+        }
+    }
 }

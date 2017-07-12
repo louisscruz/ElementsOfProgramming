@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Searching/Searching.java" afterPath="$PROJECT_DIR$/src/Searching/Searching.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Searching/SearchingTest.java" afterPath="$PROJECT_DIR$/src/Searching/SearchingTest.java" />
     </list>
@@ -22,14 +23,9 @@
       <file leaf-file-name="Searching.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Searching/Searching.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-              <folding>
-                <element signature="e#4438#4439#0" expanded="true" />
-                <element signature="e#4514#4515#0" expanded="true" />
-                <element signature="e#5569#5570#0" expanded="true" />
-                <element signature="e#5636#5637#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="711">
+              <caret line="249" column="10" lean-forward="false" selection-start-line="249" selection-start-column="10" selection-end-line="249" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -37,8 +33,8 @@
       <file leaf-file-name="SearchingTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Searching/SearchingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="773">
-              <caret line="161" column="28" lean-forward="false" selection-start-line="161" selection-start-column="28" selection-end-line="161" selection-end-column="28" />
+            <state relative-caret-position="771">
+              <caret line="174" column="37" lean-forward="true" selection-start-line="174" selection-start-column="37" selection-end-line="174" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,8 +123,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -199,6 +193,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -685,9 +681,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SearchingTest - 2017.07.04 at 21h 34m 04s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SearchingTest - 2017.07.04 at 21h 34m 52s.xml">
       <configuration name="SearchingTest" configurationId="JUnit" />
     </history-entry>
@@ -713,6 +706,9 @@
       <configuration name="SearchingTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SearchingTest - 2017.07.05 at 00h 02m 49s.xml">
+      <configuration name="SearchingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SearchingTest - 2017.07.11 at 21h 42m 35s.xml">
       <configuration name="SearchingTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1093,21 +1089,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Searching/Searching.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-          <folding>
-            <element signature="e#4438#4439#0" expanded="true" />
-            <element signature="e#4514#4515#0" expanded="true" />
-            <element signature="e#5569#5570#0" expanded="true" />
-            <element signature="e#5636#5637#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="711">
+          <caret line="249" column="10" lean-forward="false" selection-start-line="249" selection-start-column="10" selection-end-line="249" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Searching/SearchingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="161" column="28" lean-forward="false" selection-start-line="161" selection-start-column="28" selection-end-line="161" selection-end-column="28" />
+        <state relative-caret-position="771">
+          <caret line="174" column="37" lean-forward="true" selection-start-line="174" selection-start-column="37" selection-end-line="174" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

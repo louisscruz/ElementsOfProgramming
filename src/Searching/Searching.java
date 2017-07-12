@@ -246,4 +246,42 @@ public class Searching {
 
         return newPivotIdx;
     }
+
+    public static class MissingDuplicate {
+        public Integer missing;
+        public Integer duplicate;
+
+        public MissingDuplicate(Integer missing, Integer duplicate) {
+            this.missing = missing;
+            this.duplicate = duplicate;
+        }
+    }
+
+    public static MissingDuplicate findMissingDuplicate(List<Integer> list) {
+        int missXORDup = 0;
+
+        for (int i = 0; i < list.size(); i++) {
+            missXORDup ^= (i ^ list.get(i));
+        }
+
+        int differBit = missXORDup & (~(missXORDup - 1));
+        int missOrDup = 0;
+
+        for (int i = 0; i < list.size(); i++) {
+            if ((i & differBit) != 0) {
+                missOrDup ^= i;
+            }
+            if ((list.get(i) & differBit) != 0) {
+                missOrDup ^= list.get(i);
+            }
+        }
+
+        for (int l : list) {
+            if (l == missOrDup) {
+                return new MissingDuplicate(missOrDup ^ missXORDup, missOrDup);
+            }
+        }
+
+        return new MissingDuplicate(missOrDup, missOrDup ^ missXORDup);
+    }
 }

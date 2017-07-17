@@ -75,4 +75,25 @@ class HashMapsTest {
             }
         }
     }
+
+    @Nested
+    class LRUCacheTests {
+        @Test
+        @DisplayName("behaves properly")
+        void properly() {
+            HashMaps.LRUCache cache = new HashMaps.LRUCache(1);
+
+            assertNull(cache.lookup(1));
+
+            cache.insert(1, 1);
+
+            assertEquals(1, (int)cache.lookup(1));
+
+            cache.insert(2, 2);
+
+            assertNull(cache.lookup(1));
+
+            assertEquals(2, (int)cache.lookup(2));
+        }
+    }
 }

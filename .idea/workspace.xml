@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashMaps/HashMaps.java" afterPath="$PROJECT_DIR$/src/HashMaps/HashMaps.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashMaps/HashMapsTest.java" afterPath="$PROJECT_DIR$/src/HashMaps/HashMapsTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,23 +47,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashMaps.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HashMaps.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMaps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="713">
+              <caret line="63" column="44" lean-forward="true" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1665#1666#0" expanded="true" />
+                <element signature="e#1734#1735#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashMapsTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HashMapsTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMapsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+            <state relative-caret-position="638">
+              <caret line="78" column="11" lean-forward="true" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,8 +141,8 @@
         <option value="$PROJECT_DIR$/src/Searching/Searching.java" />
         <option value="$PROJECT_DIR$/src/Searching/SearchingTest.java" />
         <option value="$PROJECT_DIR$/src/HashMaps/HashMap.java" />
-        <option value="$PROJECT_DIR$/src/HashMaps/HashMapsTest.java" />
         <option value="$PROJECT_DIR$/src/HashMaps/HashMaps.java" />
+        <option value="$PROJECT_DIR$/src/HashMaps/HashMapsTest.java" />
       </list>
     </option>
   </component>
@@ -756,8 +759,8 @@
     <history-entry file="HashMapsTest - 2017.07.16 at 20h 23m 07s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SearchingTest - 2017.07.04 at 23h 33m 08s.xml">
-      <configuration name="SearchingTest" configurationId="JUnit" />
+    <history-entry file="HashMapsTest - 2017.07.16 at 21h 48m 43s.xml">
+      <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SearchingTest - 2017.07.04 at 23h 58m 33s.xml">
       <configuration name="SearchingTest" configurationId="JUnit" />
@@ -785,7 +788,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22469491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22469491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1160,20 +1163,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMapsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMaps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        <state relative-caret-position="713">
+          <caret line="63" column="44" lean-forward="true" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1665#1666#0" expanded="true" />
+            <element signature="e#1734#1735#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMaps.java">
+    <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMapsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="638">
+          <caret line="78" column="11" lean-forward="true" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

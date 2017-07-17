@@ -1,9 +1,6 @@
 package HashMaps;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class HashMaps {
     public static boolean canFormPalindrome(String s) {
@@ -50,5 +47,32 @@ public class HashMaps {
         }
 
         return counts.isEmpty();
+    }
+
+    public static class LRUCache {
+        LinkedHashMap<Integer, Integer> isbnToPrice;
+
+        LRUCache(final int capacity) {
+            this.isbnToPrice = new LinkedHashMap<Integer, Integer>(capacity, 1.0f, true) {
+                @Override
+                protected boolean removeEldestEntry(Map.Entry<Integer, Integer> e) {
+                    return this.size() > capacity;
+                }
+            };
+        }
+
+        public Integer lookup(Integer key) {
+            if (!isbnToPrice.containsKey(key)) {
+                return null;
+            }
+            return isbnToPrice.get(key);
+        }
+
+        public void insert(Integer key, Integer value) {
+            isbnToPrice.get(key);
+            if (!isbnToPrice.containsKey(key)) {
+                isbnToPrice.put(key, value);
+            }
+        }
     }
 }

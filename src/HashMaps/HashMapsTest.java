@@ -96,4 +96,33 @@ class HashMapsTest {
             assertEquals(2, (int)cache.lookup(2));
         }
     }
+
+    @Nested
+    class kMostFrequentQueriesTests {
+        @Nested
+        class whenValid {
+            @Test
+            @DisplayName("returns the proper queries")
+            void threeQueries() {
+                List<String> input = new ArrayList<>(Arrays.asList("one", "one", "two", "one", "two", "three", "one", "two", "three", "four", "five", "six"));
+
+                List<String> expected = new ArrayList<>(Arrays.asList("one", "two", "three"));
+
+                List<String> answer = HashMaps.kMostFrequentQueries(input, 3);
+
+                System.out.println(answer);
+
+                boolean isCorrect = true;
+
+                for (String s : answer) {
+                    if (!expected.contains(s)) {
+                        isCorrect = false;
+                        break;
+                    }
+                }
+
+                assertTrue(isCorrect);
+            }
+        }
+    }
 }

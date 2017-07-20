@@ -75,4 +75,59 @@ public class HashMaps {
             }
         }
     }
+
+    public static List<String> kMostFrequentQueries(List<String> queries, int k) {
+        Map<String, Integer> counts = new HashMap<>();
+
+        for (String q : queries) {
+            if (counts.containsKey(q)) {
+                counts.put(q, counts.get(q) + 1);
+            } else {
+                counts.put(q, 1);
+            }
+        }
+
+        queries = new ArrayList<String>(counts.keySet());
+
+        return queryQuickSelect(queries, k, 0, queries.size() - 1, counts);
+    }
+
+    private static List<String> queryQuickSelect(List<String> input, int k, int first, int last, Map<String, Integer> valuesMap) {
+        Random rand = new Random();
+
+        while (first < last) {
+            int nextRand = first + rand.nextInt(last - first);
+            int nextPivot = partition(input, nextRand, first, last, valuesMap);
+
+            if (nextPivot < (k - 1)) {
+                first = nextPivot + 1;
+            } else {
+                last = nextPivot;
+            }
+        }
+
+        return input.subList(0, k);
+    }
+
+    private static int partition(List<String> input, int randIdx, int first, int last, Map<String, Integer> valuesMap) {
+        System.out.println(input);
+        String key = input.get(randIdx);
+        int val = valuesMap.get(key);
+
+        Collections.swap(input, last, randIdx);
+
+        for (int i = first; i < last; i++) {
+            String currentKey = input.get(i);
+            int currentVal = valuesMap.get(currentKey);
+
+            if (currentVal > val) {
+                Collections.swap(input, i, first);
+                first++;
+            }
+        }
+
+        Collections.swap(input, first, last);
+
+        return first;
+    }
 }

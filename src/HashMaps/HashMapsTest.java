@@ -1,15 +1,13 @@
 package HashMaps;
 
+import static com.sun.org.apache.xml.internal.security.keys.keyresolver.KeyResolver.iterator;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Arrays;
+import java.util.*;
 
 class HashMapsTest {
     @Nested
@@ -110,8 +108,6 @@ class HashMapsTest {
 
                 List<String> answer = HashMaps.kMostFrequentQueries(input, 3);
 
-                System.out.println(answer);
-
                 boolean isCorrect = true;
 
                 for (String s : answer) {
@@ -123,6 +119,23 @@ class HashMapsTest {
 
                 assertTrue(isCorrect);
             }
+        }
+    }
+
+    @Nested
+    class smallestSubarrayCoverageTests {
+        @Test
+        @DisplayName("finds the correct sub-array")
+        void findSubArray() {
+            Iterator<String> words = new ArrayList<>(Arrays.asList("one", "two", "one", "three", "four")).iterator();
+            List<String> query = new ArrayList<>(Arrays.asList("two", "three"));
+
+            HashMaps.SubArray answer = HashMaps.smallestSubArrayCoverage(words, query);
+
+            HashMaps.SubArray expected = new HashMaps.SubArray(1, 3);
+
+            assertEquals(expected.start, answer.start);
+            assertEquals(expected.end, answer.end);
         }
     }
 }

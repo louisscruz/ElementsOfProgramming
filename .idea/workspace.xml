@@ -2,6 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMaps.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMaps.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$LRUCacheTests.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$LRUCacheTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$canFormPalindromeTests$whenFalse.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$canFormPalindromeTests$whenFalse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$canFormPalindromeTests$whenTrue.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$canFormPalindromeTests$whenTrue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$canFormPalindromeTests.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$canFormPalindromeTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$constructableTests$whenFalse.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$constructableTests$whenFalse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$constructableTests$whenTrue.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$constructableTests$whenTrue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$constructableTests.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$constructableTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$kMostFrequentQueriesTests$whenValid.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$kMostFrequentQueriesTests$whenValid.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$kMostFrequentQueriesTests.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest$kMostFrequentQueriesTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest.class" afterPath="$PROJECT_DIR$/out/production/ElementsOfProgramming/HashMaps/HashMapsTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashMaps/HashMaps.java" afterPath="$PROJECT_DIR$/src/HashMaps/HashMaps.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashMaps/HashMapsTest.java" afterPath="$PROJECT_DIR$/src/HashMaps/HashMapsTest.java" />
@@ -20,21 +31,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HashMaps.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HashMaps.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMaps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="758">
-              <caret line="116" column="47" lean-forward="true" selection-start-line="116" selection-start-column="47" selection-end-line="116" selection-end-column="47" />
+            <state relative-caret-position="381">
+              <caret line="139" column="9" lean-forward="false" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashMapsTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HashMapsTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMapsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="106" column="154" lean-forward="false" selection-start-line="106" selection-start-column="154" selection-end-line="106" selection-end-column="154" />
+            <state relative-caret-position="893">
+              <caret line="137" column="51" lean-forward="false" selection-start-line="137" selection-start-column="51" selection-end-line="137" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,8 +137,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -196,27 +206,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ElementsOfProgramming" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ElementsOfProgramming" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BinaryTrees" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -702,34 +695,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HashMapsTest - 2017.07.19 at 23h 33m 37s.xml">
+    <history-entry file="HashMapsTest - 2017.07.20 at 22h 52m 34s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HashMapsTest - 2017.07.19 at 23h 33m 39s.xml">
+    <history-entry file="HashMapsTest - 2017.07.20 at 23h 13m 50s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HashMapsTest - 2017.07.19 at 23h 33m 40s.xml">
+    <history-entry file="HashMapsTest - 2017.07.20 at 23h 14m 03s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HashMapsTest - 2017.07.19 at 23h 33m 41s.xml">
+    <history-entry file="HashMapsTest - 2017.07.20 at 23h 15m 28s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HashMapsTest - 2017.07.19 at 23h 33m 42s.xml">
+    <history-entry file="HashMapsTest - 2017.07.20 at 23h 16m 38s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HashMapsTest - 2017.07.19 at 23h 33m 44s.xml">
+    <history-entry file="HashMapsTest - 2017.07.20 at 23h 19m 58s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HashMapsTest - 2017.07.19 at 23h 33m 45s.xml">
+    <history-entry file="HashMapsTest - 2017.07.20 at 23h 21m 19s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HashMapsTest - 2017.07.19 at 23h 33m 46s.xml">
+    <history-entry file="HashMapsTest - 2017.07.20 at 23h 22m 01s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HashMapsTest - 2017.07.19 at 23h 33m 47s.xml">
+    <history-entry file="HashMapsTest - 2017.07.20 at 23h 26m 27s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HashMapsTest - 2017.07.19 at 23h 37m 35s.xml">
+    <history-entry file="HashMapsTest - 2017.07.20 at 23h 26m 35s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1071,9 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="11" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1109,21 +1099,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMapsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMaps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="106" column="154" lean-forward="false" selection-start-line="106" selection-start-column="154" selection-end-line="106" selection-end-column="154" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="381">
+          <caret line="139" column="9" lean-forward="false" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMaps.java">
+    <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMapsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="758">
-          <caret line="116" column="47" lean-forward="true" selection-start-line="116" selection-start-column="47" selection-end-line="116" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="893">
+          <caret line="137" column="51" lean-forward="false" selection-start-line="137" selection-start-column="51" selection-end-line="137" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

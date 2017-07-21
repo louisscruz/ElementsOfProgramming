@@ -110,7 +110,6 @@ public class HashMaps {
     }
 
     private static int partition(List<String> input, int randIdx, int first, int last, Map<String, Integer> valuesMap) {
-        System.out.println(input);
         String key = input.get(randIdx);
         int val = valuesMap.get(key);
 
@@ -129,5 +128,66 @@ public class HashMaps {
         Collections.swap(input, first, last);
 
         return first;
+    }
+
+    public static class SubArray {
+        public int start;
+        public int end;
+
+        public SubArray(int start, int end) {
+            this.start = start;
+            this.end = end;
+        }
+    }
+
+    private static Integer getValueForFirstEntry(LinkedHashMap<String, Integer> m) {
+        Integer result = null;
+
+        for (Map.Entry<String, Integer> entry : m.entrySet()) {
+            result = entry.getValue();
+            break;
+        }
+
+        return result;
+    }
+
+    public static SubArray smallestSubArrayCoverage(Iterator<String> stream, List<String> queryStrings) {
+        LinkedHashMap<String, Integer> dict = new LinkedHashMap<>();
+
+        for (String s : queryStrings) {
+            dict.put(s, null);
+        }
+
+        int numStringsFromQueryStringsSeenSoFar = 0;
+
+        SubArray res = new SubArray(-1, -1);
+
+        int idx = 0;
+
+        while (stream.hasNext()) {
+            String s = stream.next();
+
+            if (dict.containsKey(s)) {
+                Integer it = dict.get(s);
+
+                if (it == null) {
+                    numStringsFromQueryStringsSeenSoFar++;
+                }
+
+                dict.remove(s);
+                dict.put(s, idx);
+            }
+
+            if (numStringsFromQueryStringsSeenSoFar == queryStrings.size()) {
+                if ((res.start == -1 && res.end == -1) || idx - getValueForFirstEntry(dict) < res.end - res.start) {
+                    res.start = getValueForFirstEntry(dict);
+                    res.end = idx;
+                }
+            }
+
+            idx++;
+        }
+
+        return res;
     }
 }

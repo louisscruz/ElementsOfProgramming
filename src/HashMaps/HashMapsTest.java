@@ -138,4 +138,21 @@ class HashMapsTest {
             assertEquals(expected.end, answer.end);
         }
     }
+
+    @Nested
+    class smallestConsecutiveSubarrayCoverageTests {
+        @Test
+        @DisplayName("finds the correct sub-array")
+        void findSubArray() {
+            List<String> words = new ArrayList<>(Arrays.asList("b", "a", "c", "b"));
+            List<String> query = new ArrayList<>(Arrays.asList("a", "b"));
+
+            HashMaps.SubArray answer = HashMaps.smallestConsecutiveSubArrayCoverage(words, query);
+
+            HashMaps.SubArray expected = new HashMaps.SubArray(1, 3);
+
+            assertEquals(expected.start, answer.start);
+            assertEquals(expected.end, answer.end);
+        }
+    }
 }

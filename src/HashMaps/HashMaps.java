@@ -194,12 +194,12 @@ public class HashMaps {
     public static SubArray smallestConsecutiveSubArrayCoverage(List<String> paragraph, List<String> queryStrings) {
         Map<String, Integer> keywordToIdx = new HashMap<>();
 
-        List<Integer> latestOccurence = new ArrayList<>(queryStrings.size());
+        List<Integer> latestOccurrence = new ArrayList<>(queryStrings.size());
 
         List<Integer> shortestSubArrayLength = new ArrayList<>(queryStrings.size());
 
         for (int i = 0; i < queryStrings.size(); i++) {
-            latestOccurence.add(-1);
+            latestOccurrence.add(-1);
             shortestSubArrayLength.add(Integer.MAX_VALUE);
             keywordToIdx.put(queryStrings.get(i), i);
         }
@@ -214,12 +214,20 @@ public class HashMaps {
                 if (keywordIdx == 0) {
                     shortestSubArrayLength.set(0, 1);
                 } else if (shortestSubArrayLength.get(keywordIdx - 1) != Integer.MAX_VALUE) {
-                    int distanceToPreviousKeyword = i - latestOccurence.get(keywordIdx - 1);
+                    int distanceToPreviousKeyword = i - latestOccurrence.get(keywordIdx - 1);
                     shortestSubArrayLength.set(keywordIdx, distanceToPreviousKeyword + shortestSubArrayLength.get(keywordIdx - 1));
                 }
-            }
 
-            latestOccurrence.set(keywordIdx, i);
+                latestOccurrence.set(keywordIdx, i);
+
+                if (keywordIdx == queryStrings.size() - 1 && shortestSubArrayLength.get(shortestSubArrayLength.size() - 1) < shortestDistance) {
+                    shortestDistance = shortestSubArrayLength.get(shortestSubArrayLength.size() - 1);
+                    result.start = i - shortestSubArrayLength.get(shortestSubArrayLength.size() - 1) + 1;
+                    result.end = i;
+                }
+            }
         }
+
+        return result;
     }
 }

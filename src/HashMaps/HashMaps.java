@@ -230,4 +230,71 @@ public class HashMaps {
 
         return result;
     }
+
+    public static SubArray largestDistinctSubArray(List<String> source) {
+        Set<String> set = new HashSet<>();
+        SubArray answer = new SubArray(-1, -1);
+
+        int startIdx = 0;
+
+        for (int i = 0; i < source.size(); i++) {
+            String s = source.get(i);
+
+            if (!set.contains(s)) {
+                set.add(s);
+                int previousAnswerSize = answer.end - answer.start + 1;
+
+                if (answer.start + answer.end < 0 || set.size() > previousAnswerSize) {
+                    answer.start = startIdx;
+                    answer.end = i;
+                }
+            } else {
+                String word = source.get(startIdx);
+                while (word != s) {
+                    set.remove(word);
+                    word = source.get(++startIdx);
+                }
+                startIdx++;
+                set.add(s);
+            }
+        }
+
+        return answer;
+    }
+
+    public static int largestSequentialSubSet(List<Integer> input) {
+        Map<Integer, Integer> counts = new HashMap<>();
+
+        for (Integer i : input) {
+            counts.put(i, 1);
+        }
+
+        for (Integer i : input) {
+            if (counts.containsKey(i)) {
+                int checkVal = i - 1;
+
+                while (counts.containsKey(checkVal)) {
+                    counts.put(i, counts.get(i) + 1);
+                    counts.remove(checkVal--);
+                }
+
+                checkVal = i + 1;
+
+                while (counts.containsKey(checkVal)) {
+                    counts.put(i, counts.get(i) + 1);
+                    counts.remove(checkVal++);
+                }
+            }
+        }
+
+        int max = 1;
+
+        for (Integer i : counts.keySet()) {
+            if (counts.get(i) > max) {
+                max = counts.get(i);
+            }
+        }
+
+        return max;
+    }
 }

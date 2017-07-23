@@ -155,4 +155,35 @@ class HashMapsTest {
             assertEquals(expected.end, answer.end);
         }
     }
+
+    @Nested
+    class largestDistinctSubArrayTests {
+        @Test
+        @DisplayName("finds the correct sub-array")
+        void distinct() {
+            List<String> source = new ArrayList<>(Arrays.asList("a", "b", "b", "c", "d", "e", "c", "b", "d", "e"));
+
+            HashMaps.SubArray expected = new HashMaps.SubArray(2, 5);
+
+            HashMaps.SubArray answer = HashMaps.largestDistinctSubArray(source);
+
+            assertEquals(expected.start, answer.start);
+
+            assertEquals(expected.end, answer.end);
+        }
+    }
+
+    @Nested
+    class largestSequentialSubSet {
+        @Test
+        @DisplayName("returns the correct answer")
+        void largest() {
+            List<Integer> input = new ArrayList<>(Arrays.asList(5, 6, 4, 7, 3, 1, 1, 9));
+            int expected = 5;
+
+            int answer = HashMaps.largestSequentialSubSet(input);
+
+            assertEquals(expected, answer);
+        }
+    }
 }

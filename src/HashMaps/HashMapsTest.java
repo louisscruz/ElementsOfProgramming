@@ -207,4 +207,21 @@ class HashMapsTest {
             assertEquals(1, answer);
         }
     }
+
+    @Nested
+    class findAllSubstringsTests {
+        @Test
+        @DisplayName("returns the correct indices")
+        void findAll() {
+            String word = "amanaplanacanal";
+
+            List<String> words = new ArrayList<>(Arrays.asList("can", "apl", "ana"));
+
+            List<Integer> expected = new ArrayList<>(Arrays.asList(4));
+
+            List<Integer> answer = HashMaps.findAllSubstrings(word, words);
+
+            assertEquals(expected, answer);
+        }
+    }
 }

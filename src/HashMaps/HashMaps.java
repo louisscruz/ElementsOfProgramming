@@ -297,4 +297,55 @@ public class HashMaps {
 
         return max;
     }
+
+    public static class Score {
+        public int id;
+        public int val;
+
+        public Score(int id, int val) {
+            this.id = id;
+            this.val = val;
+        }
+    }
+
+    public static int topStudent(List<Score> scores) {
+        Map<Integer, PriorityQueue<Integer>> studentScores = new HashMap<>();
+
+        for (Score s : scores) {
+            int studentId = s.id;
+            int val = s.val;
+
+            if (!studentScores.containsKey(studentId)) {
+                studentScores.put(studentId, new PriorityQueue<Integer>());
+            }
+
+            PriorityQueue<Integer> scoreQueue = studentScores.get(studentId);
+
+            scoreQueue.add(val);
+        }
+
+        int max = -1;
+        int answer = -1;
+
+        for (int i : studentScores.keySet()) {
+            PriorityQueue minHeap = studentScores.get(i);
+
+            if (minHeap.size() >= 3) {
+                int average = (int)minHeap.poll();
+
+                for (int j = 0; j < 2; j++) {
+                    int nextInt = (int)minHeap.poll();
+
+                    average = (average + nextInt) / 2;
+                }
+
+                if (average > max) {
+                    answer = i;
+                    max = average;
+                }
+            }
+        }
+
+        return answer;
+    }
 }

@@ -186,4 +186,25 @@ class HashMapsTest {
             assertEquals(expected, answer);
         }
     }
+
+    @Nested
+    class topStudentTests {
+        @Test
+        @DisplayName("returns the correct answer")
+        void top() {
+            List<HashMaps.Score> scores = new LinkedList<>();
+
+            scores.add(new HashMaps.Score(1, 90));
+            scores.add(new HashMaps.Score(2, 80));
+            scores.add(new HashMaps.Score(1, 100));
+            scores.add(new HashMaps.Score(1, 95));
+            scores.add(new HashMaps.Score(2, 90));
+            scores.add(new HashMaps.Score(2, 85));
+            scores.add(new HashMaps.Score(3, 100));
+
+            int answer = HashMaps.topStudent(scores);
+
+            assertEquals(1, answer);
+        }
+    }
 }

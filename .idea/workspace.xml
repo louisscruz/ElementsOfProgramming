@@ -20,21 +20,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HashMaps.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HashMaps.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMaps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="803">
-              <caret line="291" column="43" lean-forward="false" selection-start-line="291" selection-start-column="43" selection-end-line="291" selection-end-column="43" />
+            <state relative-caret-position="443">
+              <caret line="318" column="75" lean-forward="true" selection-start-line="318" selection-start-column="75" selection-end-line="318" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashMapsTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Heaps.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Heaps/Heaps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="191" column="56" lean-forward="false" selection-start-line="191" selection-start-column="56" selection-end-line="191" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashMapsTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMapsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="848">
-              <caret line="182" column="0" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+            <state relative-caret-position="788">
+              <caret line="199" column="50" lean-forward="true" selection-start-line="199" selection-start-column="50" selection-end-line="199" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,8 +136,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -192,13 +201,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Heaps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElementsOfProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ElementsOfProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="HashMaps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -684,15 +712,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HashMapsTest - 2017.07.23 at 10h 33m 44s.xml">
-      <configuration name="HashMapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HashMapsTest - 2017.07.23 at 10h 37m 16s.xml">
-      <configuration name="HashMapsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HashMapsTest - 2017.07.23 at 10h 38m 09s.xml">
-      <configuration name="HashMapsTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HashMapsTest - 2017.07.23 at 10h 39m 19s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
@@ -712,6 +731,15 @@
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="HashMapsTest - 2017.07.23 at 15h 18m 14s.xml">
+      <configuration name="HashMapsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HashMapsTest - 2017.07.23 at 15h 19m 20s.xml">
+      <configuration name="HashMapsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HashMapsTest - 2017.07.23 at 17h 55m 29s.xml">
+      <configuration name="HashMapsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HashMapsTest - 2017.07.23 at 17h 56m 28s.xml">
       <configuration name="HashMapsTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1020,13 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Heaps/Heaps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2745">
-          <caret line="191" column="56" lean-forward="false" selection-start-line="191" selection-start-column="56" selection-end-line="191" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedLists/LinkedListsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1084,21 +1105,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMapsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMaps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="182" column="0" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="443">
+          <caret line="318" column="75" lean-forward="true" selection-start-line="318" selection-start-column="75" selection-end-line="318" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMaps.java">
+    <entry file="file://$PROJECT_DIR$/src/Heaps/Heaps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="291" column="43" lean-forward="false" selection-start-line="291" selection-start-column="43" selection-end-line="291" selection-end-column="43" />
+        <state relative-caret-position="561">
+          <caret line="191" column="56" lean-forward="false" selection-start-line="191" selection-start-column="56" selection-end-line="191" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashMaps/HashMapsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="788">
+          <caret line="199" column="50" lean-forward="true" selection-start-line="199" selection-start-column="50" selection-end-line="199" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

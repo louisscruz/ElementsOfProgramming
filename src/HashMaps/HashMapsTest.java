@@ -224,4 +224,13 @@ class HashMapsTest {
             assertEquals(expected, answer);
         }
     }
+
+    @Nested
+    class testCollatzTests {
+        @Test
+        @DisplayName("returns true")
+        void returnsTrue() {
+            assertTrue(HashMaps.testCollatz(1000));
+        }
+    }
 }

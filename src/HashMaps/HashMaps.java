@@ -400,4 +400,43 @@ public class HashMaps {
         count++;
         dict.put(word, count);
     }
+
+    public static boolean testCollatz(int n) {
+        if (n < 1) return false;
+        if (n < 3) return true;
+
+        Set<Long> validNumbers = new HashSet<>();
+
+        for (int i = 3; i <= n; i += 2) {
+            Set<Long> path = new HashSet<>();
+            long j = i;
+
+            while (j >= i) {
+                if (path.contains(j)) {
+                    return false;
+                } else {
+                    path.add(j);
+
+                    if (j % 2 == 0) {
+                        j /= 2;
+                    } else {
+                        if (validNumbers.contains(j)) {
+                            break;
+                        }
+
+                        validNumbers.add(j);
+                        Long next = (3 * j) + 1;
+
+                        if (next <= j) {
+                            throw new ArithmeticException("Collatz overflowed");
+                        }
+
+                        j = next;
+                    }
+                }
+            }
+        }
+
+        return true;
+    }
 }

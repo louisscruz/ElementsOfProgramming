@@ -46,4 +46,27 @@ class SortingTest {
             }
         }
     }
+
+    @Nested
+    class uniqueNamesTests {
+        @Test
+        @DisplayName("returns the correct result")
+        void uniqueNames() {
+            List<Sorting.Name> names = new ArrayList<>();
+            names.add(new Sorting.Name("jack", "noble"));
+            names.add(new Sorting.Name("john", "doe"));
+            names.add(new Sorting.Name("john", "don"));
+
+            List<Sorting.Name> expected = new ArrayList<>();
+            expected.add(new Sorting.Name("jack", "noble"));
+            expected.add(new Sorting.Name("john", "doe"));
+
+            Sorting.uniqueNames(names);
+
+            assertEquals(expected.get(0).first, names.get(0).first);
+            assertEquals(expected.get(0).last, names.get(0).last);
+            assertEquals(expected.get(1).first, names.get(1).first);
+            assertEquals(expected.get(1).last, names.get(1).last);
+        }
+    }
 }

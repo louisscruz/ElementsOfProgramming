@@ -1,6 +1,7 @@
 package Sorting;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Sorting {
@@ -57,5 +58,42 @@ public class Sorting {
         while (j >= 0) {
             first.set(writeIdx--, second.get(j--));
         }
+    }
+
+    public static class Name implements Comparable<Name> {
+        public String first;
+        public String last;
+
+        public Name(String first, String last) {
+            this.first = first;
+            this.last = last;
+        }
+
+        public int compareTo(Name name) {
+            int cmpFirst = first.compareTo(name.first);
+
+            if (cmpFirst != 0) return cmpFirst;
+
+            return last.compareTo(name.last);
+        }
+
+        @Override
+        public String toString() {
+            return this.first + ", " + this.last;
+        }
+    }
+
+    public static void uniqueNames(List<Name> names) {
+        Collections.sort(names);
+
+        int writeIdx = 1;
+
+        for (int i = 1; i < names.size(); i++) {
+            if (!names.get(i).first.equals(names.get(writeIdx).first)) {
+                names.set(++writeIdx, names.get(i));
+            }
+        }
+
+        names.subList(++writeIdx, names.size()).clear();
     }
 }

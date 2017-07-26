@@ -26,4 +26,24 @@ class SortingTest {
             assertEquals(expected, answer);
         }
     }
+
+    @Nested
+    class mergeArraysTests {
+        @Nested
+        class whenEnoughBlankSpaces {
+            @Test
+            @DisplayName("correctly modifies the first array")
+            void merge() {
+                List<Integer> first = new ArrayList<>(Arrays.asList(1, 3, 5, 7, 9, null, null, null, null, null));
+
+                List<Integer> second = new ArrayList<>(Arrays.asList(2, 4, 6, 8, 10));
+
+                Sorting.mergeArrays(first, second);
+
+                List<Integer> expected = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+                assertEquals(expected, first);
+            }
+        }
+    }
 }

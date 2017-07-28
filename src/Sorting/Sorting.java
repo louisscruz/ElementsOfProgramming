@@ -96,4 +96,20 @@ public class Sorting {
 
         names.subList(++writeIdx, names.size()).clear();
     }
+
+    public static Integer smallestNonConstructable(List<Integer> coins) {
+        Collections.sort(coins);
+
+        int currentVal = 0;
+
+        for (int a : coins) {
+            if (currentVal + 1 < a) {
+                return currentVal + 1;
+            }
+
+            currentVal += a;
+        }
+
+        return currentVal + 1;
+    }
 }

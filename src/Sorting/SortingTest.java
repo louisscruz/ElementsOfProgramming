@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Nested;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -67,6 +68,21 @@ class SortingTest {
             assertEquals(expected.get(0).last, names.get(0).last);
             assertEquals(expected.get(1).first, names.get(1).first);
             assertEquals(expected.get(1).last, names.get(1).last);
+        }
+    }
+
+    @Nested
+    class smallestNonConstructableTests {
+        @Test
+        @DisplayName("returns the proper value")
+        void smallest() {
+            List<Integer> coins = new LinkedList<>(Arrays.asList(12, 2, 1, 15, 2, 4));
+
+            Integer expected = 10;
+
+            Integer answer = Sorting.smallestNonConstructable(coins);
+
+            assertEquals(expected, answer);
         }
     }
 }

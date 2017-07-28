@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sorting/Sorting.java" afterPath="$PROJECT_DIR$/src/Sorting/Sorting.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sorting/SortingTest.java" afterPath="$PROJECT_DIR$/src/Sorting/SortingTest.java" />
     </list>
@@ -19,11 +20,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Sorting.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Sorting.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Sorting/Sorting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="82" column="9" lean-forward="false" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+            <state relative-caret-position="743">
+              <caret line="102" column="26" lean-forward="false" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2167#2168#0" expanded="true" />
@@ -33,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SortingTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SortingTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sorting/SortingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="68" column="58" lean-forward="false" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
+            <state relative-caret-position="863">
+              <caret line="82" column="45" lean-forward="false" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/Searching/SearchingTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -60,7 +61,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3360">
               <caret line="232" column="51" lean-forward="false" selection-start-line="232" selection-start-column="51" selection-end-line="232" selection-end-column="51" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#6818#6819#0" expanded="false" />
+                <element signature="e#6880#6881#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,8 +129,8 @@
         <option value="$PROJECT_DIR$/src/HashMaps/HashMap.java" />
         <option value="$PROJECT_DIR$/src/HashMaps/HashMapsTest.java" />
         <option value="$PROJECT_DIR$/src/HashMaps/HashMaps.java" />
-        <option value="$PROJECT_DIR$/src/Sorting/Sorting.java" />
         <option value="$PROJECT_DIR$/src/Sorting/SortingTest.java" />
+        <option value="$PROJECT_DIR$/src/Sorting/Sorting.java" />
       </list>
     </option>
   </component>
@@ -240,8 +245,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -727,24 +732,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SortingTest - 2017.07.25 at 19h 31m 57s.xml">
-      <configuration name="SortingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SortingTest - 2017.07.25 at 19h 32m 44s.xml">
-      <configuration name="SortingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SortingTest - 2017.07.25 at 19h 32m 56s.xml">
-      <configuration name="SortingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SortingTest - 2017.07.25 at 21h 52m 13s.xml">
-      <configuration name="SortingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SortingTest - 2017.07.25 at 22h 18m 13s.xml">
-      <configuration name="SortingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SortingTest - 2017.07.25 at 22h 18m 28s.xml">
-      <configuration name="SortingTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SortingTest - 2017.07.25 at 22h 18m 53s.xml">
       <configuration name="SortingTest" configurationId="JUnit" />
     </history-entry>
@@ -757,9 +744,27 @@
     <history-entry file="SortingTest - 2017.07.25 at 22h 30m 27s.xml">
       <configuration name="SortingTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SortingTest - 2017.07.27 at 22h 37m 19s.xml">
+      <configuration name="SortingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortingTest - 2017.07.27 at 22h 38m 33s.xml">
+      <configuration name="SortingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortingTest - 2017.07.27 at 22h 44m 38s.xml">
+      <configuration name="SortingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortingTest - 2017.07.27 at 22h 44m 51s.xml">
+      <configuration name="SortingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortingTest - 2017.07.27 at 22h 46m 53s.xml">
+      <configuration name="SortingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortingTest - 2017.07.27 at 22h 47m 08s.xml">
+      <configuration name="SortingTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -771,7 +776,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22469491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22469491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1103,7 +1108,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="191" column="56" lean-forward="false" selection-start-line="191" selection-start-column="56" selection-end-line="191" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,7 +1115,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3360">
           <caret line="232" column="51" lean-forward="false" selection-start-line="232" selection-start-column="51" selection-end-line="232" selection-end-column="51" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#6818#6819#0" expanded="false" />
+            <element signature="e#6880#6881#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1123,32 +1131,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sorting/Sorting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="82" column="9" lean-forward="false" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
-            <element signature="e#2227#2228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Searching/SearchingTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sorting/SortingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" column="58" lean-forward="false" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
+        <state relative-caret-position="863">
+          <caret line="82" column="45" lean-forward="false" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sorting/Sorting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="102" column="26" lean-forward="false" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="e#2227#2228#0" expanded="true" />
           </folding>
         </state>
       </provider>

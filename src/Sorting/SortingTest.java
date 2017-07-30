@@ -85,4 +85,19 @@ class SortingTest {
             assertEquals(expected, answer);
         }
     }
+
+    @Nested
+    class simultaneousEventsTests {
+        @Test
+        @DisplayName("returns the proper value")
+        void simultaneous() {
+            List<Sorting.Event> events = new ArrayList<>(Arrays.asList(new Sorting.Event(1, 3), new Sorting.Event(2, 3), new Sorting.Event(2, 4), new Sorting.Event(3, 4), new Sorting.Event(5, 6)));
+
+            int expected = 4;
+
+            int answer = Sorting.simultaneousEvents(events);
+
+            assertEquals(expected, answer);
+        }
+    }
 }

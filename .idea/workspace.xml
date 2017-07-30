@@ -23,12 +23,10 @@
       <file leaf-file-name="Sorting.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Sorting/Sorting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="743">
-              <caret line="102" column="26" lean-forward="false" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+            <state relative-caret-position="893">
+              <caret line="164" column="19" lean-forward="false" selection-start-line="164" selection-start-column="19" selection-end-line="164" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2167#2168#0" expanded="true" />
-                <element signature="e#2227#2228#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -37,8 +35,8 @@
       <file leaf-file-name="SortingTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sorting/SortingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="863">
-              <caret line="82" column="45" lean-forward="false" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
+            <state relative-caret-position="923">
+              <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,8 +127,8 @@
         <option value="$PROJECT_DIR$/src/HashMaps/HashMap.java" />
         <option value="$PROJECT_DIR$/src/HashMaps/HashMapsTest.java" />
         <option value="$PROJECT_DIR$/src/HashMaps/HashMaps.java" />
-        <option value="$PROJECT_DIR$/src/Sorting/SortingTest.java" />
         <option value="$PROJECT_DIR$/src/Sorting/Sorting.java" />
+        <option value="$PROJECT_DIR$/src/Sorting/SortingTest.java" />
       </list>
     </option>
   </component>
@@ -732,12 +730,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SortingTest - 2017.07.25 at 22h 18m 53s.xml">
-      <configuration name="SortingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SortingTest - 2017.07.25 at 22h 20m 45s.xml">
-      <configuration name="SortingTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SortingTest - 2017.07.25 at 22h 21m 00s.xml">
       <configuration name="SortingTest" configurationId="JUnit" />
     </history-entry>
@@ -760,6 +752,12 @@
       <configuration name="SortingTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SortingTest - 2017.07.27 at 22h 47m 08s.xml">
+      <configuration name="SortingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortingTest - 2017.07.30 at 09h 27m 10s.xml">
+      <configuration name="SortingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortingTest - 2017.07.30 at 09h 28m 32s.xml">
       <configuration name="SortingTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1141,8 +1139,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sorting/SortingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="863">
-          <caret line="82" column="45" lean-forward="false" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
+        <state relative-caret-position="923">
+          <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1151,12 +1149,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sorting/Sorting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="102" column="26" lean-forward="false" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+        <state relative-caret-position="893">
+          <caret line="164" column="19" lean-forward="false" selection-start-line="164" selection-start-column="19" selection-end-line="164" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
-            <element signature="e#2227#2228#0" expanded="true" />
           </folding>
         </state>
       </provider>

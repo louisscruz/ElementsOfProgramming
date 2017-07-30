@@ -112,4 +112,56 @@ public class Sorting {
 
         return currentVal + 1;
     }
+
+    public static class Event {
+        public int start;
+        public int end;
+
+        public Event(int start, int end) {
+            this.start = start;
+            this.end = end;
+        }
+    }
+
+    public static class Endpoint implements Comparable<Endpoint> {
+        public int time;
+        public boolean isStart;
+
+        public int compareTo(Endpoint e) {
+            if (time != e.time) {
+                return Integer.compare(time, e.time);
+            }
+
+            return isStart && !e.isStart ? -1 : !isStart && e.isStart ? 1 : 0;
+        }
+
+        public Endpoint (int time, boolean isStart) {
+            this.time = time;
+            this.isStart = isStart;
+        }
+    }
+
+    public static int simultaneousEvents(List<Event> events) {
+        List<Endpoint> endpoints = new ArrayList<>();
+
+        for (Event e : events) {
+            endpoints.add(new Endpoint(e.start, true));
+            endpoints.add(new Endpoint(e.end, false));
+        }
+
+        Collections.sort(endpoints);
+
+        int current = 0, max = 0;
+
+        for (Endpoint e : endpoints) {
+            if (e.isStart) {
+                current++;
+                max = Math.max(current, max);
+            } else {
+                current--;
+            }
+        }
+
+        return max;
+    }
 }

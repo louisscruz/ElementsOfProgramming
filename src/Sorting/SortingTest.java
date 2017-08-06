@@ -199,4 +199,32 @@ class SortingTest {
             }
         }
     }
+
+    @Nested
+    class listSortTests {
+        @Test
+        @DisplayName("properly sorts them")
+        void sorts() {
+            Sorting.ListNode<Integer> list = new Sorting.ListNode<Integer>(3);
+            list.next = new Sorting.ListNode<Integer>(2);
+            list.next.next = new Sorting.ListNode<Integer>(2);
+            list.next.next.next = new Sorting.ListNode<Integer>(1);
+
+            Sorting.listSort(list);
+
+            boolean sorted = true;
+
+            Sorting.ListNode<Integer> currentNode = list;
+
+            while (currentNode.next != null) {
+                if (currentNode.val > currentNode.next.val) {
+                    sorted = false;
+                }
+
+                currentNode = currentNode.next;
+            }
+
+            assertTrue(sorted);
+        }
+    }
 }

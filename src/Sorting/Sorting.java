@@ -323,4 +323,63 @@ public class Sorting {
 
         return true;
     }
+
+    public static class ListNode<T> {
+        public T val;
+        public ListNode<T> next;
+
+        public ListNode(T val) {
+            this.val = val;
+        }
+    }
+
+    public static ListNode<Integer> listSort(ListNode<Integer> list) {
+        if (list == null || list.next == null) {
+            return list;
+        }
+
+        ListNode<Integer> preSlow = null, slow = list, fast = list;
+
+        while (fast != null && fast.next != null) {
+            preSlow = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        preSlow.next = null;
+
+        return mergeSortedLists(listSort(list), listSort(slow));
+    }
+
+    public static ListNode<Integer> mergeSortedLists(ListNode<Integer> a, ListNode<Integer> b) {
+        ListNode<Integer> head;
+
+        if (a.val <= b.val) {
+            head = a;
+            a = a.next;
+        } else {
+            head = b;
+            b = b.next;
+        }
+
+        ListNode<Integer> currentNode = head;
+
+        while (a != null && b != null) {
+            if (a.val <= b.val) {
+                currentNode.next = a;
+                a = a.next;
+            } else {
+                currentNode.next = b;
+                b = b.next;
+            }
+
+            currentNode = currentNode.next;
+        }
+
+        ListNode<Integer> remainder = a == null ? b : a;
+
+        currentNode.next = remainder;
+
+        return head;
+    }
 }

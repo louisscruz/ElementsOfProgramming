@@ -1,10 +1,6 @@
 package Sorting;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Sorting {
     public static List<Integer> intersection(List<Integer> first, List<Integer> second) {
@@ -242,5 +238,53 @@ public class Sorting {
         }
 
         return result;
+    }
+
+    public static class Student {
+        public int age;
+
+        public Student(int age) {
+            this.age = age;
+        }
+    }
+
+    public static void groupByAge(List<Student> students) {
+        Map<Integer, Integer> ageToCount = new HashMap<>();
+
+        for (Student s : students) {
+            int key = s.age;
+
+            if (ageToCount.containsKey(key)) {
+                ageToCount.put(key, ageToCount.get(key) + 1);
+            } else {
+                ageToCount.put(key, 1);
+            }
+        }
+
+        Map<Integer, Integer> ageToOffset = new HashMap<>();
+        int offset = 0;
+
+        for (Map.Entry<Integer, Integer> entry : ageToCount.entrySet()) {
+            ageToOffset.put(entry.getKey(), offset);
+            offset += entry.getValue();
+        }
+
+        while (!ageToOffset.isEmpty()) {
+            Map.Entry<Integer, Integer> from = ageToOffset.entrySet().iterator().next();
+            Integer toAge = students.get(from.getValue()).age;
+            Integer toValue = ageToOffset.get(toAge);
+
+            Collections.swap(students, from.getValue(), toValue);
+
+            Integer count = ageToCount.get(toAge) - 1;
+
+            ageToCount.put(toAge, count);
+
+            if (count > 0) {
+                ageToOffset.put(toAge, toValue + 1);
+            } else {
+                ageToOffset.remove(toAge);
+            }
+        }
     }
 }

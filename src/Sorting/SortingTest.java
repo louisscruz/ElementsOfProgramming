@@ -4,10 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -123,6 +120,40 @@ class SortingTest {
             List<Sorting.Interval> answer = Sorting.unionOfIntervals(intervals);
 
             assertEquals(expected, answer);
+        }
+    }
+
+    @Nested
+    class groupByAgeTests {
+        @Test
+        @DisplayName("correctly places people of the same age next to each other")
+        void students() {
+            List<Sorting.Student> students = new ArrayList<>();
+            students.add(new Sorting.Student(5));
+            students.add(new Sorting.Student(7));
+            students.add(new Sorting.Student(5));
+            students.add(new Sorting.Student(13));
+            students.add(new Sorting.Student(7));
+
+            Sorting.groupByAge(students);
+
+            boolean proper = true;
+
+            Set<Integer> seen = new HashSet<>();
+
+            for (int i = 0; i < students.size() - 1; i++) {
+                Sorting.Student s = students.get(i);
+
+                if (s.age != students.get(i + 1).age) {
+                    if (seen.contains(s.age)) {
+                        proper = false;
+                    } else {
+                        seen.add(s.age);
+                    }
+                }
+            }
+
+            assertTrue(proper);
         }
     }
 }

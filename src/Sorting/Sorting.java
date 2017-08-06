@@ -287,4 +287,40 @@ public class Sorting {
             }
         }
     }
+
+    public static class Player implements Comparable<Player> {
+        public int height;
+
+        public Player(int height) {
+            this.height = height;
+        }
+
+        @Override
+        public int compareTo(Player other) {
+            return this.height - other.height;
+        }
+    }
+
+    public static boolean properPhoto(List<Player> teamOne, List<Player> teamTwo) {
+//        Assumption: teams are same size
+        Collections.sort(teamOne);
+        Collections.sort(teamTwo);
+
+        boolean firstTaller = teamOne.get(0).height > teamTwo.get(0).height;
+
+        List<Player> taller = firstTaller ? teamOne : teamTwo;
+        List<Player> shorter = firstTaller ? teamTwo : teamOne;
+
+        for (int i = 0; i < taller.size(); i++) {
+            Player tallPlayer = taller.get(i);
+            Player shortPlayer = shorter.get(i);
+            int disparity = tallPlayer.compareTo(shortPlayer);
+
+            if (disparity <= 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }

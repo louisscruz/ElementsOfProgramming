@@ -156,4 +156,47 @@ class SortingTest {
             assertTrue(proper);
         }
     }
+
+    @Nested
+    class properPhotoTests {
+        @Nested
+        class whenTrue {
+            @Test
+            @DisplayName("returns the correct value")
+            void proper() {
+                List<Sorting.Player> firstTeam = new ArrayList<>();
+                List<Sorting.Player> secondTeam = new ArrayList<>();
+
+                firstTeam.add(new Sorting.Player(1));
+                firstTeam.add(new Sorting.Player(2));
+                firstTeam.add(new Sorting.Player(5));
+
+                secondTeam.add(new Sorting.Player(3));
+                secondTeam.add(new Sorting.Player(4));
+                secondTeam.add(new Sorting.Player(6));
+
+                assertTrue(Sorting.properPhoto(firstTeam, secondTeam));
+            }
+        }
+
+        @Nested
+        class whenFalse {
+            @Test
+            @DisplayName("returns the correct value")
+            void improper() {
+                List<Sorting.Player> firstTeam = new ArrayList<>();
+                List<Sorting.Player> secondTeam = new ArrayList<>();
+
+                firstTeam.add(new Sorting.Player(1));
+                firstTeam.add(new Sorting.Player(2));
+                firstTeam.add(new Sorting.Player(7));
+
+                secondTeam.add(new Sorting.Player(3));
+                secondTeam.add(new Sorting.Player(4));
+                secondTeam.add(new Sorting.Player(6));
+
+                assertFalse(Sorting.properPhoto(firstTeam, secondTeam));
+            }
+        }
+    }
 }

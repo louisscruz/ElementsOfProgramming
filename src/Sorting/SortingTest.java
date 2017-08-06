@@ -227,4 +227,20 @@ class SortingTest {
             assertTrue(sorted);
         }
     }
+
+    @Nested
+    class salaryCapTests {
+        @Test
+        @DisplayName("returns the correct answer")
+        void cap() {
+            List<Double> salaries = new ArrayList<>(Arrays.asList(40d, 90d, 100d, 20d, 30d));
+            Double target = 210d;
+
+            assertEquals((Double)60.0, Sorting.salaryCap(salaries, target));
+
+            Double otherTarget = 200d;
+
+            assertEquals((Double) 55.0, Sorting.salaryCap(salaries, otherTarget));
+        }
+    }
 }

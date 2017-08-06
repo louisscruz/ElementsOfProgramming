@@ -382,4 +382,49 @@ public class Sorting {
 
         return head;
     }
+
+    public static Double salaryCap(List<Double> salaries, Double target) {
+        if (salaries.size() == 1) {
+            return salaries.get(0);
+        }
+
+        Collections.sort(salaries, Collections.reverseOrder());
+
+        Double sum = 0d;
+
+        for (Double s : salaries) {
+            sum += s;
+        }
+
+        Double targetRemoval = sum - target;
+
+        if (targetRemoval <= 0) {
+            return salaries.get(0);
+        }
+
+        int i = 0;
+
+        Double answer = salaries.get(i);
+        Double currentDiff = salaries.get(i) - salaries.get(i + 1);
+        Double amountRemoved = 0.0;
+        int removalFactor = 1;
+        Double amountToRemove = (removalFactor * currentDiff);
+
+        while (i < salaries.size() - 1 && (amountToRemove + amountRemoved) <= targetRemoval) {
+            amountRemoved += currentDiff;
+            answer = amountRemoved;
+            currentDiff = salaries.get(++i) - salaries.get(i + 1);
+            Double newDiff = ++removalFactor * currentDiff;
+            currentDiff += newDiff;
+            amountToRemove += currentDiff;
+        }
+
+        if (amountRemoved != target) {
+            Double difference = targetRemoval - amountRemoved;
+            Double dividedDifference = difference / removalFactor;
+            answer = salaries.get(i) - dividedDifference;
+        }
+
+        return answer;
+    }
 }

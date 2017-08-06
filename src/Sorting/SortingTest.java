@@ -100,4 +100,29 @@ class SortingTest {
             assertEquals(expected, answer);
         }
     }
+
+    @Nested
+    class intervalUnionTests {
+        @Test
+        @DisplayName("returns the proper values")
+        void union() {
+            List<Sorting.Interval> intervals = new ArrayList<>();
+            intervals.add(new Sorting.Interval(0, false, 3, false));
+            intervals.add(new Sorting.Interval(1, true, 1, true));
+            intervals.add(new Sorting.Interval(2, true, 4, true));
+            intervals.add(new Sorting.Interval(3, true, 4, false));
+            intervals.add(new Sorting.Interval(5, true, 7, false));
+            intervals.add(new Sorting.Interval(7, true, 8, false));
+            intervals.add(new Sorting.Interval(8, true, 11, false));
+            intervals.add(new Sorting.Interval(9, false, 11, true));
+
+            List<Sorting.Interval> expected = new ArrayList<>();
+            expected.add(new Sorting.Interval(0, false, 4, true));
+            expected.add(new Sorting.Interval(5, true, 11, true));
+
+            List<Sorting.Interval> answer = Sorting.unionOfIntervals(intervals);
+
+            assertEquals(expected, answer);
+        }
+    }
 }

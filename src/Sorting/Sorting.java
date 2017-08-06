@@ -1,8 +1,10 @@
 package Sorting;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public class Sorting {
     public static List<Integer> intersection(List<Integer> first, List<Integer> second) {
@@ -163,5 +165,82 @@ public class Sorting {
         }
 
         return max;
+    }
+
+    public static class Interval implements Comparable<Interval> {
+        public Endpoint left = new Endpoint();
+        public Endpoint right = new Endpoint();
+
+        private static class Endpoint {
+            public boolean isClosed;
+            public int val;
+        }
+
+        public Interval(int leftVal, boolean leftClosed, int rightVal, boolean rightClosed) {
+            this.left.val = leftVal;
+            this.left.isClosed = leftClosed;
+            this.right.val = rightVal;
+            this.right.isClosed = rightClosed;
+        }
+
+        public int compareTo(Interval i) {
+            if (Integer.compare(left.val, i.left.val) != 0) {
+                return left.val - i.left.val;
+            }
+
+            if (left.isClosed && !i.left.isClosed) {
+                return -1;
+            }
+
+            return (!left.isClosed && i.left.isClosed) ? 1 : 0;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (obj == null || !(obj instanceof Interval)) {
+                return false;
+            }
+
+            if (this == obj) return true;
+
+            Interval that = (Interval)obj;
+
+            return left.val == that.left.val && left.isClosed == that.left.isClosed;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(left.val, left.isClosed);
+        }
+    }
+
+    public static List<Interval> unionOfIntervals(List<Interval> intervals) {
+        if (intervals.isEmpty()) {
+            return Collections.EMPTY_LIST;
+        }
+
+        Collections.sort(intervals);
+        List<Interval> result = new ArrayList<>(Arrays.asList(intervals.get(0)));
+
+        for (Interval i : intervals) {
+            int lastIdx = result.size() - 1;
+            boolean isNotEmpty = !result.isEmpty();
+            boolean leftIsLessThanResultRight = i.left.val < result.get(lastIdx).right.val;
+            boolean leftIsEqualToResultRight = i.left.val == result.get(lastIdx).right.val;
+            boolean leftAndResultRightTouching = (i.left.isClosed || result.get(lastIdx).right.isClosed);
+            boolean intersectionExists = leftIsLessThanResultRight;
+            boolean barelyTouching = leftIsEqualToResultRight && leftAndResultRightTouching;
+            boolean shouldIncrease = isNotEmpty && (intersectionExists || barelyTouching);
+            if (shouldIncrease) {
+                boolean isLarger = i.right.val > result.get(lastIdx).right.val;
+                if (isLarger) {
+                    result.get(lastIdx).right = i.right;
+                }
+            } else {
+                result.add(i);
+            }
+        }
+
+        return result;
     }
 }

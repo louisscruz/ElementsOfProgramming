@@ -91,4 +91,22 @@ public class BinarySearchTrees {
 
         return firstLarger;
     }
+
+    public static BinarySearchTreeNode<Integer> firstInOrder(BinarySearchTreeNode<Integer> tree, int target) {
+        BinarySearchTreeNode<Integer> currentNode = tree;
+        BinarySearchTreeNode<Integer> first = null;
+
+        while (currentNode != null) {
+            if (currentNode.data < target) {
+                currentNode = currentNode.right;
+            } else if (currentNode.data > target) {
+                currentNode = currentNode.left;
+            } else {
+                first = currentNode;
+                currentNode = currentNode.left;
+            }
+        }
+
+        return first;
+    }
 }

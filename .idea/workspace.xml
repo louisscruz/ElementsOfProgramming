@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="675f5918-724b-403c-b051-933e1df446c7" name="Default" comment="Add other parity methods and right propagate">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinarySearchTrees/BinarySearchTrees.java" afterPath="$PROJECT_DIR$/src/BinarySearchTrees/BinarySearchTrees.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinarySearchTrees/BinarySearchTreesTest.java" afterPath="$PROJECT_DIR$/src/BinarySearchTrees/BinarySearchTreesTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,7 +45,7 @@
       <file leaf-file-name="SortingTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sorting/SortingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
+            <state relative-caret-position="494">
               <caret line="244" column="5" lean-forward="false" selection-start-line="244" selection-start-column="5" selection-end-line="244" selection-end-column="5" />
               <folding />
             </state>
@@ -54,11 +55,11 @@
       <file leaf-file-name="BinarySearchTrees.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BinarySearchTrees/BinarySearchTrees.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="109" column="21" lean-forward="false" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
+            <state relative-caret-position="269">
+              <caret line="115" column="154" lean-forward="false" selection-start-line="115" selection-start-column="154" selection-end-line="115" selection-end-column="154" />
               <folding>
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#410#411#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,8 +68,8 @@
       <file leaf-file-name="BinarySearchTreesTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BinarySearchTrees/BinarySearchTreesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="131" column="64" lean-forward="false" selection-start-line="131" selection-start-column="64" selection-end-line="131" selection-end-column="64" />
+            <state relative-caret-position="434">
+              <caret line="159" column="93" lean-forward="false" selection-start-line="159" selection-start-column="93" selection-end-line="159" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,7 +82,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="10" selection-end-column="49" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -813,17 +816,17 @@
     <history-entry file="BinarySearchTreesTest - 2017.08.08 at 15h 51m 03s.xml">
       <configuration name="BinarySearchTreesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingTest - 2017.08.06 at 14h 38m 37s.xml">
-      <configuration name="SortingTest" configurationId="JUnit" />
+    <history-entry file="BinarySearchTreesTest - 2017.08.08 at 16h 16m 10s.xml">
+      <configuration name="BinarySearchTreesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingTest - 2017.08.06 at 14h 39m 00s.xml">
-      <configuration name="SortingTest" configurationId="JUnit" />
+    <history-entry file="BinarySearchTreesTest - 2017.08.08 at 16h 18m 04s.xml">
+      <configuration name="BinarySearchTreesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingTest - 2017.08.06 at 14h 40m 50s.xml">
-      <configuration name="SortingTest" configurationId="JUnit" />
+    <history-entry file="BinarySearchTreesTest - 2017.08.08 at 16h 18m 15s.xml">
+      <configuration name="BinarySearchTreesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SortingTest - 2017.08.06 at 14h 41m 05s.xml">
-      <configuration name="SortingTest" configurationId="JUnit" />
+    <history-entry file="BinarySearchTreesTest - 2017.08.08 at 16h 18m 50s.xml">
+      <configuration name="BinarySearchTreesTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SortingTest - 2017.08.06 at 14h 41m 26s.xml">
       <configuration name="SortingTest" configurationId="JUnit" />
@@ -1190,7 +1193,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="10" selection-end-column="49" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1217,7 +1222,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sorting/SortingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
+        <state relative-caret-position="494">
           <caret line="244" column="5" lean-forward="false" selection-start-line="244" selection-start-column="5" selection-end-line="244" selection-end-column="5" />
           <folding />
         </state>
@@ -1225,8 +1230,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BinarySearchTrees/BinarySearchTreesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="131" column="64" lean-forward="false" selection-start-line="131" selection-start-column="64" selection-end-line="131" selection-end-column="64" />
+        <state relative-caret-position="434">
+          <caret line="159" column="93" lean-forward="false" selection-start-line="159" selection-start-column="93" selection-end-line="159" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1235,11 +1240,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BinarySearchTrees/BinarySearchTrees.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="109" column="21" lean-forward="false" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
+        <state relative-caret-position="269">
+          <caret line="115" column="154" lean-forward="false" selection-start-line="115" selection-start-column="154" selection-end-line="115" selection-end-column="154" />
           <folding>
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
           </folding>
         </state>
       </provider>

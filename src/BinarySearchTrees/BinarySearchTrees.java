@@ -1,9 +1,6 @@
 package BinarySearchTrees;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class BinarySearchTrees {
     public static class BinarySearchTreeNode<T> {
@@ -108,5 +105,27 @@ public class BinarySearchTrees {
         }
 
         return first;
+    }
+
+    public static List<BinarySearchTreeNode<Integer>> kLargest(BinarySearchTreeNode<Integer> tree, int k) {
+        List<BinarySearchTreeNode<Integer>> answer = findLargest(tree, k, new ArrayList<BinarySearchTreeNode<Integer>>());
+        Collections.reverse(answer);
+        return answer;
+    }
+
+    public static List<BinarySearchTreeNode<Integer>> findLargest(BinarySearchTreeNode<Integer> tree, int k, List<BinarySearchTreeNode<Integer>> answer) {
+        if (tree.right != null) {
+            findLargest(tree.right, k, answer);
+        }
+
+        if (answer.size() == k) return answer;
+
+        answer.add(tree);
+
+        if (tree.left != null) {
+            findLargest(tree.left, k, answer);
+        }
+
+        return answer;
     }
 }

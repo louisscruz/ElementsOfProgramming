@@ -13,6 +13,10 @@ public class BinarySearchTrees {
         public BinarySearchTreeNode(T data) {
             this.data = data;
         }
+
+        public boolean equals(BinarySearchTreeNode<T> other) {
+            return this.data == other.data;
+        }
     }
 
     public static boolean isProperTreeDepth(BinarySearchTreeNode<Integer> tree) {
@@ -69,5 +73,22 @@ public class BinarySearchTrees {
         }
 
         return true;
+    }
+
+    public static BinarySearchTreeNode<Integer> firstLarger(BinarySearchTreeNode<Integer> tree, int target) {
+        BinarySearchTreeNode<Integer> currentNode = tree;
+        BinarySearchTreeNode<Integer> firstLarger = null;
+
+        while (currentNode != null) {
+            if (currentNode.data > target) {
+                firstLarger = currentNode;
+                currentNode = currentNode.left;
+            } else {
+                // The node is much smaller than or equal to the target.
+                currentNode = currentNode.right;
+            }
+        }
+
+        return firstLarger;
     }
 }

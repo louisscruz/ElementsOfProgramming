@@ -162,4 +162,45 @@ class BinarySearchTreesTest {
             assertEquals(expected, answer);
         }
     }
+
+    @Nested
+    class lowestAncestorTests {
+        @Nested
+        class whenPresent {
+            @Test
+            @DisplayName("returns the proper node")
+            void present() {
+                BinarySearchTreeNode<Integer> tree = new BinarySearchTreeNode<>(5);
+                tree.left = new BinarySearchTreeNode<>(3);
+                tree.right = new BinarySearchTreeNode<>(10);
+                tree.left.left = new BinarySearchTreeNode<>(1);
+                tree.left.right = new BinarySearchTreeNode<>(5);
+                tree.right.left = new BinarySearchTreeNode<>(7);
+                tree.right.right = new BinarySearchTreeNode<>(11);
+
+                BinarySearchTreeNode<Integer> answer = BinarySearchTrees.lowestAncestor(tree, 7, 11);
+
+                assertEquals(tree.right, answer);
+            }
+        }
+
+        @Nested
+        class whenNotPresent {
+            @Test
+            @DisplayName("returns null")
+            void notPresent() {
+                BinarySearchTreeNode<Integer> tree = new BinarySearchTreeNode<>(5);
+                tree.left = new BinarySearchTreeNode<>(3);
+                tree.right = new BinarySearchTreeNode<>(10);
+                tree.left.left = new BinarySearchTreeNode<>(1);
+                tree.left.right = new BinarySearchTreeNode<>(5);
+                tree.right.left = new BinarySearchTreeNode<>(7);
+                tree.right.right = new BinarySearchTreeNode<>(11);
+
+                BinarySearchTreeNode<Integer> answer = BinarySearchTrees.lowestAncestor(tree, 6, 11);
+
+                assertNull(answer);
+            }
+        }
+    }
 }

@@ -128,4 +128,43 @@ public class BinarySearchTrees {
 
         return answer;
     }
+
+    public static boolean exists(BinarySearchTreeNode<Integer> tree, int val) {
+        while (tree != null) {
+            if (tree.data < val) {
+                tree = tree.right;
+            } else if (tree.data > val) {
+                tree = tree.left;
+            } else {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static BinarySearchTreeNode<Integer> lowestAncestor(BinarySearchTreeNode<Integer> tree, int a, int b) {
+        BinarySearchTreeNode<Integer> current = tree, ancestor = null;
+
+        while (current != null) {
+            boolean aLess = current.data > a;
+            boolean bLess = current.data > b;
+
+            if (aLess == bLess) {
+                if (aLess) {
+                    current = current.left;
+                } else {
+                    current = current.right;
+                }
+            } else {
+                break;
+            }
+        }
+
+        if (exists(current, a) && exists(current, b)) {
+            ancestor = current;
+        }
+
+        return ancestor;
+    }
 }

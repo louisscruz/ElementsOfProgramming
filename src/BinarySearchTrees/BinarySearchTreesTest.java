@@ -203,4 +203,31 @@ class BinarySearchTreesTest {
             }
         }
     }
+
+    @Nested
+    class rebuildPreOrderTests {
+        @Test
+        @DisplayName("returns the correct tree")
+        void rebuild() {
+            List<Integer> list = new ArrayList<>(Arrays.asList(5, 3, 1, 4, 10, 7, 11));
+
+            BinarySearchTreeNode<Integer> answer = BinarySearchTrees.rebuildPreOrder(list);
+
+            BinarySearchTreeNode<Integer> tree = new BinarySearchTreeNode<>(5);
+            tree.left = new BinarySearchTreeNode<>(3);
+            tree.right = new BinarySearchTreeNode<>(10);
+            tree.left.left = new BinarySearchTreeNode<>(1);
+            tree.left.right = new BinarySearchTreeNode<>(4);
+            tree.right.left = new BinarySearchTreeNode<>(7);
+            tree.right.right = new BinarySearchTreeNode<>(11);
+
+            assert(tree.equals(answer));
+            assert(tree.left.equals(answer.left));
+            assert(tree.right.equals(answer.right));
+            assert(tree.left.left.equals(answer.left.left));
+            assert(tree.left.right.equals(answer.left.right));
+            assert(tree.right.left.equals(answer.right.left));
+            assert(tree.right.right.equals(answer.right.right));
+        }
+    }
 }

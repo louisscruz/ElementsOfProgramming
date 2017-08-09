@@ -167,4 +167,33 @@ public class BinarySearchTrees {
 
         return ancestor;
     }
+
+    public static Integer rootIdx;
+
+    public static BinarySearchTreeNode<Integer> rebuildPreOrder(List<Integer> preOrderSequence) {
+        rootIdx = 0;
+        return rebuildPreOrderOnValueRange(preOrderSequence, Integer.MIN_VALUE, Integer.MAX_VALUE);
+    }
+
+    public static BinarySearchTreeNode<Integer> rebuildPreOrderOnValueRange(List<Integer> preOrderSequence, int min, int max) {
+        if (rootIdx == preOrderSequence.size()) {
+            return null;
+        }
+
+        int root = preOrderSequence.get(rootIdx);
+        if (root < min || root > max) {
+            return null;
+        }
+
+        rootIdx++;
+
+        BinarySearchTreeNode<Integer> leftSubTree = rebuildPreOrderOnValueRange(preOrderSequence, min, root);
+        BinarySearchTreeNode<Integer> rightSubTree = rebuildPreOrderOnValueRange(preOrderSequence, root, max);
+
+        BinarySearchTreeNode<Integer> answer = new BinarySearchTreeNode<Integer>(root);
+        answer.left = leftSubTree;
+        answer.right = rightSubTree;
+
+        return answer;
+    }
 }

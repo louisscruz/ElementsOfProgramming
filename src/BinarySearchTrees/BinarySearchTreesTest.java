@@ -265,4 +265,21 @@ class BinarySearchTreesTest {
             assertEquals(expected, answer);
         }
     }
+
+    @Nested
+    class ab2SecondTests {
+        @Test
+        @DisplayName("returns the correct values")
+        void ab2() {
+            ABSqrt2 first = new ABSqrt2(0, 0);
+            ABSqrt2 second = new ABSqrt2(1, 0);
+            ABSqrt2 third = new ABSqrt2(0, 1);
+
+            List<ABSqrt2> expected = new ArrayList<>(Arrays.asList(first, second, third));
+
+            List<ABSqrt2> answer = BinarySearchTrees.ab2Second(3);
+
+            assertEquals(expected, answer);
+        }
+    }
 }

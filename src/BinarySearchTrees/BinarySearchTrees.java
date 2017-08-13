@@ -314,4 +314,38 @@ public class BinarySearchTrees {
 
         return result;
     }
+
+    public static List<ABSqrt2> ab2Second(int k) {
+        int i = 0, j = 0;
+
+        List<ABSqrt2> result = new ArrayList<>();
+
+        if (k == 0) return result;
+
+        result.add(new ABSqrt2(0, 0));
+
+        while (result.size() < k) {
+            ABSqrt2 firstA = result.get(i);
+            ABSqrt2 firstB = result.get(j);
+
+            ABSqrt2 nextA = new ABSqrt2(firstA.a + 1, firstA.b);
+            ABSqrt2 nextB = new ABSqrt2(firstB.a, firstB.b + 1);
+
+            int cmp = nextA.compareTo(nextB);
+
+            if (cmp < 0) {
+                result.add(nextA);
+                ++i;
+            } else if (cmp > 0) {
+                result.add(nextB);
+                ++j;
+            } else {
+                result.add(nextA);
+                ++i;
+                ++j;
+            }
+        }
+
+        return result;
+    }
 }

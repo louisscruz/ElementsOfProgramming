@@ -260,4 +260,58 @@ public class BinarySearchTrees {
             currentHeads.add(new ArrayData(idxNextMin, sortedArrays.get(idxNextMin).get(heads.get(idxNextMin))));
         }
     }
+
+    public static class ABSqrt2 implements Comparable<ABSqrt2> {
+        public int a, b;
+        public double val;
+
+        public ABSqrt2(int a, int b) {
+            this.a = a;
+            this.b = b;
+            this.val = a + (b * Math.sqrt(2));
+        }
+
+        @Override
+        public int compareTo(ABSqrt2 other) {
+            return Double.compare(this.val, other.val);
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (obj == null) {
+                return false;
+            }
+
+            if (!(obj instanceof ABSqrt2)) {
+                return false;
+            }
+
+            ABSqrt2 other = (ABSqrt2)obj;
+
+            return other.val == this.val;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(this.a, this.b);
+        }
+    }
+
+    public static List<ABSqrt2> ab2First(int k) {
+        NavigableSet<ABSqrt2> candidates = new TreeSet<>();
+
+        candidates.add(new ABSqrt2(0, 0));
+
+        List<ABSqrt2> result = new ArrayList<>();
+
+        while (result.size() < k) {
+            ABSqrt2 smallest = candidates.pollFirst();
+            result.add(smallest);
+
+            candidates.add(new ABSqrt2(smallest.a + 1, smallest.b));
+            candidates.add(new ABSqrt2(smallest.a, smallest.b + 1));
+        }
+
+        return result;
+    }
 }

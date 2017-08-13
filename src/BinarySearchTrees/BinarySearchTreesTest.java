@@ -3,6 +3,7 @@ package BinarySearchTrees;
 import static org.junit.jupiter.api.Assertions.*;
 
 import BinaryTrees.BinaryTreeNode;
+import BinarySearchTrees.BinarySearchTrees.ABSqrt2;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -245,6 +246,23 @@ class BinarySearchTreesTest {
             int answer = BinarySearchTrees.findMinDistanceSortedArrays(lists);
 
             assertEquals(1, answer);
+        }
+    }
+
+    @Nested
+    class ab2FirstTests {
+        @Test
+        @DisplayName("returns the correct values")
+        void ab2() {
+            ABSqrt2 first = new ABSqrt2(0, 0);
+            ABSqrt2 second = new ABSqrt2(1, 0);
+            ABSqrt2 third = new ABSqrt2(0, 1);
+
+            List<ABSqrt2> expected = new ArrayList<>(Arrays.asList(first, second, third));
+
+            List<ABSqrt2> answer = BinarySearchTrees.ab2First(3);
+
+            assertEquals(expected, answer);
         }
     }
 }

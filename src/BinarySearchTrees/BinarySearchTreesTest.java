@@ -230,4 +230,21 @@ class BinarySearchTreesTest {
             assert(tree.right.right.equals(answer.right.right));
         }
     }
+
+    @Nested
+    class findMinDistanceSortedArraysTests {
+        @Test
+        @DisplayName("returns the smallest")
+        void smallest() {
+            List<Integer> first = new ArrayList<>(Arrays.asList(5, 10, 15));
+            List<Integer> second = new ArrayList<>(Arrays.asList(3, 6, 9, 12, 15));
+            List<Integer> third = new ArrayList<>(Arrays.asList(8, 16, 24));
+
+            List<List<Integer>> lists = new ArrayList<>(Arrays.asList(first, second, third));
+
+            int answer = BinarySearchTrees.findMinDistanceSortedArrays(lists);
+
+            assertEquals(1, answer);
+        }
+    }
 }

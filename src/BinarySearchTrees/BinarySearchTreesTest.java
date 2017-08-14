@@ -282,4 +282,29 @@ class BinarySearchTreesTest {
             assertEquals(expected, answer);
         }
     }
+
+    @Nested
+    class minHeightTreeFromArrayTests {
+        @Test
+        @DisplayName("returns the correct tree")
+        void height() {
+            BinarySearchTreeNode<Integer> expected = new BinarySearchTreeNode<Integer>(5);
+            expected.left = new BinarySearchTreeNode<Integer>(3);
+            expected.right = new BinarySearchTreeNode<Integer>(7);
+            expected.left.left = new BinarySearchTreeNode<Integer>(2);
+            expected.left.right = new BinarySearchTreeNode<Integer>(4);
+            expected.right.left = new BinarySearchTreeNode<Integer>(6);
+            expected.right.right = new BinarySearchTreeNode<Integer>(8);
+
+            BinarySearchTreeNode<Integer> answer = BinarySearchTrees.buildMinHeightBST(Arrays.asList(2, 3, 4, 5, 6, 7, 8));
+
+            assertEquals(expected, answer);
+            assert(expected.left.equals(answer.left));
+            assert(expected.right.equals(answer.right));
+            assert(expected.left.left.equals(answer.left.left));
+            assert(expected.left.right.equals(answer.left.right));
+            assert(expected.right.left.equals(answer.right.left));
+            assert(expected.right.right.equals(answer.right.right));
+        }
+    }
 }

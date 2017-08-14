@@ -11,8 +11,28 @@ public class BinarySearchTrees {
             this.data = data;
         }
 
-        public boolean equals(BinarySearchTreeNode<T> other) {
+        public BinarySearchTreeNode(T data, BinarySearchTreeNode left, BinarySearchTreeNode right) {
+            this.data = data;
+            this.left = left;
+            this.right = right;
+        }
+
+//        public boolean equals(BinarySearchTreeNode<T> other) {
+//            return this.data == other.data;
+//        }
+        @Override
+        public boolean equals(Object obj) {
+            if (obj == null) return false;
+            if (!(obj instanceof BinarySearchTreeNode)) return false;
+
+            BinarySearchTreeNode<T> other = (BinarySearchTreeNode<T>)obj;
+
             return this.data == other.data;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(this.data, this.left, this.right);
         }
     }
 
@@ -347,5 +367,17 @@ public class BinarySearchTrees {
         }
 
         return result;
+    }
+
+    public static BinarySearchTreeNode<Integer> buildMinHeightBST(List<Integer> list) {
+        return buildMinHeightBSTFromSubArray(list, 0, list.size());
+    }
+
+    public static BinarySearchTreeNode<Integer> buildMinHeightBSTFromSubArray(List<Integer> list, int floor, int ceiling) {
+        if (floor >= ceiling) return null;
+
+        int midIdx = floor + ((ceiling - floor) / 2);
+
+        return new BinarySearchTreeNode(list.get(midIdx), buildMinHeightBSTFromSubArray(list, floor, midIdx), buildMinHeightBSTFromSubArray(list, midIdx + 1, ceiling));
     }
 }

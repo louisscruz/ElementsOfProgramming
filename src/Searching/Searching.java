@@ -284,4 +284,30 @@ public class Searching {
 
         return new MissingDuplicate(missOrDup, missOrDup ^ missXORDup);
     }
+
+    public static Integer cyclicMin(List<Integer> list) {
+        if (list.size() == 0) return null;
+
+        int midIdx = list.size() / 2;
+
+        boolean isLarger = list.get(midIdx) > list.get(list.size() - 1);
+
+        int left = isLarger ? midIdx + 1 : 0;
+        int right = isLarger ? list.size() : midIdx;
+
+        Integer response = list.get(midIdx);
+
+        while (left <= right) {
+            midIdx = left + ((right - left) / 2);
+
+            if (list.get(midIdx) < response) {
+                response = list.get(midIdx);
+                right = midIdx;
+            } else {
+                left = midIdx + 1;
+            }
+        }
+
+        return response;
+    }
 }

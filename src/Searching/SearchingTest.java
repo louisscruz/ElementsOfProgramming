@@ -184,4 +184,61 @@ class SearchingTest {
             assertEquals(2, (int)answer.duplicate);
         }
     }
+
+    @Nested
+    class cyclicMinTests {
+        @Test
+        @DisplayName("returns the null when given an empty array")
+        void empty() {
+            Integer answer = Searching.cyclicMin(new ArrayList<Integer>());
+
+            assertNull(answer);
+        }
+
+        @Nested
+        class whenMidIsOnLarger {
+            @Test
+            @DisplayName("without repeats")
+            void noRepeats() {
+                List<Integer> list = new ArrayList<>(Arrays.asList(3, 4, 5, 1, 2));
+
+                Integer answer = Searching.cyclicMin(list);
+
+                assertEquals((Integer)1, answer);
+            }
+
+            @Test
+            @DisplayName("without repeats")
+            void withRepeats() {
+                List<Integer> list = new ArrayList<>(Arrays.asList(3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 1, 1, 1, 1, 2, 2, 2));
+
+                Integer answer = Searching.cyclicMin(list);
+
+                assertEquals((Integer)1, answer);
+            }
+        }
+
+        @Nested
+        class whenMidIsOnSmaller {
+            @Test
+            @DisplayName("without repeats")
+            void noRepeats() {
+                List<Integer> list = new ArrayList<>(Arrays.asList(3, 4, 0, 1, 2));
+
+                Integer answer = Searching.cyclicMin(list);
+
+                assertEquals((Integer)0, answer);
+            }
+
+            @Test
+            @DisplayName("without repeats")
+            void withRepeats() {
+                List<Integer> list = new ArrayList<>(Arrays.asList(3, 3, 3, 3, 4, 4, 4, 0, 0, 1, 1, 2));
+
+                Integer answer = Searching.cyclicMin(list);
+
+                assertEquals((Integer)0, answer);
+            }
+        }
+    }
 }

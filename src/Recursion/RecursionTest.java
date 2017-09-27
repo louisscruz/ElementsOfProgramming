@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Arrays;
@@ -39,6 +40,20 @@ class RecursionTest {
             expected.add("move 2 to 1");
             expected.add("move 0 to 1");
             assertEquals(expected, instructions);
+        }
+    }
+
+    @Nested
+    class nQueens {
+        @Test
+        @DisplayName("does something")
+        void correctResult() {
+            List<List<Integer>> result = Recursion.nQueens(4);
+            List<List<Integer>> expected = new ArrayList<>();
+            expected.add(Arrays.asList(1, 3, 0, 2));
+            expected.add(Arrays.asList(2, 0, 3, 1));
+
+            assertEquals(expected, result);
         }
     }
 }
